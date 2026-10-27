@@ -5,8 +5,15 @@
     "mode": "Battle Royale",
     "updatedAt": "2026-10-27",
     "seasonStart": "2026-09-16",
-    "perks": ["Scavenger", "Sprinter", "Tempered"],
-    "equipment": ["Semtex", "Rauchgranate"],
+    "perks": [
+      "Scavenger",
+      "Sprinter",
+      "Tempered"
+    ],
+    "equipment": [
+      "Semtex",
+      "Rauchgranate"
+    ],
     "perksNote": "Empfehlung von wzstats.gg zu den Meta-Builds",
     "nextChange": {
       "date": "2026-11-06",
@@ -14,202 +21,978 @@
       "text": "Season 1 bringt die MW4-Waffen und die neue BR-Map Hajin. Danach verschiebt sich die Meta stark. PS4 und Xbox One werden nicht mehr unterstützt."
     },
     "sources": [
-      { "name": "wzstats.gg", "url": "https://wzstats.gg/" },
-      { "name": "CODMunity Patch Notes", "url": "https://codmunity.gg/patch-notes/warzone/2026-10-14" }
+      {
+        "name": "wzstats.gg",
+        "url": "https://wzstats.gg/"
+      },
+      {
+        "name": "CODMunity Patch Notes",
+        "url": "https://codmunity.gg/patch-notes/warzone/2026-10-14"
+      }
     ]
   },
   "weapons": [
     {
-      "id": "voyak-kt-3", "name": "VOYAK KT-3", "cls": "Sturmgewehr", "role": "long", "tier": "meta", "rank": 1,
+      "id": "voyak-kt-3",
+      "name": "VOYAK KT-3",
+      "cls": "Sturmgewehr",
+      "role": "long",
+      "tier": "meta",
+      "rank": 1,
       "code": "A09-34FBS-SSP4W-11",
       "attachments": [
-        { "slot": "Optik", "name": "FANG HOVERPOINT ELO", "unlock": "Waffenkammer" },
-        { "slot": "Mündung", "name": "MONOLITHIC SUPPRESSOR", "unlock": "Level 28" },
-        { "slot": "Lauf", "name": "17.6\" LTI GRAV-4 BARREL", "unlock": "Level 34" },
-        { "slot": "Magazin", "name": "SK-GARRISON DRUM", "unlock": "Level 40" },
-        { "slot": "Schaft", "name": "V-LAST CONTROL PAD", "unlock": "Level 33" }
+        {
+          "slot": "Optik",
+          "name": "FANG HOVERPOINT ELO",
+          "unlock": "Waffenkammer"
+        },
+        {
+          "slot": "Mündung",
+          "name": "MONOLITHIC SUPPRESSOR",
+          "unlock": "Level 28"
+        },
+        {
+          "slot": "Lauf",
+          "name": "17.6\" LTI GRAV-4 BARREL",
+          "unlock": "Level 34"
+        },
+        {
+          "slot": "Magazin",
+          "name": "SK-GARRISON DRUM",
+          "unlock": "Level 40"
+        },
+        {
+          "slot": "Schaft",
+          "name": "V-LAST CONTROL PAD",
+          "unlock": "Level 33"
+        }
       ],
       "stats": [
-        { "label": "Feuerrate", "value": "659 RPM" },
-        { "label": "Zielen (ADS)", "value": "375 ms" },
-        { "label": "Projektil", "value": "1151 m/s" }
+        {
+          "label": "Feuerrate",
+          "value": "659 RPM"
+        },
+        {
+          "label": "Zielen (ADS)",
+          "value": "375 ms"
+        },
+        {
+          "label": "Projektil",
+          "value": "1151 m/s"
+        }
       ],
-      "pros": ["Gute TTK auf allen Distanzen", "Doppelter Schaden pro Magazin dank Trommel", "Rund 35 % weniger Rückstoß als die Basiswaffe"],
-      "cons": ["Langsames Zielen", "Langsameres Nachladen mit Trommel"],
-      "trend": { "type": "buff", "date": "2026-09-16", "note": "Season-6-Start: mehr Schaden auf allen Distanzen, weniger Rückstoß, schnellere Projektile" },
+      "pros": [
+        "Gute TTK auf allen Distanzen",
+        "Doppelter Schaden pro Magazin dank Trommel",
+        "Rund 35 % weniger Rückstoß als die Basiswaffe"
+      ],
+      "cons": [
+        "Langsames Zielen",
+        "Langsameres Nachladen mit Trommel"
+      ],
+      "trend": {
+        "type": "buff",
+        "date": "2026-09-16",
+        "note": "Season-6-Start: mehr Schaden auf allen Distanzen, weniger Rückstoß, schnellere Projektile"
+      },
       "altBuilds": [
         {
-          "name": "Variante: wenig Rückstoß", "code": "A09-9CQNY-ZW11",
+          "name": "Variante: wenig Rückstoß",
+          "code": "A09-9CQNY-ZW11",
           "attachments": [
-            { "slot": "Mündung", "name": "EMT3 COMPENSATOR", "unlock": "Level 20" },
-            { "slot": "Lauf", "name": "17.6\" LTI GRAV-4 BARREL", "unlock": "Level 34" },
-            { "slot": "Unterlauf", "name": "VAS CONVERGENCE FOREGRIP", "unlock": "Waffenkammer" },
-            { "slot": "Magazin", "name": "SK-GARRISON DRUM", "unlock": "Level 40" },
-            { "slot": "Schaft", "name": "V-LAST CONTROL PAD", "unlock": "Level 33" }
+            {
+              "slot": "Mündung",
+              "name": "EMT3 COMPENSATOR",
+              "unlock": "Level 20"
+            },
+            {
+              "slot": "Lauf",
+              "name": "17.6\" LTI GRAV-4 BARREL",
+              "unlock": "Level 34"
+            },
+            {
+              "slot": "Unterlauf",
+              "name": "VAS CONVERGENCE FOREGRIP",
+              "unlock": "Waffenkammer"
+            },
+            {
+              "slot": "Magazin",
+              "name": "SK-GARRISON DRUM",
+              "unlock": "Level 40"
+            },
+            {
+              "slot": "Schaft",
+              "name": "V-LAST CONTROL PAD",
+              "unlock": "Level 33"
+            }
           ]
         }
       ]
     },
     {
-      "id": "mk35-isr", "name": "MK35 ISR", "cls": "Sturmgewehr", "role": "long", "tier": "meta", "rank": 2,
+      "id": "mk35-isr",
+      "name": "MK35 ISR",
+      "cls": "Sturmgewehr",
+      "role": "long",
+      "tier": "meta",
+      "rank": 2,
       "code": "A12-34FBS-SSY4B-11",
       "attachments": [
-        { "slot": "Optik", "name": "FANG HOVERPOINT ELO", "unlock": "Waffenkammer" },
-        { "slot": "Mündung", "name": "MONOLITHIC SUPPRESSOR", "unlock": "Level 39" },
-        { "slot": "Lauf", "name": "16.5\" GREAVES BELLUM BARREL", "unlock": "Level 14" },
-        { "slot": "Magazin", "name": "BOWEN SIREN DRUM", "unlock": "Level 29" },
-        { "slot": "Schaft", "name": "GREAVES CASSIN STOCK", "unlock": "Level 8" }
+        {
+          "slot": "Optik",
+          "name": "FANG HOVERPOINT ELO",
+          "unlock": "Waffenkammer"
+        },
+        {
+          "slot": "Mündung",
+          "name": "MONOLITHIC SUPPRESSOR",
+          "unlock": "Level 39"
+        },
+        {
+          "slot": "Lauf",
+          "name": "16.5\" GREAVES BELLUM BARREL",
+          "unlock": "Level 14"
+        },
+        {
+          "slot": "Magazin",
+          "name": "BOWEN SIREN DRUM",
+          "unlock": "Level 29"
+        },
+        {
+          "slot": "Schaft",
+          "name": "GREAVES CASSIN STOCK",
+          "unlock": "Level 8"
+        }
       ],
       "stats": [
-        { "label": "Feuerrate", "value": "750 RPM" },
-        { "label": "Projektil", "value": "1109 m/s" },
-        { "label": "Schaden/Mag", "value": "2280" }
+        {
+          "label": "Feuerrate",
+          "value": "750 RPM"
+        },
+        {
+          "label": "Projektil",
+          "value": "1109 m/s"
+        },
+        {
+          "label": "Schaden/Mag",
+          "value": "2280"
+        }
       ],
-      "pros": ["Sehr wenig Rückstoß", "Sehr hohe Projektilgeschwindigkeit", "Gute TTK auf allen Distanzen"],
+      "pros": [
+        "Sehr wenig Rückstoß",
+        "Sehr hohe Projektilgeschwindigkeit",
+        "Gute TTK auf allen Distanzen"
+      ],
       "cons": []
     },
     {
-      "id": "ds20-mirage", "name": "DS20 MIRAGE", "cls": "Sturmgewehr", "role": "long", "tier": "meta", "rank": 3,
+      "id": "ds20-mirage",
+      "name": "DS20 MIRAGE",
+      "cls": "Sturmgewehr",
+      "role": "long",
+      "tier": "meta",
+      "rank": 3,
       "code": "A05-34FBS-SSSND-11",
       "attachments": [
-        { "slot": "Optik", "name": "FANG HOVERPOINT ELO", "unlock": "Waffenkammer" },
-        { "slot": "Mündung", "name": "MONOLITHIC SUPPRESSOR", "unlock": "Level 18" },
-        { "slot": "Lauf", "name": "17.1\" ABDICATOR BARREL", "unlock": "Level 29" },
-        { "slot": "Magazin", "name": "GRIFFON RESERVE EXTENDED II", "unlock": "Level 27" },
-        { "slot": "Schaft", "name": "WEIGHTED STOCK", "unlock": "Level 3" }
+        {
+          "slot": "Optik",
+          "name": "FANG HOVERPOINT ELO",
+          "unlock": "Waffenkammer"
+        },
+        {
+          "slot": "Mündung",
+          "name": "MONOLITHIC SUPPRESSOR",
+          "unlock": "Level 18"
+        },
+        {
+          "slot": "Lauf",
+          "name": "17.1\" ABDICATOR BARREL",
+          "unlock": "Level 29"
+        },
+        {
+          "slot": "Magazin",
+          "name": "GRIFFON RESERVE EXTENDED II",
+          "unlock": "Level 27"
+        },
+        {
+          "slot": "Schaft",
+          "name": "WEIGHTED STOCK",
+          "unlock": "Level 3"
+        }
       ],
       "stats": [
-        { "label": "Feuerrate", "value": "606 RPM" },
-        { "label": "Zielen (ADS)", "value": "377 ms" },
-        { "label": "Projektil", "value": "1179 m/s" }
+        {
+          "label": "Feuerrate",
+          "value": "606 RPM"
+        },
+        {
+          "label": "Zielen (ADS)",
+          "value": "377 ms"
+        },
+        {
+          "label": "Projektil",
+          "value": "1179 m/s"
+        }
       ],
-      "pros": ["Gute Projektilgeschwindigkeit", "Guter Schaden pro Magazin"],
-      "cons": ["Unterdurchschnittliche TTK", "Langsames Nachladen", "Hoher vertikaler Rückstoß"],
-      "trend": { "type": "buff", "date": "2026-10-14", "note": "Besserer Hüftfeuer-Spread, weniger View Kick, schnellerer Granatwerfer" }
+      "pros": [
+        "Gute Projektilgeschwindigkeit",
+        "Guter Schaden pro Magazin"
+      ],
+      "cons": [
+        "Unterdurchschnittliche TTK",
+        "Langsames Nachladen",
+        "Hoher vertikaler Rückstoß"
+      ],
+      "trend": {
+        "type": "buff",
+        "date": "2026-10-14",
+        "note": "Besserer Hüftfeuer-Spread, weniger View Kick, schnellerer Granatwerfer"
+      }
     },
     {
-      "id": "vmp", "name": "VMP", "cls": "MP", "role": "close", "tier": "meta", "rank": 1,
+      "id": "vmp",
+      "name": "VMP",
+      "cls": "MP",
+      "role": "close",
+      "tier": "meta",
+      "rank": 1,
       "code": "S14-6K7PG-6B11",
       "attachments": [
-        { "slot": "Mündung", "name": "LTI STENTORIAN BRAKE", "unlock": "Waffenkammer" },
-        { "slot": "Lauf", "name": "14.6\" NOCTURNAL-VI BARREL", "unlock": "Level 9" },
-        { "slot": "Unterlauf", "name": "SAPPER GUARD HANDSTOP", "unlock": "Level 33" },
-        { "slot": "Magazin", "name": "DAPPLE CAPACITY MAG", "unlock": "Level 35" },
-        { "slot": "Schaft", "name": "GREAVES VALOUR PAD", "unlock": "Level 8" }
+        {
+          "slot": "Mündung",
+          "name": "LTI STENTORIAN BRAKE",
+          "unlock": "Waffenkammer"
+        },
+        {
+          "slot": "Lauf",
+          "name": "14.6\" NOCTURNAL-VI BARREL",
+          "unlock": "Level 9"
+        },
+        {
+          "slot": "Unterlauf",
+          "name": "SAPPER GUARD HANDSTOP",
+          "unlock": "Level 33"
+        },
+        {
+          "slot": "Magazin",
+          "name": "DAPPLE CAPACITY MAG",
+          "unlock": "Level 35"
+        },
+        {
+          "slot": "Schaft",
+          "name": "GREAVES VALOUR PAD",
+          "unlock": "Level 8"
+        }
       ],
       "stats": [
-        { "label": "Feuerrate", "value": "984 RPM" },
-        { "label": "Zielen (ADS)", "value": "170 ms" },
-        { "label": "Sprint-to-Fire", "value": "120 ms" }
+        {
+          "label": "Feuerrate",
+          "value": "984 RPM"
+        },
+        {
+          "label": "Zielen (ADS)",
+          "value": "170 ms"
+        },
+        {
+          "label": "Sprint-to-Fire",
+          "value": "120 ms"
+        }
       ],
-      "pros": ["Sehr hohe Feuerrate", "Schnelles Zielen", "38 % mehr Schaden pro Magazin mit dem Build"],
-      "cons": ["Seit dem 14. Oktober mehr Rückstoß", "Langsames Nachladen"],
-      "trend": { "type": "nerf", "date": "2026-10-14", "note": "Mehr View Kick und mehr Streuung" }
+      "pros": [
+        "Sehr hohe Feuerrate",
+        "Schnelles Zielen",
+        "38 % mehr Schaden pro Magazin mit dem Build"
+      ],
+      "cons": [
+        "Seit dem 14. Oktober mehr Rückstoß",
+        "Langsames Nachladen"
+      ],
+      "trend": {
+        "type": "nerf",
+        "date": "2026-10-14",
+        "note": "Mehr View Kick und mehr Streuung"
+      }
     },
     {
-      "id": "mpc-25", "name": "MPC-25", "cls": "MP", "role": "close", "tier": "meta", "rank": 2,
+      "id": "mpc-25",
+      "name": "MPC-25",
+      "cls": "MP",
+      "role": "close",
+      "tier": "meta",
+      "rank": 2,
       "code": "S06-3SUZ7-NU11",
       "attachments": [
-        { "slot": "Mündung", "name": "LTI STENTORIAN BRAKE", "unlock": "Waffenkammer" },
-        { "slot": "Lauf", "name": "14.5\" VAS ASHE BARREL", "unlock": "Level 15" },
-        { "slot": "Unterlauf", "name": "FLOWGUARD FOREGRIP", "unlock": "Level 32" },
-        { "slot": "Magazin", "name": "MPC OVERLOAD DRUM", "unlock": "Level 35" },
-        { "slot": "Schaft", "name": "VIPER WIRE STOCK", "unlock": "Level 34" }
+        {
+          "slot": "Mündung",
+          "name": "LTI STENTORIAN BRAKE",
+          "unlock": "Waffenkammer"
+        },
+        {
+          "slot": "Lauf",
+          "name": "14.5\" VAS ASHE BARREL",
+          "unlock": "Level 15"
+        },
+        {
+          "slot": "Unterlauf",
+          "name": "FLOWGUARD FOREGRIP",
+          "unlock": "Level 32"
+        },
+        {
+          "slot": "Magazin",
+          "name": "MPC OVERLOAD DRUM",
+          "unlock": "Level 35"
+        },
+        {
+          "slot": "Schaft",
+          "name": "VIPER WIRE STOCK",
+          "unlock": "Level 34"
+        }
       ],
       "stats": [
-        { "label": "Feuerrate", "value": "723 RPM" },
-        { "label": "Zielen (ADS)", "value": "196 ms" },
-        { "label": "Sprint-to-Fire", "value": "142 ms" }
+        {
+          "label": "Feuerrate",
+          "value": "723 RPM"
+        },
+        {
+          "label": "Zielen (ADS)",
+          "value": "196 ms"
+        },
+        {
+          "label": "Sprint-to-Fire",
+          "value": "142 ms"
+        }
       ],
-      "pros": ["Gute Mobilität", "Gutes Handling", "Starkes Hüftfeuer-Umbaukit"],
-      "cons": ["Etwas schwächere TTK", "Hoher vertikaler Rückstoß"],
-      "trend": { "type": "buff", "date": "2026-09-16", "note": "Season-6-Start: Nahkampfschaden reicht weiter, 10 % weniger vertikaler Rückstoß" }
+      "pros": [
+        "Gute Mobilität",
+        "Gutes Handling",
+        "Starkes Hüftfeuer-Umbaukit"
+      ],
+      "cons": [
+        "Etwas schwächere TTK",
+        "Hoher vertikaler Rückstoß"
+      ],
+      "trend": {
+        "type": "buff",
+        "date": "2026-09-16",
+        "note": "Season-6-Start: Nahkampfschaden reicht weiter, 10 % weniger vertikaler Rückstoß"
+      }
     },
     {
-      "id": "rev-46", "name": "REV-46", "cls": "MP", "role": "close", "tier": "meta", "rank": 3,
+      "id": "rev-46",
+      "name": "REV-46",
+      "cls": "MP",
+      "role": "close",
+      "tier": "meta",
+      "rank": 3,
       "code": "S09-AV4JD-2ZI31-1",
       "attachments": [
-        { "slot": "Optik", "name": "LETHAL TOOLS ELO" },
-        { "slot": "Mündung", "name": "LTI STENTORIAN BRAKE", "unlock": "Waffenkammer" },
-        { "slot": "Lauf", "name": "CAUDAL TARGET BARREL", "unlock": "Level 12" },
-        { "slot": "Unterlauf", "name": "SAPPER GUARD HANDSTOP", "unlock": "Level 24" },
-        { "slot": "Magazin", "name": "KOMODO DRUM MAG", "unlock": "Level 34" }
+        {
+          "slot": "Optik",
+          "name": "LETHAL TOOLS ELO"
+        },
+        {
+          "slot": "Mündung",
+          "name": "LTI STENTORIAN BRAKE",
+          "unlock": "Waffenkammer"
+        },
+        {
+          "slot": "Lauf",
+          "name": "CAUDAL TARGET BARREL",
+          "unlock": "Level 12"
+        },
+        {
+          "slot": "Unterlauf",
+          "name": "SAPPER GUARD HANDSTOP",
+          "unlock": "Level 24"
+        },
+        {
+          "slot": "Magazin",
+          "name": "KOMODO DRUM MAG",
+          "unlock": "Level 34"
+        }
       ],
       "stats": [
-        { "label": "Feuerrate", "value": "1200 RPM" },
-        { "label": "Zielen (ADS)", "value": "201 ms" },
-        { "label": "Sprint-to-Fire", "value": "125 ms" }
+        {
+          "label": "Feuerrate",
+          "value": "1200 RPM"
+        },
+        {
+          "label": "Zielen (ADS)",
+          "value": "201 ms"
+        },
+        {
+          "label": "Sprint-to-Fire",
+          "value": "125 ms"
+        }
       ],
-      "pros": ["Sehr hohe Feuerrate", "Starke TTK im Nahkampf", "Top Mobilität", "Gut kontrollierbarer Rückstoß"],
-      "cons": ["Munition ist schnell leer", "Kimme verdeckt viel Sicht"],
-      "trend": { "type": "buff", "date": "2026-10-14", "note": "Schaft klappt 150 ms schneller ein und aus" }
+      "pros": [
+        "Sehr hohe Feuerrate",
+        "Starke TTK im Nahkampf",
+        "Top Mobilität",
+        "Gut kontrollierbarer Rückstoß"
+      ],
+      "cons": [
+        "Munition ist schnell leer",
+        "Kimme verdeckt viel Sicht"
+      ],
+      "trend": {
+        "type": "buff",
+        "date": "2026-10-14",
+        "note": "Schaft klappt 150 ms schneller ein und aus"
+      }
     },
     {
-      "id": "ryden-45k", "name": "RYDEN 45K", "cls": "MP", "role": "close", "tier": "meta", "rank": 4,
+      "id": "ryden-45k",
+      "name": "RYDEN 45K",
+      "cls": "MP",
+      "role": "close",
+      "tier": "meta",
+      "rank": 4,
       "code": "S01-34FEK-EX39Q-11",
       "attachments": [
-        { "slot": "Optik", "name": "FANG HOVERPOINT ELO", "unlock": "Waffenkammer" },
-        { "slot": "Mündung", "name": "LTI STENTORIAN BRAKE", "unlock": "Waffenkammer" },
-        { "slot": "Lauf", "name": "9\" BASILISK BARREL", "unlock": "Level 12" },
-        { "slot": "Unterlauf", "name": "FLOWGUARD FOREGRIP", "unlock": "Level 28" },
-        { "slot": "Magazin", "name": "FORWARD BREACH MAG", "unlock": "Level 27" }
+        {
+          "slot": "Optik",
+          "name": "FANG HOVERPOINT ELO",
+          "unlock": "Waffenkammer"
+        },
+        {
+          "slot": "Mündung",
+          "name": "LTI STENTORIAN BRAKE",
+          "unlock": "Waffenkammer"
+        },
+        {
+          "slot": "Lauf",
+          "name": "9\" BASILISK BARREL",
+          "unlock": "Level 12"
+        },
+        {
+          "slot": "Unterlauf",
+          "name": "FLOWGUARD FOREGRIP",
+          "unlock": "Level 28"
+        },
+        {
+          "slot": "Magazin",
+          "name": "FORWARD BREACH MAG",
+          "unlock": "Level 27"
+        }
       ],
       "stats": [
-        { "label": "Feuerrate", "value": "952 RPM" },
-        { "label": "Zielen (ADS)", "value": "168 ms" },
-        { "label": "Sprint-to-Fire", "value": "91 ms" }
+        {
+          "label": "Feuerrate",
+          "value": "952 RPM"
+        },
+        {
+          "label": "Zielen (ADS)",
+          "value": "168 ms"
+        },
+        {
+          "label": "Sprint-to-Fire",
+          "value": "91 ms"
+        }
       ],
-      "pros": ["Hohe Feuerrate", "Gute Mobilität", "Starke TTK bei Kopftreffern"],
-      "cons": ["Schwächere TTK auf den Körper", "Wenig Schaden pro Magazin", "Munition ist schnell leer"],
-      "trend": { "type": "buff", "date": "2026-10-14", "note": "Weniger View Kick und Gun Kick" }
+      "pros": [
+        "Hohe Feuerrate",
+        "Gute Mobilität",
+        "Starke TTK bei Kopftreffern"
+      ],
+      "cons": [
+        "Schwächere TTK auf den Körper",
+        "Wenig Schaden pro Magazin",
+        "Munition ist schnell leer"
+      ],
+      "trend": {
+        "type": "buff",
+        "date": "2026-10-14",
+        "note": "Weniger View Kick und Gun Kick"
+      }
     },
     {
-      "id": "strider-300", "name": "STRIDER 300", "cls": "Scharfschützengewehr", "role": "sniper", "tier": "meta", "rank": 1,
+      "id": "strider-300",
+      "name": "STRIDER 300",
+      "cls": "Scharfschützengewehr",
+      "role": "sniper",
+      "tier": "meta",
+      "rank": 1,
       "code": "R07-2JD6P-9UF4L-IW11",
       "attachments": [
-        { "slot": "Mündung", "name": "MONOLITHIC SUPPRESSOR", "unlock": "Level 33" },
-        { "slot": "Lauf", "name": "25\" BOWEN GROOVED BARREL", "unlock": "Level 21" },
-        { "slot": "Unterlauf", "name": "CORNERSTONE-642 GUARD", "unlock": "Level 9" },
-        { "slot": "Hintergriff", "name": "HATCH QUICK GRIP", "unlock": "Level 23" },
-        { "slot": "Feuermodus", "name": ".300 WM OVERPRESSURED", "unlock": "Level 24" }
+        {
+          "slot": "Mündung",
+          "name": "MONOLITHIC SUPPRESSOR",
+          "unlock": "Level 33"
+        },
+        {
+          "slot": "Lauf",
+          "name": "25\" BOWEN GROOVED BARREL",
+          "unlock": "Level 21"
+        },
+        {
+          "slot": "Unterlauf",
+          "name": "CORNERSTONE-642 GUARD",
+          "unlock": "Level 9"
+        },
+        {
+          "slot": "Hintergriff",
+          "name": "HATCH QUICK GRIP",
+          "unlock": "Level 23"
+        },
+        {
+          "slot": "Feuermodus",
+          "name": ".300 WM OVERPRESSURED",
+          "unlock": "Level 24"
+        }
       ],
       "stats": [
-        { "label": "Projektil", "value": "1332 m/s" },
-        { "label": "Zielen (ADS)", "value": "605 ms" },
-        { "label": "Hitscan", "value": "66,6 m" }
+        {
+          "label": "Projektil",
+          "value": "1332 m/s"
+        },
+        {
+          "label": "Zielen (ADS)",
+          "value": "605 ms"
+        },
+        {
+          "label": "Hitscan",
+          "value": "66,6 m"
+        }
       ],
-      "pros": ["One-Shot-Kopftreffer", "Exzellente Projektilgeschwindigkeit"],
-      "cons": ["Langsames Zielen", "Hoher Rückstoß", "One-Shot-Kopftreffer auf jede Distanz nur mit einem bestimmten Lauf"]
-    },
-    { "id": "vx-compact", "name": "VX COMPACT", "cls": "Sturmgewehr", "role": "long", "tier": "a", "rank": 1, "note": "auch als Sniper-Support" },
-    { "id": "peacekeeper-mk1", "name": "PEACEKEEPER MK1", "cls": "Sturmgewehr", "role": "long", "tier": "a", "rank": 2 },
-    { "id": "m15-mod-0", "name": "M15 MOD 0", "cls": "Sturmgewehr", "role": "long", "tier": "a", "rank": 3 },
-    { "id": "sturmwolf-45", "name": "STURMWOLF 45", "cls": "MP", "role": "close", "tier": "a", "rank": 1 },
-    { "id": "carbon-57", "name": "CARBON 57", "cls": "MP", "role": "close", "tier": "a", "rank": 2 }
-  ],
-  "patches": [
-    {
-      "id": "2026-10-14", "date": "2026-10-14", "title": "Season 6 · Überraschungs-Update",
-      "changes": [
-        { "type": "buff", "weapon": "DS20 MIRAGE", "text": "Besserer Hüftfeuer-Spread, weniger View Kick, schnellere Granatwerfer-Projektile" },
-        { "type": "buff", "weapon": "TR51 PARA", "text": "Bolt Carrier Group gibt jetzt 6 % mehr Feuerrate" },
-        { "type": "buff", "weapon": "GREMLIN", "text": "4 % schnellere Bewegung; Procural Extended Mag ohne Malus auf Sprint-to-Fire und Nachladen" },
-        { "type": "buff", "weapon": "REV-46", "text": "Schaft klappt 150 ms schneller ein und aus" },
-        { "type": "buff", "weapon": "RYDEN 45K", "text": "Weniger View Kick und Gun Kick" },
-        { "type": "buff", "weapon": "SOKOL 545", "text": "Warpath Blitz Kit: ADS-Bonus 20 → 30 ms, Sprint-to-Fire-Bonus 5 → 15 ms" },
-        { "type": "buff", "weapon": "XM325", "text": "Weniger View Kick und Streuung" },
-        { "type": "buff", "weapon": "KRS 7.62", "text": "3 % schnellere Bewegung, weniger View Kick" },
-        { "type": "nerf", "weapon": "VMP", "text": "Mehr View Kick und Streuung" },
-        { "type": "nerf", "weapon": "M10 BREACHER", "text": "Argus Lever: Repetierzeit 450 → 500 ms" },
-        { "type": "nerf", "weapon": "MAMMOTH", "text": "Etwas mehr View Kick" }
+      "pros": [
+        "One-Shot-Kopftreffer",
+        "Exzellente Projektilgeschwindigkeit"
+      ],
+      "cons": [
+        "Langsames Zielen",
+        "Hoher Rückstoß",
+        "One-Shot-Kopftreffer auf jede Distanz nur mit einem bestimmten Lauf"
       ]
     },
     {
-      "id": "2026-09-16", "date": "2026-09-16", "title": "Season 6 · Start",
+      "id": "vx-compact",
+      "name": "VX COMPACT",
+      "cls": "Sturmgewehr",
+      "role": "long",
+      "tier": "a",
+      "rank": 1,
+      "note": "auch als Sniper-Support"
+    },
+    {
+      "id": "peacekeeper-mk1",
+      "name": "PEACEKEEPER MK1",
+      "cls": "Sturmgewehr",
+      "role": "long",
+      "tier": "a",
+      "rank": 2
+    },
+    {
+      "id": "m15-mod-0",
+      "name": "M15 MOD 0",
+      "cls": "Sturmgewehr",
+      "role": "long",
+      "tier": "a",
+      "rank": 3
+    },
+    {
+      "id": "sturmwolf-45",
+      "name": "STURMWOLF 45",
+      "cls": "MP",
+      "role": "close",
+      "tier": "a",
+      "rank": 1
+    },
+    {
+      "id": "carbon-57",
+      "name": "CARBON 57",
+      "cls": "MP",
+      "role": "close",
+      "tier": "a",
+      "rank": 2
+    }
+  ],
+  "patches": [
+    {
+      "id": "2026-10-14",
+      "date": "2026-10-14",
+      "title": "Season 6 · Überraschungs-Update",
+      "changes": [
+        {
+          "type": "buff",
+          "weapon": "DS20 MIRAGE",
+          "text": "Besserer Hüftfeuer-Spread, weniger View Kick, schnellere Granatwerfer-Projektile"
+        },
+        {
+          "type": "buff",
+          "weapon": "TR51 PARA",
+          "text": "Bolt Carrier Group gibt jetzt 6 % mehr Feuerrate"
+        },
+        {
+          "type": "buff",
+          "weapon": "GREMLIN",
+          "text": "4 % schnellere Bewegung; Procural Extended Mag ohne Malus auf Sprint-to-Fire und Nachladen"
+        },
+        {
+          "type": "buff",
+          "weapon": "REV-46",
+          "text": "Schaft klappt 150 ms schneller ein und aus"
+        },
+        {
+          "type": "buff",
+          "weapon": "RYDEN 45K",
+          "text": "Weniger View Kick und Gun Kick"
+        },
+        {
+          "type": "buff",
+          "weapon": "SOKOL 545",
+          "text": "Warpath Blitz Kit: ADS-Bonus 20 → 30 ms, Sprint-to-Fire-Bonus 5 → 15 ms"
+        },
+        {
+          "type": "buff",
+          "weapon": "XM325",
+          "text": "Weniger View Kick und Streuung"
+        },
+        {
+          "type": "buff",
+          "weapon": "KRS 7.62",
+          "text": "3 % schnellere Bewegung, weniger View Kick"
+        },
+        {
+          "type": "nerf",
+          "weapon": "VMP",
+          "text": "Mehr View Kick und Streuung"
+        },
+        {
+          "type": "nerf",
+          "weapon": "M10 BREACHER",
+          "text": "Argus Lever: Repetierzeit 450 → 500 ms"
+        },
+        {
+          "type": "nerf",
+          "weapon": "MAMMOTH",
+          "text": "Etwas mehr View Kick"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-16",
+      "date": "2026-09-16",
+      "title": "Season 6 · Start",
       "note": "Auszug: nur die Änderungen an aktuellen Meta-Waffen.",
       "changes": [
-        { "type": "buff", "weapon": "VOYAK KT-3", "text": "Mehr Schaden auf allen Distanzen, weniger Rückstoß, schnellere Projektile" },
-        { "type": "buff", "weapon": "MPC-25", "text": "Nahkampfschaden reicht weiter (13 → 13,5 m), 8 % weniger Streuung, 10 % weniger vertikaler Rückstoß" }
+        {
+          "type": "buff",
+          "weapon": "VOYAK KT-3",
+          "text": "Mehr Schaden auf allen Distanzen, weniger Rückstoß, schnellere Projektile"
+        },
+        {
+          "type": "buff",
+          "weapon": "MPC-25",
+          "text": "Nahkampfschaden reicht weiter (13 → 13,5 m), 8 % weniger Streuung, 10 % weniger vertikaler Rückstoß"
+        }
+      ]
+    }
+  ],
+  "settings": [
+    {
+      "id": "controller",
+      "title": "Controller",
+      "note": "Startwerte für PS5, Xbox und PC mit Controller. Ändere immer nur eine Einstellung und teste sie im Schießstand.",
+      "source": "GamePro (Black Ops 7 / Warzone), GamesRadar",
+      "sections": [
+        {
+          "title": "Zielen",
+          "items": [
+            {
+              "name": "Tastenbelegung",
+              "value": "Taktisch",
+              "hint": "oder Tasten-Springer"
+            },
+            {
+              "name": "Empfindlichkeit horizontal / vertikal",
+              "value": "1.4 – 1.7",
+              "hint": "Standard 1.2 ist zu langsam. Wenn du über das Ziel ziehst: niedriger."
+            },
+            {
+              "name": "Zoom-Empfindlichkeit",
+              "value": "1.00 – 1.20",
+              "hint": "1.00 bei kleinem Zoom, 1.20 bei großem Zoom (bei Empfindlichkeit ca. 1.4)"
+            },
+            {
+              "name": "Reaktionskurve",
+              "value": "Standard",
+              "hint": "in Warzone; im BO7-Multiplayer Dynamisch"
+            },
+            {
+              "name": "ADS-Übergang",
+              "value": "Sofort"
+            },
+            {
+              "name": "Zielhilfe",
+              "value": "Standard"
+            }
+          ]
+        },
+        {
+          "title": "Tote Zonen",
+          "items": [
+            {
+              "name": "Linker Stick min",
+              "value": "3 – 4",
+              "hint": "so niedrig wie möglich ohne Stick-Drift"
+            },
+            {
+              "name": "Linker Stick max",
+              "value": "60"
+            },
+            {
+              "name": "Rechter Stick min",
+              "value": "3 – 4",
+              "hint": "so niedrig wie möglich ohne Stick-Drift"
+            },
+            {
+              "name": "Rechter Stick max",
+              "value": "99"
+            },
+            {
+              "name": "L2 / R2 (LT / RT)",
+              "value": "5"
+            }
+          ]
+        },
+        {
+          "title": "Controller & Bewegung",
+          "items": [
+            {
+              "name": "Vibration",
+              "value": "Aus"
+            },
+            {
+              "name": "Trigger-Effekt (DualSense)",
+              "value": "Aus"
+            },
+            {
+              "name": "Sprint-Hilfe",
+              "value": "Taktischer Sprint"
+            },
+            {
+              "name": "Rutschen / Hechten",
+              "value": "Hybrid"
+            },
+            {
+              "name": "Automatischer Fallschirm",
+              "value": "Aus"
+            },
+            {
+              "name": "Sprinten bricht Nachladen ab",
+              "value": "An"
+            },
+            {
+              "name": "Interagieren / Nachladen",
+              "value": "Nachladen bevorzugen"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mkb",
+      "title": "Maus & Tastatur",
+      "note": "Startwerte für den PC. Die Maus-Empfindlichkeit hängt von deiner DPI ab: höhere DPI, niedrigere Empfindlichkeit.",
+      "source": "Gfinity, GGRecon, Keychron, Charlie Intel (Warzone-Guides)",
+      "sections": [
+        {
+          "title": "Maus",
+          "items": [
+            {
+              "name": "DPI",
+              "value": "800",
+              "hint": "üblich sind 400 – 1600"
+            },
+            {
+              "name": "Maus-Empfindlichkeit",
+              "value": "4 – 6",
+              "hint": "bei 800 DPI; bei 400 DPI etwa doppelt so hoch"
+            },
+            {
+              "name": "ADS-Multiplikator",
+              "value": "1.00",
+              "hint": "zwischen 0.80 und 1.00, Profis meist 1.00"
+            },
+            {
+              "name": "Monitor-Distanz-Koeffizient",
+              "value": "1.33"
+            },
+            {
+              "name": "Mausbeschleunigung",
+              "value": "0"
+            },
+            {
+              "name": "Mausfilterung",
+              "value": "0"
+            },
+            {
+              "name": "Mausglättung",
+              "value": "Aus"
+            }
+          ]
+        },
+        {
+          "title": "Bewegung",
+          "items": [
+            {
+              "name": "Sprint-Hilfe",
+              "value": "Taktischer Sprint"
+            },
+            {
+              "name": "Rutschen / Hechten",
+              "value": "Hybrid"
+            },
+            {
+              "name": "Automatischer Fallschirm",
+              "value": "Aus"
+            },
+            {
+              "name": "Sprinten bricht Nachladen ab",
+              "value": "An"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "graphics",
+      "title": "Grafik",
+      "note": "Für viele FPS, wenig Verzögerung und gute Sichtbarkeit am PC. Konsolen haben nur die Ansicht-Einstellungen.",
+      "source": "setup.gg (Sept. 2026), Gfinity (Black Ops 7)",
+      "sections": [
+        {
+          "title": "Anzeige & Leistung",
+          "items": [
+            {
+              "name": "Anzeigemodus",
+              "value": "Vollbild exklusiv"
+            },
+            {
+              "name": "Auflösung",
+              "value": "Nativ"
+            },
+            {
+              "name": "Bildwiederholrate",
+              "value": "Maximum des Monitors"
+            },
+            {
+              "name": "Render-Auflösung",
+              "value": "100"
+            },
+            {
+              "name": "Dynamische Auflösung",
+              "value": "Aus"
+            },
+            {
+              "name": "V-Sync",
+              "value": "Aus"
+            },
+            {
+              "name": "FPS-Limit",
+              "value": "Monitor-Hz",
+              "hint": "mit G-Sync/FreeSync 3 FPS darunter, z.B. 141 bei 144 Hz"
+            },
+            {
+              "name": "NVIDIA Reflex",
+              "value": "An + Boost",
+              "hint": "AMD: Anti-Lag an"
+            },
+            {
+              "name": "Frame Generation",
+              "value": "Aus"
+            },
+            {
+              "name": "Upscaling / Schärfe",
+              "value": "FidelityFX CAS 80 – 90",
+              "hint": "bei 1440p/4K und schwacher Grafikkarte: DLSS/FSR Qualität"
+            }
+          ]
+        },
+        {
+          "title": "Qualität",
+          "items": [
+            {
+              "name": "VRAM-Ziel",
+              "value": "70 – 80 %"
+            },
+            {
+              "name": "Texturauflösung",
+              "value": "Normal",
+              "hint": "bei wenig Grafikspeicher: Niedrig"
+            },
+            {
+              "name": "Anisotroper Texturfilter",
+              "value": "Normal – Hoch"
+            },
+            {
+              "name": "Partikelauflösung",
+              "value": "Sehr niedrig"
+            },
+            {
+              "name": "Shader-Qualität",
+              "value": "Niedrig"
+            },
+            {
+              "name": "Schattenqualität",
+              "value": "Niedrig"
+            },
+            {
+              "name": "Bildschirmraum-Schatten, -Beleuchtung, -Reflexionen",
+              "value": "Aus"
+            },
+            {
+              "name": "Volumetrische Qualität",
+              "value": "Niedrig"
+            },
+            {
+              "name": "Dauerhafte Effekte",
+              "value": "Aus"
+            },
+            {
+              "name": "Textur-Streaming auf Abruf",
+              "value": "Minimal"
+            }
+          ]
+        },
+        {
+          "title": "Ansicht (auch Konsole)",
+          "items": [
+            {
+              "name": "Sichtfeld (FOV)",
+              "value": "100 – 120"
+            },
+            {
+              "name": "ADS-Sichtfeld",
+              "value": "Betroffen"
+            },
+            {
+              "name": "Waffen-Sichtfeld",
+              "value": "Breit"
+            },
+            {
+              "name": "Fahrzeug-Sichtfeld",
+              "value": "Breit"
+            },
+            {
+              "name": "Bewegungsunschärfe (Welt & Waffe)",
+              "value": "Aus"
+            },
+            {
+              "name": "Tiefenschärfe",
+              "value": "Aus"
+            },
+            {
+              "name": "Filmkörnung",
+              "value": "0"
+            },
+            {
+              "name": "Kamerabewegung",
+              "value": "Am geringsten"
+            }
+          ]
+        }
       ]
     }
   ]
