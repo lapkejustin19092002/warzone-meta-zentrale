@@ -1,0 +1,757 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Warzone Meta-Zentrale</title>
+<meta name="description" content="Die aktuelle Warzone-Meta: beste Loadouts mit Aufsätzen und Build-Codes, Buffs und Nerfs. Jede Woche aktualisiert.">
+<meta name="theme-color" content="#0A0D10">
+<meta name="color-scheme" content="dark">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/icon-192.png" type="image/png">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="WZ Meta">
+<meta property="og:title" content="Warzone Meta-Zentrale">
+<meta property="og:description" content="Beste Warzone-Loadouts mit Build-Codes, Buffs und Nerfs. Jede Woche aktualisiert.">
+<meta property="og:image" content="icons/icon-512.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Teko:wght@500;600;700&family=Barlow+Condensed:wght@500;600;700&family=Barlow:wght@400;500;600&family=Share+Tech+Mono&display=swap">
+<style>
+/* Layout: Taktik-HUD auf Kartenraster. Kopf mit Titel, HUD-Zählern und Minimap-Kreis; darunter Loadout-Drop, Waffen als Loot-Karten mit Seltenheitsfarbe, Patch-Intel am Ende. Bewusst nur dunkel, wie das Spiel-Menü. */
+:root {
+  color-scheme: dark;
+  --bg: #0A0D10;
+  --panel: #12171C;
+  --panel-2: #192028;
+  --line: #26313B;
+  --line-strong: #3B4855;
+  --ink: #E9EDF0;
+  --muted: #8A98A4;
+  --dim: #5A6772;
+  --accent: #FF8A1F;
+  --on-accent: #140A01;
+  --legendary: #FFB020;
+  --epic: #B26DFF;
+  --plate: #4FA8FF;
+  --buff: #5BE38C;
+  --nerf: #FF5C57;
+  --gas: #FF6A1A;
+  --grid: rgba(255, 255, 255, .035);
+  --glow-gas: rgba(255, 106, 26, .15);
+  --glow-plate: rgba(79, 168, 255, .07);
+  --sheen: rgba(255, 255, 255, .05);
+  --f-display: "Teko", "Arial Narrow", Impact, sans-serif;
+  --f-ui: "Barlow Condensed", "Arial Narrow", "Segoe UI", sans-serif;
+  --f-body: "Barlow", "Segoe UI", system-ui, sans-serif;
+  --f-mono: "Share Tech Mono", ui-monospace, Consolas, monospace;
+  --cut: 14px;
+  padding-top: env(safe-area-inset-top, 0px);
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+  background: var(--bg);
+}
+
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+img { max-width: 100%; }
+body {
+  margin: 0;
+  background-color: var(--bg);
+  background-image:
+    radial-gradient(1100px 560px at 88% -8%, var(--glow-gas), transparent 62%),
+    radial-gradient(900px 520px at -12% 105%, var(--glow-plate), transparent 60%),
+    linear-gradient(var(--grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+  background-size: auto, auto, 72px 72px, 72px 72px;
+  color: var(--ink);
+  font-family: var(--f-body);
+  font-size: 15px;
+  line-height: 1.5;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 28px 56px;
+  -webkit-text-size-adjust: 100%;
+}
+.wrap { max-width: 1200px; margin: 0 auto; display: grid; gap: 44px; }
+h1, h2, h3, h4 { text-wrap: balance; margin: 0; }
+button { font: inherit; color: inherit; cursor: pointer; }
+button:focus-visible, a:focus-visible, summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+a { color: var(--accent); }
+.label {
+  font-family: var(--f-ui); font-weight: 600; font-size: 12.5px;
+  letter-spacing: .16em; text-transform: uppercase; color: var(--muted);
+}
+.cut { clip-path: polygon(0 0, calc(100% - var(--cut)) 0, 100% var(--cut), 100% 100%, 0 100%); }
+
+/* ---------- Kopf ---------- */
+.hero { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 440px); gap: 28px; align-items: stretch; }
+.hero-text { display: grid; gap: 18px; align-content: end; min-width: 0; }
+.hero .label { color: var(--accent); }
+.hero h1 {
+  font-family: var(--f-display); font-weight: 700;
+  font-size: clamp(64px, 11vw, 136px); line-height: .78; letter-spacing: .005em;
+  text-transform: uppercase; padding-top: .12em;
+}
+.hero h1 span { color: var(--accent); display: block; }
+.status { display: flex; flex-wrap: wrap; gap: 8px; }
+.pill {
+  display: inline-flex; align-items: center; gap: 7px;
+  font-family: var(--f-ui); font-weight: 600; font-size: 14px; letter-spacing: .08em; text-transform: uppercase;
+  padding: 4px 10px; background: var(--panel-2); border-left: 2px solid var(--line-strong); white-space: nowrap;
+}
+.pill.ok { border-left-color: var(--buff); }
+.pill.ok::before { content: ""; width: 7px; height: 7px; background: var(--buff); box-shadow: 0 0 8px var(--buff); }
+.pill.warn { border-left-color: var(--accent); color: var(--accent); }
+
+.actions { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.btn {
+  display: inline-flex; align-items: center; gap: 8px; border: 1px solid var(--line-strong); background: var(--panel);
+  padding: 7px 14px; font-family: var(--f-ui); font-weight: 700; font-size: 15px; letter-spacing: .1em; text-transform: uppercase; color: var(--ink);
+}
+.btn:hover { border-color: var(--muted); }
+.btn.primary { background: var(--accent); border-color: var(--accent); color: var(--on-accent); }
+.btn.primary:hover { filter: brightness(1.08); }
+.btn svg { width: 16px; height: 16px; }
+.hint { font-size: 13px; color: var(--muted); }
+
+.hud { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); max-width: 520px; background: var(--panel); }
+.hud > div { padding: 10px 14px 8px; display: grid; }
+.hud > div + div { border-left: 1px solid var(--line); }
+.hud b { font-family: var(--f-display); font-weight: 600; font-size: 44px; line-height: .9; font-variant-numeric: tabular-nums; }
+.hud b.buff { color: var(--buff); }
+.hud b.nerf { color: var(--nerf); }
+.hud span { font-family: var(--f-ui); font-weight: 600; font-size: 12px; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); line-height: 1.2; }
+
+.zone { background: var(--panel); position: relative; display: grid; grid-template-columns: 150px minmax(0, 1fr); gap: 16px; padding: 16px; align-items: center; }
+.zone::before, .zone::after { content: ""; position: absolute; width: 16px; height: 16px; pointer-events: none; }
+.zone::before { left: 0; top: 0; border-left: 2px solid var(--accent); border-top: 2px solid var(--accent); }
+.zone::after { right: 0; bottom: 0; border-right: 2px solid var(--accent); border-bottom: 2px solid var(--accent); }
+.zone svg { width: 150px; height: 150px; display: block; }
+.zone .map-bg { fill: var(--panel-2); }
+.zone .map-grid { stroke: var(--line); stroke-width: 1; }
+.zone .map-txt { fill: var(--dim); font-family: var(--f-mono); font-size: 9px; }
+.zone .gas { fill: var(--gas); fill-opacity: .26; }
+.zone .ring { fill: none; stroke: var(--ink); stroke-width: 1.6; }
+.zone .next { fill: none; stroke: var(--ink); stroke-width: 1; stroke-dasharray: 4 3; opacity: .7; }
+.zone .me { fill: var(--legendary); }
+.zone .sweep { transform-box: view-box; transform-origin: 100px 100px; }
+.zone .sweep-fill { fill: url(#sweepGrad); }
+.zone-info { display: grid; gap: 4px; min-width: 0; }
+.zone-info .label { color: var(--gas); }
+.zone-info .days { font-family: var(--f-display); font-weight: 600; font-size: 56px; line-height: .85; }
+.zone-info .days small { font-size: 26px; color: var(--muted); margin-left: 4px; }
+.zone-info h2 { font-family: var(--f-ui); font-weight: 700; font-size: 19px; line-height: 1.15; text-transform: uppercase; letter-spacing: .03em; }
+.zone-info p { margin: 0; font-size: 13px; color: var(--muted); line-height: 1.4; }
+.bar { height: 6px; background: var(--panel-2); margin-top: 6px; position: relative; overflow: hidden; }
+.bar i { position: absolute; inset: 0 auto 0 0; background: var(--gas); }
+.bar-cap { font-family: var(--f-mono); font-size: 11.5px; color: var(--dim); }
+
+/* ---------- Abschnittsköpfe ---------- */
+.section-head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: end; gap: 12px 20px; margin-bottom: 16px; padding-bottom: 10px; border-bottom: 1px solid var(--line); }
+.section-head h2 { font-family: var(--f-display); font-weight: 600; font-size: 42px; line-height: .8; text-transform: uppercase; letter-spacing: .01em; padding-top: .12em; }
+.section-head h2::before { content: ""; display: inline-block; width: 10px; height: 10px; background: var(--accent); margin-right: 12px; vertical-align: .18em; transform: rotate(45deg); }
+
+/* ---------- Loadout-Drop ---------- */
+.kit { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 6px; }
+.slot { background: var(--panel); padding: 12px 14px; display: grid; gap: 3px; align-content: start; min-width: 0; box-shadow: inset 0 1px 0 var(--sheen); }
+.slot.gun { grid-column: span 3; border-bottom: 3px solid var(--legendary); padding-bottom: 12px; }
+.slot.perk { grid-column: span 2; border-top: 2px solid var(--plate); }
+.slot.eq { grid-column: span 3; border-top: 2px solid var(--line-strong); }
+.slot strong { font-family: var(--f-ui); font-weight: 700; font-size: 18px; letter-spacing: .02em; text-transform: uppercase; overflow-wrap: anywhere; }
+.slot.gun strong { font-family: var(--f-display); font-weight: 600; font-size: 36px; line-height: .85; padding-top: .1em; }
+.slot .row { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-top: 4px; }
+.slot code { font-family: var(--f-mono); font-size: 13px; color: var(--muted); overflow-wrap: anywhere; }
+.slot small { color: var(--dim); font-size: 12.5px; }
+
+/* ---------- Tabs ---------- */
+.tabs-row { display: flex; flex-wrap: wrap; gap: 10px 18px; align-items: center; }
+.tabs { display: flex; align-items: center; gap: 2px; flex-wrap: wrap; }
+.tabs kbd {
+  font-family: var(--f-mono); font-size: 12px; color: var(--muted);
+  border: 1px solid var(--line-strong); padding: 1px 6px; margin: 0 6px; background: var(--panel);
+}
+.tabs button {
+  border: 0; background: transparent; padding: 6px 10px 4px;
+  font-family: var(--f-ui); font-weight: 700; font-size: 17px; letter-spacing: .08em; text-transform: uppercase;
+  color: var(--muted); border-bottom: 2px solid transparent;
+}
+.tabs button:hover { color: var(--ink); }
+.tabs button[aria-pressed="true"] { color: var(--ink); border-bottom-color: var(--accent); }
+.tabs .n { font-family: var(--f-mono); font-size: 12px; color: var(--accent); margin-left: 5px; }
+.toggle {
+  display: inline-flex; align-items: center; gap: 7px; background: var(--panel); border: 1px solid var(--line-strong);
+  padding: 5px 12px; font-family: var(--f-ui); font-weight: 700; font-size: 15px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted);
+}
+.toggle svg { width: 15px; height: 15px; }
+.toggle[aria-pressed="true"] { border-color: var(--legendary); color: var(--legendary); }
+.toggle[aria-pressed="true"] path { fill: currentColor; }
+
+/* ---------- Loot-Karten ---------- */
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 350px), 1fr)); gap: 14px; align-items: start; }
+.card {
+  --rar: var(--legendary);
+  position: relative; display: grid; gap: 14px; padding: 18px 18px 20px; min-width: 0;
+  background:
+    linear-gradient(to top, color-mix(in srgb, var(--rar) 16%, transparent), transparent 38%),
+    var(--panel);
+  box-shadow: inset 0 1px 0 var(--sheen);
+  transition: transform .15s ease;
+}
+.card::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 4px; background: var(--rar); box-shadow: 0 0 18px var(--rar); }
+.card:hover { transform: translateY(-2px); }
+.card-head { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; gap: 14px; align-items: start; }
+.rank { font-family: var(--f-display); font-weight: 700; font-size: 64px; line-height: .72; color: var(--rar); padding-top: .1em; min-width: .9em; }
+.rank span { font-size: 26px; color: var(--dim); vertical-align: top; margin-right: 1px; }
+.rarity { font-family: var(--f-ui); font-weight: 700; font-size: 12px; letter-spacing: .18em; text-transform: uppercase; color: var(--rar); }
+.card h3 { font-family: var(--f-display); font-weight: 600; font-size: 38px; line-height: .82; text-transform: uppercase; padding-top: .14em; overflow-wrap: anywhere; }
+.card .cls { margin: 4px 0 0; font-family: var(--f-ui); font-weight: 600; font-size: 14px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+.fav { border: 0; background: transparent; padding: 4px; color: var(--dim); margin-right: 6px; }
+.fav svg { width: 22px; height: 22px; display: block; }
+.fav:hover { color: var(--ink); }
+.fav[aria-pressed="true"] { color: var(--legendary); }
+.fav[aria-pressed="true"] path { fill: currentColor; }
+
+.chips { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+.chip {
+  font-family: var(--f-ui); font-weight: 700; font-size: 13px; letter-spacing: .1em; text-transform: uppercase;
+  padding: 2px 8px; background: var(--panel-2); color: var(--muted);
+}
+.chip.buff { color: var(--buff); background: color-mix(in srgb, var(--buff) 13%, transparent); }
+.chip.nerf { color: var(--nerf); background: color-mix(in srgb, var(--nerf) 13%, transparent); }
+.trend-note { margin: -6px 0 0; font-size: 13.5px; color: var(--muted); }
+
+.gunsmith { display: grid; gap: 6px; }
+.gunsmith > .label { font-size: 11.5px; color: var(--dim); }
+.att { margin: 0; display: grid; gap: 3px; }
+.att > div { display: grid; grid-template-columns: 92px minmax(0, 1fr); gap: 10px; padding: 6px 10px; background: var(--panel-2); border-left: 2px solid var(--line-strong); }
+.att dt { font-family: var(--f-ui); font-weight: 600; font-size: 12px; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); padding-top: 2px; }
+.att dd { margin: 0; font-family: var(--f-ui); font-weight: 600; font-size: 15.5px; letter-spacing: .02em; overflow-wrap: anywhere; line-height: 1.25; }
+.att dd small { display: block; font-family: var(--f-mono); font-weight: 400; font-size: 11.5px; letter-spacing: 0; color: var(--dim); margin-top: 1px; }
+.att dd small.armory { color: var(--plate); }
+
+.code { display: flex; align-items: stretch; flex-wrap: wrap; gap: 0; border: 1px solid var(--line-strong); background: var(--bg); }
+.code .label { font-size: 11px; padding: 8px 10px; border-right: 1px solid var(--line); display: flex; align-items: center; }
+.code code { font-family: var(--f-mono); font-size: 15px; letter-spacing: .04em; color: var(--ink); padding: 7px 10px; flex: 1 1 auto; min-width: 0; overflow-wrap: anywhere; display: flex; align-items: center; }
+.copy {
+  border: 0; background: var(--accent); color: var(--on-accent); padding: 6px 14px;
+  font-family: var(--f-ui); font-weight: 700; font-size: 14px; letter-spacing: .1em; text-transform: uppercase;
+}
+.copy:hover { filter: brightness(1.1); }
+.copy.done { background: var(--buff); }
+
+.stats { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.stats div { display: grid; padding: 0 10px; }
+.stats div:first-child { padding-left: 0; }
+.stats div + div { border-left: 1px solid var(--line); }
+.stats b { font-family: var(--f-display); font-weight: 500; font-size: 28px; line-height: .9; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.stats span { font-family: var(--f-ui); font-weight: 600; font-size: 11.5px; letter-spacing: .12em; text-transform: uppercase; color: var(--dim); }
+
+details { border-top: 1px solid var(--line); padding-top: 10px; }
+summary { font-family: var(--f-ui); font-weight: 700; font-size: 14px; letter-spacing: .12em; text-transform: uppercase; cursor: pointer; color: var(--muted); }
+summary:hover { color: var(--ink); }
+.more { display: grid; gap: 14px; padding-top: 12px; }
+.proscons { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+.proscons ul { margin: 4px 0 0; padding-left: 16px; font-size: 14px; display: grid; gap: 3px; }
+.proscons .plus .label { color: var(--buff); }
+.proscons .minus .label { color: var(--nerf); }
+.alt { display: grid; gap: 6px; }
+.alt h4 { font-family: var(--f-ui); font-weight: 700; font-size: 15px; letter-spacing: .08em; text-transform: uppercase; }
+
+/* ---------- A-Tier ---------- */
+.atier { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 200px), 1fr)); gap: 8px; }
+.atier > div {
+  --rar: var(--epic);
+  position: relative; display: grid; gap: 2px; padding: 12px 14px 14px;
+  background: linear-gradient(to top, color-mix(in srgb, var(--rar) 14%, transparent), transparent 60%), var(--panel);
+}
+.atier > div::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 3px; background: var(--rar); }
+.atier .rarity { font-size: 11px; }
+.atier strong { font-family: var(--f-display); font-weight: 600; font-size: 27px; line-height: .9; text-transform: uppercase; padding-top: .1em; }
+.atier small { color: var(--muted); font-size: 13px; }
+
+/* ---------- Patch-Intel ---------- */
+.patches { display: grid; gap: 14px; }
+.patch { background: var(--panel); padding: 16px 18px; display: grid; gap: 10px; box-shadow: inset 0 1px 0 var(--sheen); }
+.patch-head { display: flex; flex-wrap: wrap; gap: 6px 14px; align-items: baseline; }
+.patch-head h3 { font-family: var(--f-ui); font-weight: 700; font-size: 20px; letter-spacing: .04em; text-transform: uppercase; }
+.patch-head time { font-family: var(--f-mono); font-size: 13px; color: var(--accent); }
+.changes { margin: 0; padding: 0; list-style: none; display: grid; }
+.changes li { display: grid; grid-template-columns: 22px minmax(110px, 170px) minmax(0, 1fr); gap: 10px; padding: 8px 0; border-top: 1px solid var(--line); align-items: baseline; }
+.changes .mk { font-size: 12px; }
+.changes .buff .mk { color: var(--buff); }
+.changes .nerf .mk { color: var(--nerf); }
+.changes strong { font-family: var(--f-ui); font-weight: 700; font-size: 16.5px; letter-spacing: .03em; }
+.changes strong.in-meta { color: var(--legendary); }
+.changes span { font-size: 14px; min-width: 0; }
+.patch .note { margin: 0; font-size: 13px; color: var(--dim); }
+
+/* ---------- Leer- und Ladezustand ---------- */
+.empty { background: var(--panel); border-left: 3px solid var(--accent); padding: 22px; display: grid; gap: 6px; max-width: 640px; }
+.empty h3 { font-family: var(--f-display); font-weight: 600; font-size: 30px; line-height: .9; text-transform: uppercase; padding-top: .1em; }
+.empty p { margin: 0; color: var(--muted); }
+
+footer { border-top: 1px solid var(--line); padding-top: 18px; display: grid; gap: 6px; font-size: 13.5px; color: var(--muted); max-width: 78ch; }
+footer p { margin: 0; }
+footer .legal { color: var(--dim); font-size: 12.5px; }
+
+.toast {
+  position: fixed; left: 50%; bottom: calc(20px + env(safe-area-inset-bottom, 0px)); transform: translateX(-50%);
+  background: var(--panel-2); border-left: 3px solid var(--buff); padding: 10px 16px; font-family: var(--f-ui); font-weight: 700;
+  letter-spacing: .08em; text-transform: uppercase; font-size: 14px; z-index: 20; max-width: calc(100% - 32px);
+}
+
+@media (max-width: 900px) {
+  .hero { grid-template-columns: minmax(0, 1fr); }
+}
+@media (max-width: 560px) {
+  .zone { grid-template-columns: 112px minmax(0, 1fr); gap: 12px; padding: 12px; }
+  .zone svg { width: 112px; height: 112px; }
+  .zone-info .days { font-size: 46px; }
+  .slot.gun, .slot.eq { grid-column: span 6; }
+  .hud b { font-size: 36px; }
+  .changes li { grid-template-columns: 18px minmax(0, 1fr); }
+  .changes li span { grid-column: 2; }
+  .proscons { grid-template-columns: minmax(0, 1fr); }
+  .att > div { grid-template-columns: 78px minmax(0, 1fr); }
+  .tabs kbd { display: none; }
+  .tabs button { padding-inline: 7px; font-size: 16px; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .zone .sweep { animation: sweep 5s linear infinite; }
+  @keyframes sweep { to { transform: rotate(360deg); } }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="hero">
+    <div class="hero-text">
+      <span class="label">Call of Duty: Warzone · Battle Royale</span>
+      <h1>Meta<span>Zentrale</span></h1>
+      <div class="hud" id="hud" aria-label="Lage auf einen Blick">
+        <div><b>–</b><span>Meta-Waffen</span></div>
+        <div><b class="buff">–</b><span>Buffs letzter Patch</span></div>
+        <div><b class="nerf">–</b><span>Nerfs letzter Patch</span></div>
+      </div>
+      <div class="status" id="status"><span class="pill">Lade Meta-Daten …</span></div>
+      <div class="actions">
+        <button type="button" class="btn primary" id="install" hidden>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0l-5-5m5 5l5-5M4 19h16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="square"/></svg>
+          App installieren
+        </button>
+        <button type="button" class="btn" id="share">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 12h8M14 6l6 6-6 6M4 4v16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="square"/></svg>
+          Teilen
+        </button>
+        <span class="hint" id="ios-hint" hidden>Als App aufs iPhone: Teilen-Symbol in Safari, dann „Zum Home-Bildschirm“.</span>
+      </div>
+    </div>
+    <div id="zone"></div>
+  </header>
+
+  <section id="kit-section" aria-labelledby="kit-title" hidden>
+    <div class="section-head">
+      <h2 id="kit-title">Loadout-Drop</h2>
+      <span class="label">Stärkste Kombi der aktuellen Meta</span>
+    </div>
+    <div class="kit" id="kit"></div>
+  </section>
+
+  <section aria-labelledby="meta-title">
+    <div class="section-head">
+      <h2 id="meta-title">Meta-Waffen</h2>
+      <div class="tabs-row">
+        <nav class="tabs" id="seg" aria-label="Nach Rolle filtern">
+          <kbd title="Taste Q">Q</kbd>
+          <button type="button" id="f-all" data-filter="all" aria-pressed="true">Alle<span class="n"></span></button>
+          <button type="button" id="f-long" data-filter="long" aria-pressed="false">Fernkampf<span class="n"></span></button>
+          <button type="button" id="f-close" data-filter="close" aria-pressed="false">Nahkampf<span class="n"></span></button>
+          <button type="button" id="f-sniper" data-filter="sniper" aria-pressed="false">Sniper<span class="n"></span></button>
+          <kbd title="Taste E">E</kbd>
+        </nav>
+        <button type="button" class="toggle" id="favOnly" aria-pressed="false">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.5l2.6 5.3 5.9.9-4.25 4.1 1 5.8L12 16.9l-5.25 2.7 1-5.8L3.5 9.7l5.9-.9z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+          Favoriten
+        </button>
+      </div>
+    </div>
+    <div id="grid" class="grid"></div>
+  </section>
+
+  <section id="atier-section" aria-labelledby="atier-title" hidden>
+    <div class="section-head">
+      <h2 id="atier-title">Auch spielbar</h2>
+      <span class="label">A-Tier</span>
+    </div>
+    <div class="atier" id="atier"></div>
+  </section>
+
+  <section id="patch-section" aria-labelledby="patch-title" hidden>
+    <div class="section-head">
+      <h2 id="patch-title">Patch-Intel</h2>
+      <span class="label">Buffs &amp; Nerfs</span>
+    </div>
+    <div class="patches" id="patches"></div>
+  </section>
+
+  <footer id="footer">
+    <p>Die Meta wird jede Woche automatisch aktualisiert.</p>
+    <p class="legal">Inoffizielle Fan-App. Nicht mit Activision oder Call of Duty verbunden.</p>
+  </footer>
+</div>
+<div class="toast" id="toast" role="status" hidden></div>
+
+<script>
+(function () {
+  const ROLES = { long: "Fernkampf", close: "Nahkampf", sniper: "Sniper" };
+  const ROLE_ORDER = { long: 0, close: 1, sniper: 2 };
+  const FILTERS = ["all", "long", "close", "sniper"];
+  const STAR = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.5l2.6 5.3 5.9.9-4.25 4.1 1 5.8L12 16.9l-5.25 2.7 1-5.8L3.5 9.7l5.9-.9z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>';
+
+  const S = { info: null, weapons: [], patches: [], filter: "all", favOnly: false, favs: new Set(), status: "loading" };
+  try { S.favs = new Set(JSON.parse(localStorage.getItem("wz-favs") || "[]")); } catch (e) {}
+  try { const f = localStorage.getItem("wz-filter"); if (f && FILTERS.includes(f)) S.filter = f; } catch (e) {}
+  try { S.favOnly = localStorage.getItem("wz-favonly") === "1"; } catch (e) {}
+
+  const $ = (id) => document.getElementById(id);
+  const esc = (v) => String(v == null ? "" : v).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+  const arr = (v) => (Array.isArray(v) ? v : []);
+
+  function parseDate(iso) {
+    if (!iso) return null;
+    const d = /^\d{4}-\d{2}-\d{2}$/.test(iso) ? new Date(iso + "T12:00:00") : new Date(iso);
+    return isNaN(d) ? null : d;
+  }
+  function fmtDate(iso, short) {
+    const d = parseDate(iso);
+    if (!d) return esc(iso || "");
+    return d.toLocaleDateString("de-DE", short ? { day: "numeric", month: "short" } : { day: "numeric", month: "long", year: "numeric" });
+  }
+  function dayDiff(fromIso, toIso) {
+    const a = parseDate(fromIso), b = parseDate(toIso);
+    if (!a || !b) return null;
+    return Math.round((Date.UTC(b.getFullYear(), b.getMonth(), b.getDate()) - Date.UTC(a.getFullYear(), a.getMonth(), a.getDate())) / 86400000);
+  }
+  const todayIso = () => { const d = new Date(); return d.getFullYear() + "-" + String(d.getMonth() + 1).padStart(2, "0") + "-" + String(d.getDate()).padStart(2, "0"); };
+  const metaWeapons = () => S.weapons.filter((w) => w.tier === "meta");
+  const latestPatch = () => S.patches.slice().sort((a, b) => String(b.date).localeCompare(String(a.date)))[0];
+
+  function saveFavs() { try { localStorage.setItem("wz-favs", JSON.stringify([...S.favs])); } catch (e) {} }
+  let toastTimer = 0;
+  function toast(msg) {
+    const t = $("toast");
+    t.textContent = msg; t.hidden = false;
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(() => { t.hidden = true; }, 2200);
+  }
+
+  /* ---------- Kopf ---------- */
+  function renderHud() {
+    const p = latestPatch();
+    const ch = p ? arr(p.changes) : [];
+    const vals = S.status === "ready"
+      ? [metaWeapons().length, ch.filter((c) => c.type === "buff").length, ch.filter((c) => c.type === "nerf").length]
+      : ["–", "–", "–"];
+    $("hud").querySelectorAll("b").forEach((b, i) => { b.textContent = vals[i]; });
+  }
+
+  function renderStatus() {
+    const el = $("status");
+    const i = S.info;
+    if (S.status === "loading") { el.innerHTML = '<span class="pill">Lade Meta-Daten …</span>'; return; }
+    if (!i) { el.innerHTML = '<span class="pill warn">Meta-Daten nicht geladen</span>'; return; }
+    const age = dayDiff(i.updatedAt, todayIso());
+    let fresh = "";
+    if (age != null) {
+      const txt = age <= 0 ? "Heute aktualisiert" : age === 1 ? "Gestern aktualisiert" : "Vor " + age + " Tagen aktualisiert";
+      fresh = age > 7 ? '<span class="pill warn">' + txt + ", evtl. veraltet</span>" : '<span class="pill ok">' + txt + "</span>";
+    }
+    el.innerHTML = '<span class="pill">' + esc(i.game) + " · " + esc(i.season) + "</span>" + '<span class="pill">Stand ' + fmtDate(i.updatedAt) + "</span>" + fresh +
+      (S.offline ? '<span class="pill warn">Offline-Stand</span>' : "");
+  }
+
+  function minimap(frac) {
+    const R0 = 86, R1 = 30;
+    const r = R1 + (R0 - R1) * frac;
+    const cx = 104, cy = 98, nx = 109, ny = 104, nr = 18;
+    let grid = "", txt = "";
+    for (let k = 1; k < 5; k++) grid += '<line class="map-grid" x1="' + k * 40 + '" y1="0" x2="' + k * 40 + '" y2="200"></line><line class="map-grid" x1="0" y1="' + k * 40 + '" x2="200" y2="' + k * 40 + '"></line>';
+    "ABCDE".split("").forEach((L, k) => { txt += '<text class="map-txt" x="' + (k * 40 + 4) + '" y="11">' + L + "</text>"; });
+    for (let k = 1; k < 5; k++) txt += '<text class="map-txt" x="3" y="' + (k * 40 + 12) + '">' + (k + 1) + "</text>";
+    return '<svg viewBox="0 0 200 200" aria-hidden="true">' +
+      '<defs><linearGradient id="sweepGrad" x1="0" y1="0" x2="1" y2="0"><stop offset="0" style="stop-color:var(--accent);stop-opacity:0"></stop><stop offset="1" style="stop-color:var(--accent);stop-opacity:.28"></stop></linearGradient></defs>' +
+      '<rect class="map-bg" width="200" height="200"></rect>' + grid + txt +
+      '<path class="gas" fill-rule="evenodd" d="M0 0H200V200H0Z M' + (cx - r).toFixed(1) + " " + cy + " a" + r.toFixed(1) + " " + r.toFixed(1) + " 0 1 0 " + (2 * r).toFixed(1) + " 0 a" + r.toFixed(1) + " " + r.toFixed(1) + " 0 1 0 " + (-2 * r).toFixed(1) + ' 0Z"></path>' +
+      '<g class="sweep"><path class="sweep-fill" d="M100 100 L100 -42 A142 142 0 0 1 200 0 Z"></path></g>' +
+      '<circle class="ring" cx="' + cx + '" cy="' + cy + '" r="' + r.toFixed(1) + '"></circle>' +
+      '<circle class="next" cx="' + nx + '" cy="' + ny + '" r="' + nr + '"></circle>' +
+      '<path class="me" d="M100 91 L106 106 L100 102 L94 106Z"></path>' +
+      "</svg>";
+  }
+
+  function renderZone() {
+    const el = $("zone");
+    const n = S.info && S.info.nextChange;
+    if (!n || !n.date) { el.innerHTML = ""; return; }
+    const left = dayDiff(todayIso(), n.date);
+    if (left == null) { el.innerHTML = ""; return; }
+    const total = dayDiff(S.info.seasonStart, n.date);
+    const frac = total && total > 0 ? Math.min(1, Math.max(0, left / total)) : 0;
+    const num = left > 0 ? left : 0;
+    const elapsed = total && total > 0 ? Math.min(total, total - num) : null;
+    el.innerHTML =
+      '<div class="zone cut">' + minimap(frac) +
+        '<div class="zone-info">' +
+          '<span class="label">' + (left > 0 ? "Kreis schließt in" : "Kreis geschlossen") + "</span>" +
+          '<div class="days">' + num + "<small>" + (num === 1 ? "Tag" : "Tage") + "</small></div>" +
+          "<h2>" + esc(n.title) + " · " + fmtDate(n.date, true) + "</h2>" +
+          (n.text ? "<p>" + esc(n.text) + "</p>" : "") +
+          (elapsed != null ? '<div class="bar" role="img" aria-label="Season zu ' + Math.round((elapsed / total) * 100) + ' Prozent vorbei"><i style="width:' + ((elapsed / total) * 100).toFixed(1) + '%"></i></div><span class="bar-cap">' + esc(S.info.season || "Season") + " · Tag " + elapsed + " von " + total + "</span>" : "") +
+        "</div>" +
+      "</div>";
+  }
+
+  /* ---------- Loadout-Drop ---------- */
+  function topOf(role) {
+    return metaWeapons().filter((w) => w.role === role).sort((a, b) => (a.rank || 99) - (b.rank || 99))[0];
+  }
+  function copyBtn(code) { return '<button type="button" class="copy" data-copy="' + esc(code) + '">Kopieren</button>'; }
+  function renderKit() {
+    const sec = $("kit-section");
+    const long = topOf("long"), close = topOf("close");
+    const i = S.info || {};
+    if (!long && !close) { sec.hidden = true; return; }
+    sec.hidden = false;
+    const gun = (w, slot, role) => '<div class="slot gun"><span class="label">' + slot + " · " + ROLES[role] + "</span>" +
+      (w ? "<strong>" + esc(w.name) + "</strong>" + (w.code ? '<div class="row"><code>' + esc(w.code) + "</code>" + copyBtn(w.code) + "</div>" : "") : "<small>Keine Angabe</small>") + "</div>";
+    const perks = arr(i.perks).slice(0, 3);
+    const eq = arr(i.equipment).slice(0, 2);
+    $("kit").innerHTML =
+      gun(long, "Primär", "long") + gun(close, "Sekundär", "close") +
+      perks.map((p, k) => '<div class="slot perk"><span class="label">Perk ' + (k + 1) + "</span><strong>" + esc(p) + "</strong></div>").join("") +
+      eq.map((e, k) => '<div class="slot eq"><span class="label">' + (k === 0 ? "Letal" : "Taktisch") + "</span><strong>" + esc(e) + "</strong>" + (k === eq.length - 1 && i.perksNote ? "<small>" + esc(i.perksNote) + "</small>" : "") + "</div>").join("");
+  }
+
+  /* ---------- Waffen ---------- */
+  function attList(list) {
+    return '<dl class="att">' + arr(list).map((a) => {
+      const armory = a.unlock && /waffenkammer|armory/i.test(a.unlock);
+      return "<div><dt>" + esc(a.slot) + "</dt><dd>" + esc(a.name) +
+        (a.unlock ? '<small class="' + (armory ? "armory" : "") + '">' + esc(a.unlock) + "</small>" : "") + "</dd></div>";
+    }).join("") + "</dl>";
+  }
+  function codeBox(code) {
+    if (!code) return "";
+    return '<div class="code"><span class="label">Build-Code</span><code>' + esc(code) + "</code>" + copyBtn(code) + "</div>";
+  }
+  function card(w) {
+    const fav = S.favs.has(w.id);
+    const t = w.trend;
+    const trendChip = t && (t.type === "buff" || t.type === "nerf")
+      ? '<span class="chip ' + t.type + '">' + (t.type === "buff" ? "▲ Buff" : "▼ Nerf") + (t.date ? " · " + fmtDate(t.date, true) : "") + "</span>" : "";
+    const stats = arr(w.stats).length
+      ? '<div class="stats">' + arr(w.stats).slice(0, 3).map((s) => "<div><b>" + esc(s.value) + "</b><span>" + esc(s.label) + "</span></div>").join("") + "</div>" : "";
+    const pros = arr(w.pros), cons = arr(w.cons), alts = arr(w.altBuilds);
+    let more = "";
+    if (pros.length || cons.length || alts.length) {
+      more = "<details><summary>Intel: Stärken, Schwächen" + (alts.length ? " &amp; Varianten" : "") + '</summary><div class="more">' +
+        ((pros.length || cons.length) ? '<div class="proscons">' +
+          '<div class="plus"><span class="label">Stärken</span><ul>' + (pros.map((p) => "<li>" + esc(p) + "</li>").join("") || "<li>–</li>") + "</ul></div>" +
+          '<div class="minus"><span class="label">Schwächen</span><ul>' + (cons.map((p) => "<li>" + esc(p) + "</li>").join("") || "<li>–</li>") + "</ul></div>" +
+        "</div>" : "") +
+        alts.map((a) => '<div class="alt"><h4>' + esc(a.name) + "</h4>" + attList(a.attachments) + codeBox(a.code) + "</div>").join("") +
+        "</div></details>";
+    }
+    return '<article class="card cut">' +
+      '<div class="card-head">' +
+        '<div class="rank" aria-label="Platz ' + esc(w.rank) + '"><span>#</span>' + esc(w.rank) + "</div>" +
+        '<div><span class="rarity">Legendär · Meta</span><h3>' + esc(w.name) + '</h3><p class="cls">' + esc(w.cls) + " · " + esc(ROLES[w.role] || w.role) + "</p></div>" +
+        '<button type="button" class="fav" data-fav="' + esc(w.id) + '" aria-pressed="' + fav + '" aria-label="' + esc(w.name) + ' als Favorit merken">' + STAR + "</button>" +
+      "</div>" +
+      (trendChip ? '<div class="chips">' + trendChip + "</div>" : "") +
+      (t && t.note ? '<p class="trend-note">Letzter Patch: ' + esc(t.note) + "</p>" : "") +
+      '<div class="gunsmith"><span class="label">Gunsmith</span>' + attList(w.attachments) + "</div>" +
+      codeBox(w.code) +
+      stats +
+      more +
+      "</article>";
+  }
+
+  function renderGrid() {
+    const meta = metaWeapons();
+    const counts = { all: meta.length, long: 0, close: 0, sniper: 0 };
+    meta.forEach((w) => { if (counts[w.role] != null) counts[w.role]++; });
+    document.querySelectorAll("#seg button").forEach((b) => {
+      const f = b.dataset.filter;
+      b.setAttribute("aria-pressed", String(f === S.filter));
+      b.querySelector(".n").textContent = meta.length ? counts[f] : "";
+    });
+    $("favOnly").setAttribute("aria-pressed", String(S.favOnly));
+
+    const grid = $("grid");
+    if (S.status === "loading") {
+      grid.innerHTML = '<div class="empty"><h3>Meta wird geladen …</h3><p>Die aktuellen Loadouts kommen gleich.</p></div>';
+      return;
+    }
+    if (S.status === "error") {
+      grid.innerHTML = '<div class="empty"><h3>Meta-Daten nicht erreichbar</h3><p>Prüfe deine Internetverbindung und lade die Seite neu.</p></div>';
+      return;
+    }
+    if (!meta.length) {
+      grid.innerHTML = '<div class="empty"><h3>Noch keine Meta eingetragen</h3><p>Sobald die nächste Aktualisierung läuft, erscheinen hier die Loadouts mit Aufsätzen und Build-Codes.</p></div>';
+      return;
+    }
+    const list = meta
+      .filter((w) => S.filter === "all" || w.role === S.filter)
+      .filter((w) => !S.favOnly || S.favs.has(w.id))
+      .sort((a, b) => (ROLE_ORDER[a.role] ?? 9) - (ROLE_ORDER[b.role] ?? 9) || (a.rank || 99) - (b.rank || 99));
+    grid.innerHTML = list.length
+      ? list.map(card).join("")
+      : '<div class="empty"><h3>Keine Treffer</h3><p>' + (S.favOnly ? "In dieser Kategorie hast du noch keine Favoriten. Tippe auf den Stern einer Waffe, um sie zu merken." : "In dieser Kategorie ist gerade keine Waffe in der Meta.") + "</p></div>";
+  }
+
+  function renderATier() {
+    const a = S.weapons.filter((w) => w.tier === "a").sort((x, y) => (ROLE_ORDER[x.role] ?? 9) - (ROLE_ORDER[y.role] ?? 9) || (x.rank || 99) - (y.rank || 99));
+    $("atier-section").hidden = !a.length;
+    $("atier").innerHTML = a.map((w) =>
+      '<div class="cut"><span class="rarity">Episch · A-Tier</span><strong>' + esc(w.name) + "</strong><small>" + esc(w.cls) + " · " + esc(ROLES[w.role] || w.role) + (w.note ? " · " + esc(w.note) : "") + "</small></div>").join("");
+  }
+
+  function renderPatches() {
+    const p = S.patches.slice().sort((a, b) => String(b.date).localeCompare(String(a.date)));
+    $("patch-section").hidden = !p.length;
+    const metaNames = new Set(metaWeapons().map((w) => String(w.name).toUpperCase()));
+    $("patches").innerHTML = p.map((x) => {
+      const ch = arr(x.changes);
+      const b = ch.filter((c) => c.type === "buff").length, n = ch.filter((c) => c.type === "nerf").length;
+      return '<article class="patch cut"><div class="patch-head"><time datetime="' + esc(x.date) + '">' + fmtDate(x.date) + "</time><h3>" + esc(x.title) + "</h3>" +
+        '<span class="chips">' + (b ? '<span class="chip buff">' + b + " Buffs</span>" : "") + (n ? '<span class="chip nerf">' + n + " Nerfs</span>" : "") + "</span></div>" +
+        '<ul class="changes">' + ch.map((c) =>
+          '<li class="' + esc(c.type) + '"><span class="mk" aria-label="' + (c.type === "buff" ? "Buff" : c.type === "nerf" ? "Nerf" : "Änderung") + '">' + (c.type === "buff" ? "▲" : c.type === "nerf" ? "▼" : "•") + "</span>" +
+          '<strong class="' + (metaNames.has(String(c.weapon).toUpperCase()) ? "in-meta" : "") + '">' + esc(c.weapon) + "</strong><span>" + esc(c.text) + "</span></li>").join("") + "</ul>" +
+        (x.note ? '<p class="note">' + esc(x.note) + "</p>" : "") + "</article>";
+    }).join("");
+  }
+
+  function renderFooter() {
+    const i = S.info;
+    if (!i) return;
+    const src = arr(i.sources).map((s) => s && s.url && /^https:\/\//.test(s.url)
+      ? '<a href="' + esc(s.url) + '" target="_blank" rel="noopener">' + esc(s.name || s.url) + "</a>" : esc(s && s.name)).join(", ");
+    $("footer").innerHTML =
+      (src ? "<p>Quellen: " + src + ". Modus: " + esc(i.mode || "Battle Royale") + ".</p>" : "") +
+      "<p>Die Meta wird jede Woche automatisch aktualisiert.</p>" +
+      '<p class="legal">Inoffizielle Fan-App. Nicht mit Activision oder Call of Duty verbunden.</p>';
+  }
+
+  function render() {
+    renderHud(); renderStatus(); renderZone(); renderKit(); renderGrid(); renderATier(); renderPatches(); renderFooter();
+  }
+
+  /* ---------- Interaktion ---------- */
+  function setFilter(f) {
+    S.filter = f;
+    try { localStorage.setItem("wz-filter", f); } catch (e) {}
+    renderGrid();
+  }
+  document.addEventListener("click", (ev) => {
+    const f = ev.target.closest("[data-filter]");
+    if (f) { setFilter(f.dataset.filter); return; }
+    if (ev.target.closest("#favOnly")) {
+      S.favOnly = !S.favOnly;
+      try { localStorage.setItem("wz-favonly", S.favOnly ? "1" : "0"); } catch (e) {}
+      renderGrid();
+      return;
+    }
+    const fav = ev.target.closest("[data-fav]");
+    if (fav) {
+      const id = fav.dataset.fav;
+      if (S.favs.has(id)) S.favs.delete(id); else S.favs.add(id);
+      saveFavs();
+      if (S.favOnly) renderGrid(); else fav.setAttribute("aria-pressed", String(S.favs.has(id)));
+      return;
+    }
+    const cp = ev.target.closest("[data-copy]");
+    if (cp) {
+      const code = cp.dataset.copy;
+      const done = (txt) => { cp.textContent = txt; cp.classList.add("done"); setTimeout(() => { cp.textContent = "Kopieren"; cp.classList.remove("done"); }, 1600); };
+      const fallback = () => {
+        const el = cp.parentElement.querySelector("code");
+        const r = document.createRange(); r.selectNodeContents(el);
+        const sel = window.getSelection(); sel.removeAllRanges(); sel.addRange(r);
+        done("Markiert");
+      };
+      try { navigator.clipboard.writeText(code).then(() => done("Kopiert"), fallback); } catch (e) { fallback(); }
+    }
+  });
+  // Q / E wechseln die Kategorie wie die Schultertasten im Spielmenü
+  document.addEventListener("keydown", (ev) => {
+    if (ev.ctrlKey || ev.metaKey || ev.altKey) return;
+    if (ev.target.closest && ev.target.closest("input, textarea, select, [contenteditable]")) return;
+    const k = ev.key.toLowerCase();
+    if (k !== "q" && k !== "e") return;
+    const i = FILTERS.indexOf(S.filter);
+    setFilter(FILTERS[(i + (k === "e" ? 1 : FILTERS.length - 1)) % FILTERS.length]);
+  });
+
+  /* ---------- Installieren & Teilen ---------- */
+  let installEvent = null;
+  window.addEventListener("beforeinstallprompt", (ev) => {
+    ev.preventDefault();
+    installEvent = ev;
+    $("install").hidden = false;
+  });
+  window.addEventListener("appinstalled", () => { $("install").hidden = true; toast("App installiert"); });
+  $("install").addEventListener("click", async () => {
+    if (!installEvent) return;
+    installEvent.prompt();
+    try { await installEvent.userChoice; } catch (e) {}
+    installEvent = null;
+    $("install").hidden = true;
+  });
+  const standalone = window.matchMedia("(display-mode: standalone)").matches || navigator.standalone === true;
+  const isIOS = /iphone|ipad|ipod/i.test(navigator.userAgent) || (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
+  if (isIOS && !standalone) $("ios-hint").hidden = false;
+
+  $("share").addEventListener("click", async () => {
+    const url = location.href.split("#")[0];
+    const data = { title: "Warzone Meta-Zentrale", text: "Die aktuelle Warzone-Meta mit Build-Codes", url };
+    if (navigator.share) {
+      try { await navigator.share(data); } catch (e) {}
+      return;
+    }
+    try { await navigator.clipboard.writeText(url); toast("Link kopiert"); }
+    catch (e) { toast(url); }
+  });
+
+  /* ---------- Daten ---------- */
+  function apply(d, offline) {
+    S.info = d && d.info ? d.info : null;
+    S.weapons = arr(d && d.weapons);
+    S.patches = arr(d && d.patches);
+    S.offline = !!offline;
+    S.status = "ready";
+    render();
+  }
+  render();
+  fetch("data/meta.json", { cache: "no-cache" })
+    .then((r) => { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); })
+    .then((d) => apply(d, false))
+    .catch(() => {
+      if (!("caches" in window)) { S.status = "error"; render(); return; }
+      caches.match("data/meta.json", { ignoreSearch: true })
+        .then((r) => (r ? r.json() : null))
+        .then((d) => { if (d) apply(d, true); else { S.status = "error"; render(); } })
+        .catch(() => { S.status = "error"; render(); });
+    });
+
+  if ("serviceWorker" in navigator) {
+    window.addEventListener("load", () => { navigator.serviceWorker.register("sw.js").catch(() => {}); });
+  }
+})();
+</script>
+</body>
+</html>

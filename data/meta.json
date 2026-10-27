@@ -1,0 +1,216 @@
+{
+  "info": {
+    "game": "Black Ops 7",
+    "season": "Season 6",
+    "mode": "Battle Royale",
+    "updatedAt": "2026-10-27",
+    "seasonStart": "2026-09-16",
+    "perks": ["Scavenger", "Sprinter", "Tempered"],
+    "equipment": ["Semtex", "Rauchgranate"],
+    "perksNote": "Empfehlung von wzstats.gg zu den Meta-Builds",
+    "nextChange": {
+      "date": "2026-11-06",
+      "title": "MW4 kommt nach Warzone",
+      "text": "Season 1 bringt die MW4-Waffen und die neue BR-Map Hajin. Danach verschiebt sich die Meta stark. PS4 und Xbox One werden nicht mehr unterstützt."
+    },
+    "sources": [
+      { "name": "wzstats.gg", "url": "https://wzstats.gg/" },
+      { "name": "CODMunity Patch Notes", "url": "https://codmunity.gg/patch-notes/warzone/2026-10-14" }
+    ]
+  },
+  "weapons": [
+    {
+      "id": "voyak-kt-3", "name": "VOYAK KT-3", "cls": "Sturmgewehr", "role": "long", "tier": "meta", "rank": 1,
+      "code": "A09-34FBS-SSP4W-11",
+      "attachments": [
+        { "slot": "Optik", "name": "FANG HOVERPOINT ELO", "unlock": "Waffenkammer" },
+        { "slot": "Mündung", "name": "MONOLITHIC SUPPRESSOR", "unlock": "Level 28" },
+        { "slot": "Lauf", "name": "17.6\" LTI GRAV-4 BARREL", "unlock": "Level 34" },
+        { "slot": "Magazin", "name": "SK-GARRISON DRUM", "unlock": "Level 40" },
+        { "slot": "Schaft", "name": "V-LAST CONTROL PAD", "unlock": "Level 33" }
+      ],
+      "stats": [
+        { "label": "Feuerrate", "value": "659 RPM" },
+        { "label": "Zielen (ADS)", "value": "375 ms" },
+        { "label": "Projektil", "value": "1151 m/s" }
+      ],
+      "pros": ["Gute TTK auf allen Distanzen", "Doppelter Schaden pro Magazin dank Trommel", "Rund 35 % weniger Rückstoß als die Basiswaffe"],
+      "cons": ["Langsames Zielen", "Langsameres Nachladen mit Trommel"],
+      "trend": { "type": "buff", "date": "2026-09-16", "note": "Season-6-Start: mehr Schaden auf allen Distanzen, weniger Rückstoß, schnellere Projektile" },
+      "altBuilds": [
+        {
+          "name": "Variante: wenig Rückstoß", "code": "A09-9CQNY-ZW11",
+          "attachments": [
+            { "slot": "Mündung", "name": "EMT3 COMPENSATOR", "unlock": "Level 20" },
+            { "slot": "Lauf", "name": "17.6\" LTI GRAV-4 BARREL", "unlock": "Level 34" },
+            { "slot": "Unterlauf", "name": "VAS CONVERGENCE FOREGRIP", "unlock": "Waffenkammer" },
+            { "slot": "Magazin", "name": "SK-GARRISON DRUM", "unlock": "Level 40" },
+            { "slot": "Schaft", "name": "V-LAST CONTROL PAD", "unlock": "Level 33" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mk35-isr", "name": "MK35 ISR", "cls": "Sturmgewehr", "role": "long", "tier": "meta", "rank": 2,
+      "code": "A12-34FBS-SSY4B-11",
+      "attachments": [
+        { "slot": "Optik", "name": "FANG HOVERPOINT ELO", "unlock": "Waffenkammer" },
+        { "slot": "Mündung", "name": "MONOLITHIC SUPPRESSOR", "unlock": "Level 39" },
+        { "slot": "Lauf", "name": "16.5\" GREAVES BELLUM BARREL", "unlock": "Level 14" },
+        { "slot": "Magazin", "name": "BOWEN SIREN DRUM", "unlock": "Level 29" },
+        { "slot": "Schaft", "name": "GREAVES CASSIN STOCK", "unlock": "Level 8" }
+      ],
+      "stats": [
+        { "label": "Feuerrate", "value": "750 RPM" },
+        { "label": "Projektil", "value": "1109 m/s" },
+        { "label": "Schaden/Mag", "value": "2280" }
+      ],
+      "pros": ["Sehr wenig Rückstoß", "Sehr hohe Projektilgeschwindigkeit", "Gute TTK auf allen Distanzen"],
+      "cons": []
+    },
+    {
+      "id": "ds20-mirage", "name": "DS20 MIRAGE", "cls": "Sturmgewehr", "role": "long", "tier": "meta", "rank": 3,
+      "code": "A05-34FBS-SSSND-11",
+      "attachments": [
+        { "slot": "Optik", "name": "FANG HOVERPOINT ELO", "unlock": "Waffenkammer" },
+        { "slot": "Mündung", "name": "MONOLITHIC SUPPRESSOR", "unlock": "Level 18" },
+        { "slot": "Lauf", "name": "17.1\" ABDICATOR BARREL", "unlock": "Level 29" },
+        { "slot": "Magazin", "name": "GRIFFON RESERVE EXTENDED II", "unlock": "Level 27" },
+        { "slot": "Schaft", "name": "WEIGHTED STOCK", "unlock": "Level 3" }
+      ],
+      "stats": [
+        { "label": "Feuerrate", "value": "606 RPM" },
+        { "label": "Zielen (ADS)", "value": "377 ms" },
+        { "label": "Projektil", "value": "1179 m/s" }
+      ],
+      "pros": ["Gute Projektilgeschwindigkeit", "Guter Schaden pro Magazin"],
+      "cons": ["Unterdurchschnittliche TTK", "Langsames Nachladen", "Hoher vertikaler Rückstoß"],
+      "trend": { "type": "buff", "date": "2026-10-14", "note": "Besserer Hüftfeuer-Spread, weniger View Kick, schnellerer Granatwerfer" }
+    },
+    {
+      "id": "vmp", "name": "VMP", "cls": "MP", "role": "close", "tier": "meta", "rank": 1,
+      "code": "S14-6K7PG-6B11",
+      "attachments": [
+        { "slot": "Mündung", "name": "LTI STENTORIAN BRAKE", "unlock": "Waffenkammer" },
+        { "slot": "Lauf", "name": "14.6\" NOCTURNAL-VI BARREL", "unlock": "Level 9" },
+        { "slot": "Unterlauf", "name": "SAPPER GUARD HANDSTOP", "unlock": "Level 33" },
+        { "slot": "Magazin", "name": "DAPPLE CAPACITY MAG", "unlock": "Level 35" },
+        { "slot": "Schaft", "name": "GREAVES VALOUR PAD", "unlock": "Level 8" }
+      ],
+      "stats": [
+        { "label": "Feuerrate", "value": "984 RPM" },
+        { "label": "Zielen (ADS)", "value": "170 ms" },
+        { "label": "Sprint-to-Fire", "value": "120 ms" }
+      ],
+      "pros": ["Sehr hohe Feuerrate", "Schnelles Zielen", "38 % mehr Schaden pro Magazin mit dem Build"],
+      "cons": ["Seit dem 14. Oktober mehr Rückstoß", "Langsames Nachladen"],
+      "trend": { "type": "nerf", "date": "2026-10-14", "note": "Mehr View Kick und mehr Streuung" }
+    },
+    {
+      "id": "mpc-25", "name": "MPC-25", "cls": "MP", "role": "close", "tier": "meta", "rank": 2,
+      "code": "S06-3SUZ7-NU11",
+      "attachments": [
+        { "slot": "Mündung", "name": "LTI STENTORIAN BRAKE", "unlock": "Waffenkammer" },
+        { "slot": "Lauf", "name": "14.5\" VAS ASHE BARREL", "unlock": "Level 15" },
+        { "slot": "Unterlauf", "name": "FLOWGUARD FOREGRIP", "unlock": "Level 32" },
+        { "slot": "Magazin", "name": "MPC OVERLOAD DRUM", "unlock": "Level 35" },
+        { "slot": "Schaft", "name": "VIPER WIRE STOCK", "unlock": "Level 34" }
+      ],
+      "stats": [
+        { "label": "Feuerrate", "value": "723 RPM" },
+        { "label": "Zielen (ADS)", "value": "196 ms" },
+        { "label": "Sprint-to-Fire", "value": "142 ms" }
+      ],
+      "pros": ["Gute Mobilität", "Gutes Handling", "Starkes Hüftfeuer-Umbaukit"],
+      "cons": ["Etwas schwächere TTK", "Hoher vertikaler Rückstoß"],
+      "trend": { "type": "buff", "date": "2026-09-16", "note": "Season-6-Start: Nahkampfschaden reicht weiter, 10 % weniger vertikaler Rückstoß" }
+    },
+    {
+      "id": "rev-46", "name": "REV-46", "cls": "MP", "role": "close", "tier": "meta", "rank": 3,
+      "code": "S09-AV4JD-2ZI31-1",
+      "attachments": [
+        { "slot": "Optik", "name": "LETHAL TOOLS ELO" },
+        { "slot": "Mündung", "name": "LTI STENTORIAN BRAKE", "unlock": "Waffenkammer" },
+        { "slot": "Lauf", "name": "CAUDAL TARGET BARREL", "unlock": "Level 12" },
+        { "slot": "Unterlauf", "name": "SAPPER GUARD HANDSTOP", "unlock": "Level 24" },
+        { "slot": "Magazin", "name": "KOMODO DRUM MAG", "unlock": "Level 34" }
+      ],
+      "stats": [
+        { "label": "Feuerrate", "value": "1200 RPM" },
+        { "label": "Zielen (ADS)", "value": "201 ms" },
+        { "label": "Sprint-to-Fire", "value": "125 ms" }
+      ],
+      "pros": ["Sehr hohe Feuerrate", "Starke TTK im Nahkampf", "Top Mobilität", "Gut kontrollierbarer Rückstoß"],
+      "cons": ["Munition ist schnell leer", "Kimme verdeckt viel Sicht"],
+      "trend": { "type": "buff", "date": "2026-10-14", "note": "Schaft klappt 150 ms schneller ein und aus" }
+    },
+    {
+      "id": "ryden-45k", "name": "RYDEN 45K", "cls": "MP", "role": "close", "tier": "meta", "rank": 4,
+      "code": "S01-34FEK-EX39Q-11",
+      "attachments": [
+        { "slot": "Optik", "name": "FANG HOVERPOINT ELO", "unlock": "Waffenkammer" },
+        { "slot": "Mündung", "name": "LTI STENTORIAN BRAKE", "unlock": "Waffenkammer" },
+        { "slot": "Lauf", "name": "9\" BASILISK BARREL", "unlock": "Level 12" },
+        { "slot": "Unterlauf", "name": "FLOWGUARD FOREGRIP", "unlock": "Level 28" },
+        { "slot": "Magazin", "name": "FORWARD BREACH MAG", "unlock": "Level 27" }
+      ],
+      "stats": [
+        { "label": "Feuerrate", "value": "952 RPM" },
+        { "label": "Zielen (ADS)", "value": "168 ms" },
+        { "label": "Sprint-to-Fire", "value": "91 ms" }
+      ],
+      "pros": ["Hohe Feuerrate", "Gute Mobilität", "Starke TTK bei Kopftreffern"],
+      "cons": ["Schwächere TTK auf den Körper", "Wenig Schaden pro Magazin", "Munition ist schnell leer"],
+      "trend": { "type": "buff", "date": "2026-10-14", "note": "Weniger View Kick und Gun Kick" }
+    },
+    {
+      "id": "strider-300", "name": "STRIDER 300", "cls": "Scharfschützengewehr", "role": "sniper", "tier": "meta", "rank": 1,
+      "code": "R07-2JD6P-9UF4L-IW11",
+      "attachments": [
+        { "slot": "Mündung", "name": "MONOLITHIC SUPPRESSOR", "unlock": "Level 33" },
+        { "slot": "Lauf", "name": "25\" BOWEN GROOVED BARREL", "unlock": "Level 21" },
+        { "slot": "Unterlauf", "name": "CORNERSTONE-642 GUARD", "unlock": "Level 9" },
+        { "slot": "Hintergriff", "name": "HATCH QUICK GRIP", "unlock": "Level 23" },
+        { "slot": "Feuermodus", "name": ".300 WM OVERPRESSURED", "unlock": "Level 24" }
+      ],
+      "stats": [
+        { "label": "Projektil", "value": "1332 m/s" },
+        { "label": "Zielen (ADS)", "value": "605 ms" },
+        { "label": "Hitscan", "value": "66,6 m" }
+      ],
+      "pros": ["One-Shot-Kopftreffer", "Exzellente Projektilgeschwindigkeit"],
+      "cons": ["Langsames Zielen", "Hoher Rückstoß", "One-Shot-Kopftreffer auf jede Distanz nur mit einem bestimmten Lauf"]
+    },
+    { "id": "vx-compact", "name": "VX COMPACT", "cls": "Sturmgewehr", "role": "long", "tier": "a", "rank": 1, "note": "auch als Sniper-Support" },
+    { "id": "peacekeeper-mk1", "name": "PEACEKEEPER MK1", "cls": "Sturmgewehr", "role": "long", "tier": "a", "rank": 2 },
+    { "id": "m15-mod-0", "name": "M15 MOD 0", "cls": "Sturmgewehr", "role": "long", "tier": "a", "rank": 3 },
+    { "id": "sturmwolf-45", "name": "STURMWOLF 45", "cls": "MP", "role": "close", "tier": "a", "rank": 1 },
+    { "id": "carbon-57", "name": "CARBON 57", "cls": "MP", "role": "close", "tier": "a", "rank": 2 }
+  ],
+  "patches": [
+    {
+      "id": "2026-10-14", "date": "2026-10-14", "title": "Season 6 · Überraschungs-Update",
+      "changes": [
+        { "type": "buff", "weapon": "DS20 MIRAGE", "text": "Besserer Hüftfeuer-Spread, weniger View Kick, schnellere Granatwerfer-Projektile" },
+        { "type": "buff", "weapon": "TR51 PARA", "text": "Bolt Carrier Group gibt jetzt 6 % mehr Feuerrate" },
+        { "type": "buff", "weapon": "GREMLIN", "text": "4 % schnellere Bewegung; Procural Extended Mag ohne Malus auf Sprint-to-Fire und Nachladen" },
+        { "type": "buff", "weapon": "REV-46", "text": "Schaft klappt 150 ms schneller ein und aus" },
+        { "type": "buff", "weapon": "RYDEN 45K", "text": "Weniger View Kick und Gun Kick" },
+        { "type": "buff", "weapon": "SOKOL 545", "text": "Warpath Blitz Kit: ADS-Bonus 20 → 30 ms, Sprint-to-Fire-Bonus 5 → 15 ms" },
+        { "type": "buff", "weapon": "XM325", "text": "Weniger View Kick und Streuung" },
+        { "type": "buff", "weapon": "KRS 7.62", "text": "3 % schnellere Bewegung, weniger View Kick" },
+        { "type": "nerf", "weapon": "VMP", "text": "Mehr View Kick und Streuung" },
+        { "type": "nerf", "weapon": "M10 BREACHER", "text": "Argus Lever: Repetierzeit 450 → 500 ms" },
+        { "type": "nerf", "weapon": "MAMMOTH", "text": "Etwas mehr View Kick" }
+      ]
+    },
+    {
+      "id": "2026-09-16", "date": "2026-09-16", "title": "Season 6 · Start",
+      "note": "Auszug: nur die Änderungen an aktuellen Meta-Waffen.",
+      "changes": [
+        { "type": "buff", "weapon": "VOYAK KT-3", "text": "Mehr Schaden auf allen Distanzen, weniger Rückstoß, schnellere Projektile" },
+        { "type": "buff", "weapon": "MPC-25", "text": "Nahkampfschaden reicht weiter (13 → 13,5 m), 8 % weniger Streuung, 10 % weniger vertikaler Rückstoß" }
+      ]
+    }
+  ]
+}
