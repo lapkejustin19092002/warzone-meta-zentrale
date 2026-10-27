@@ -222,6 +222,20 @@ a { color: var(--accent); }
 .chip.buff { color: var(--buff); background: color-mix(in srgb, var(--buff) 13%, transparent); }
 .chip.nerf { color: var(--nerf); background: color-mix(in srgb, var(--nerf) 13%, transparent); }
 .trend-note { margin: -6px 0 0; font-size: 13.5px; color: var(--muted); }
+.showcase {
+  position: relative; height: 112px; display: grid; place-items: center;
+  background:
+    radial-gradient(60% 70% at 50% 55%, color-mix(in srgb, var(--rar) 16%, transparent), transparent 70%),
+    linear-gradient(var(--grid) 1px, transparent 1px) 0 0 / 24px 24px,
+    linear-gradient(90deg, var(--grid) 1px, transparent 1px) 0 0 / 24px 24px,
+    var(--bg);
+  border: 1px solid var(--line);
+}
+.showcase .tag { position: absolute; left: 8px; bottom: 6px; font-family: var(--f-mono); font-size: 11px; color: var(--dim); letter-spacing: .04em; }
+.gun-svg { display: block; width: 88%; max-width: 330px; height: auto; overflow: visible; }
+.gun-svg.mini { width: 120px; max-width: 100%; margin: 2px 0 4px; }
+.gun-body { fill: color-mix(in srgb, var(--rar) 22%, transparent); stroke: var(--rar); stroke-width: 1.3; stroke-linejoin: round; filter: drop-shadow(0 0 6px color-mix(in srgb, var(--rar) 55%, transparent)); }
+.slot.gun { --rar: var(--legendary); }
 
 .gunsmith { display: grid; gap: 6px; }
 .gunsmith > .label { font-size: 11.5px; color: var(--dim); }
@@ -526,13 +540,64 @@ footer .legal { color: var(--dim); font-size: 12.5px; }
     if (!long && !close) { sec.hidden = true; return; }
     sec.hidden = false;
     const gun = (w, slot, role) => '<div class="slot gun"><span class="label">' + slot + " · " + ROLES[role] + "</span>" +
-      (w ? "<strong>" + esc(w.name) + "</strong>" + (w.code ? '<div class="row"><code>' + esc(w.code) + "</code>" + copyBtn(w.code) + "</div>" : "") : "<small>Keine Angabe</small>") + "</div>";
+      (w ? gunSvg(w.cls, "mini") + "<strong>" + esc(w.name) + "</strong>" + (w.code ? '<div class="row"><code>' + esc(w.code) + "</code>" + copyBtn(w.code) + "</div>" : "") : "<small>Keine Angabe</small>") + "</div>";
     const perks = arr(i.perks).slice(0, 3);
     const eq = arr(i.equipment).slice(0, 2);
     $("kit").innerHTML =
       gun(long, "Primär", "long") + gun(close, "Sekundär", "close") +
       perks.map((p, k) => '<div class="slot perk"><span class="label">Perk ' + (k + 1) + "</span><strong>" + esc(p) + "</strong></div>").join("") +
       eq.map((e, k) => '<div class="slot eq"><span class="label">' + (k === 0 ? "Letal" : "Taktisch") + "</span><strong>" + esc(e) + "</strong>" + (k === eq.length - 1 && i.perksNote ? "<small>" + esc(i.perksNote) + "</small>" : "") + "</div>").join("");
+  }
+
+  /* ---------- Waffen-Silhouetten (eigene Zeichnungen, je Waffenklasse) ---------- */
+  const R = (x, y, w, h) => '<rect x="' + x + '" y="' + y + '" width="' + w + '" height="' + h + '"></rect>';
+  const P = (pts) => '<polygon points="' + pts + '"></polygon>';
+  const GUNS = {
+    ar: [
+      P("6,30 42,27 46,34 46,48 40,50 10,53 6,46"), R(44, 26, 80, 16), R(64, 17, 34, 8), R(72, 24, 16, 3),
+      R(124, 28, 58, 11), R(182, 31, 28, 4), R(208, 29, 14, 8), P("88,42 102,42 108,64 93,67"),
+      P("62,42 75,42 71,62 58,60"), R(140, 39, 6, 11)
+    ],
+    smg: [
+      P("16,30 50,29 50,35 24,35 24,43 50,41 50,46 16,48"), R(48, 26, 72, 16), R(64, 19, 24, 7), R(70, 25, 12, 2),
+      R(120, 28, 36, 11), R(156, 30, 22, 7), P("96,42 107,42 110,70 99,70"), P("62,42 74,42 70,60 58,58"), R(130, 39, 7, 15)
+    ],
+    sniper: [
+      P("4,32 46,30 50,36 50,46 38,52 8,55 4,48"), R(16, 25, 26, 5), R(50, 30, 62, 13),
+      R(56, 15, 54, 10), P("110,13 122,11 122,29 110,27"), P("46,16 56,17 56,24 46,25"), R(68, 25, 5, 5), R(94, 25, 5, 5),
+      R(98, 41, 4, 7), R(112, 33, 102, 5), R(212, 31, 18, 9), R(76, 43, 16, 10), P("56,43 67,43 62,61 52,59"),
+      P("150,38 154,38 162,60 158,60")
+    ],
+    marksman: [
+      P("6,31 44,28 48,35 48,48 40,50 10,53 6,46"), R(46, 27, 76, 15), R(58, 16, 48, 9), P("106,14 116,13 116,27 106,26"),
+      R(70, 25, 5, 3), R(92, 25, 5, 3), R(122, 29, 56, 10), R(178, 32, 40, 4), R(216, 30, 14, 8),
+      R(88, 42, 14, 14), P("62,42 74,42 70,61 58,59")
+    ],
+    lmg: [
+      P("6,30 42,27 46,34 46,48 40,50 10,53 6,46"), R(44, 25, 84, 18), R(48, 20, 72, 5), R(64, 14, 28, 6),
+      R(128, 27, 54, 13), R(182, 31, 30, 4), R(210, 29, 14, 8), R(80, 43, 30, 24),
+      P("62,43 74,43 70,62 58,60"), P("170,40 174,40 182,62 178,62"), P("176,40 180,40 172,62 168,62")
+    ],
+    shotgun: [
+      P("6,32 46,29 50,36 50,48 40,50 10,54 6,47"), R(48, 28, 56, 15), R(104, 30, 110, 6), R(104, 37, 90, 6),
+      R(126, 36, 40, 10), R(64, 22, 8, 6), P("62,43 74,43 70,62 58,60")
+    ],
+    pistol: [
+      R(70, 26, 100, 14), R(160, 30, 18, 6), R(76, 40, 80, 5), P("82,45 104,45 98,74 76,72"), R(84, 22, 8, 4), R(150, 22, 6, 4)
+    ]
+  };
+  function gunKind(cls) {
+    const c = String(cls || "").toLowerCase();
+    if (c.includes("scharf") || c.includes("sniper")) return "sniper";
+    if (c.includes("marksman") || c.includes("dmr")) return "marksman";
+    if (c === "mp" || c.includes("smg") || c.includes("maschinenpistole")) return "smg";
+    if (c.includes("lmg") || c.includes("maschinengewehr")) return "lmg";
+    if (c.includes("schrot") || c.includes("shotgun")) return "shotgun";
+    if (c.includes("pistol")) return "pistol";
+    return "ar";
+  }
+  function gunSvg(cls, size) {
+    return '<svg class="gun-svg ' + (size || "") + '" viewBox="0 0 240 80" aria-hidden="true"><g class="gun-body">' + GUNS[gunKind(cls)].join("") + "</g></svg>";
   }
 
   /* ---------- Waffen ---------- */
@@ -571,6 +636,7 @@ footer .legal { color: var(--dim); font-size: 12.5px; }
         '<div><span class="rarity">Legendär · Meta</span><h3>' + esc(w.name) + '</h3><p class="cls">' + esc(w.cls) + " · " + esc(ROLES[w.role] || w.role) + "</p></div>" +
         '<button type="button" class="fav" data-fav="' + esc(w.id) + '" aria-pressed="' + fav + '" aria-label="' + esc(w.name) + ' als Favorit merken">' + STAR + "</button>" +
       "</div>" +
+      '<div class="showcase">' + gunSvg(w.cls) + '<span class="tag">BLUEPRINT · ' + esc(String(w.cls || "").toUpperCase()) + "</span></div>" +
       (trendChip ? '<div class="chips">' + trendChip + "</div>" : "") +
       (t && t.note ? '<p class="trend-note">Letzter Patch: ' + esc(t.note) + "</p>" : "") +
       '<div class="gunsmith"><span class="label">Gunsmith</span>' + attList(w.attachments) + "</div>" +
@@ -617,7 +683,7 @@ footer .legal { color: var(--dim); font-size: 12.5px; }
     const a = S.weapons.filter((w) => w.tier === "a").sort((x, y) => (ROLE_ORDER[x.role] ?? 9) - (ROLE_ORDER[y.role] ?? 9) || (x.rank || 99) - (y.rank || 99));
     $("atier-section").hidden = !a.length;
     $("atier").innerHTML = a.map((w) =>
-      '<div class="cut"><span class="rarity">Episch · A-Tier</span><strong>' + esc(w.name) + "</strong><small>" + esc(w.cls) + " · " + esc(ROLES[w.role] || w.role) + (w.note ? " · " + esc(w.note) : "") + "</small></div>").join("");
+      '<div class="cut">' + gunSvg(w.cls, "mini") + '<span class="rarity">Episch · A-Tier</span><strong>' + esc(w.name) + "</strong><small>" + esc(w.cls) + " · " + esc(ROLES[w.role] || w.role) + (w.note ? " · " + esc(w.note) : "") + "</small></div>").join("");
   }
 
   function renderPatches() {

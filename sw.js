@@ -1,5 +1,5 @@
 // Offline-Unterstützung: App-Hülle aus dem Cache, Meta-Daten immer zuerst frisch aus dem Netz.
-const CACHE = "wz-meta-v1";
+const CACHE = "wz-meta-v2";
 const SHELL = [
   "./",
   "./index.html",
