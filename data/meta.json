@@ -995,5 +995,1846 @@
         }
       ]
     }
+  ],
+  "modes": [
+    {
+      "id": "resurgence",
+      "title": "Resurgence",
+      "note": "Kleinere Map mit Respawn. Hier zählen schnelle Waffen und Sniper mit One-Shot-Kopftreffer. Wo nicht anders angegeben, gilt der Build aus dem Battle Royale.",
+      "list": [
+        {
+          "ref": "voyak-kt-3",
+          "role": "long",
+          "rank": 1
+        },
+        {
+          "ref": "ds20-mirage",
+          "role": "long",
+          "rank": 2
+        },
+        {
+          "ref": "vmp",
+          "role": "close",
+          "rank": 1
+        },
+        {
+          "ref": "mpc-25",
+          "role": "close",
+          "rank": 2
+        },
+        {
+          "ref": "rev-46",
+          "role": "close",
+          "rank": 3
+        },
+        {
+          "id": "hawker-hx",
+          "name": "HAWKER HX",
+          "cls": "Scharfschützengewehr",
+          "role": "sniper",
+          "rank": 1,
+          "code": "R05-21WSL-NFYHD-XS11",
+          "attachments": [
+            {
+              "slot": "Mündung",
+              "name": "MONOLITHIC SUPPRESSOR",
+              "unlock": "Level 35"
+            },
+            {
+              "slot": "Lauf",
+              "name": "23.7\" COMPOSITE-11 BARREL",
+              "unlock": "Level 22"
+            },
+            {
+              "slot": "Hintergriff",
+              "name": "AURORAL LIGHT GRIP",
+              "unlock": "Level 30"
+            },
+            {
+              "slot": "Laser",
+              "name": "1MW INSTINCT LASER ARRAY",
+              "unlock": "Level 34"
+            },
+            {
+              "slot": "Feuermodus",
+              "name": ".338 LM OVERPRESSURED",
+              "unlock": "Level 38"
+            }
+          ],
+          "stats": [
+            {
+              "label": "Projektil",
+              "value": "1291 m/s"
+            },
+            {
+              "label": "Zielen (ADS)",
+              "value": "561 ms"
+            },
+            {
+              "label": "Hitscan",
+              "value": "64,6 m"
+            }
+          ],
+          "pros": [
+            "One-Shot-Kopftreffer",
+            "Exzellente Projektilgeschwindigkeit",
+            "Wenig Schwanken"
+          ],
+          "cons": [
+            "Langsames Zielen und Bewegen",
+            "One-Shot auf jede Distanz nur mit einem bestimmten Lauf"
+          ]
+        },
+        {
+          "id": "kar98k",
+          "name": "KAR98K",
+          "cls": "Marksman-Gewehr",
+          "role": "sniper",
+          "rank": 2,
+          "attachments": [
+            {
+              "slot": "Optik",
+              "name": "XTEN INTLAS AS-7"
+            },
+            {
+              "slot": "Mündung",
+              "name": "VT-7 SPIRITFIRE SUPPRESSOR"
+            },
+            {
+              "slot": "Lauf",
+              "name": "PRÄZISIONSGEWEHR 762 LONG BARREL"
+            },
+            {
+              "slot": "Schaft",
+              "name": "REPELLER TAC STOCK"
+            },
+            {
+              "slot": "Munition",
+              "name": "7.92 HIGH GRAIN ROUNDS"
+            }
+          ],
+          "stats": [
+            {
+              "label": "One-Shot bis",
+              "value": "71 m"
+            },
+            {
+              "label": "Zielen (ADS)",
+              "value": "340 ms"
+            },
+            {
+              "label": "Projektil",
+              "value": "905 m/s"
+            }
+          ],
+          "pros": [
+            "One-Shot-Kopftreffer",
+            "Hohe Mobilität",
+            "Schnelles Zielen"
+          ],
+          "cons": [
+            "One-Shot-Kopftreffer nur bis 71 m",
+            "Langsamere Projektile als neuere Sniper"
+          ]
+        },
+        {
+          "id": "vs-recon",
+          "name": "VS RECON",
+          "cls": "Scharfschützengewehr",
+          "role": "sniper",
+          "rank": 3,
+          "code": "R01-21WSG-L369K-P711",
+          "attachments": [
+            {
+              "slot": "Mündung",
+              "name": "MONOLITHIC SUPPRESSOR",
+              "unlock": "Level 28"
+            },
+            {
+              "slot": "Lauf",
+              "name": "23\" G-FORCE BARREL",
+              "unlock": "Level 18"
+            },
+            {
+              "slot": "Unterlauf",
+              "name": "MFS R-STOP HANDGUARD",
+              "unlock": "Prestige"
+            },
+            {
+              "slot": "Hintergriff",
+              "name": "R-1 SHELF GRIP",
+              "unlock": "Level 34"
+            },
+            {
+              "slot": "Feuermodus",
+              "name": "7.62 NATO OVERPRESSURED",
+              "unlock": "Level 39"
+            }
+          ],
+          "pros": [
+            "One-Shot-Kopftreffer auf jede Distanz",
+            "Starke Projektilgeschwindigkeit",
+            "Zwei Körpertreffer reichen"
+          ],
+          "cons": [
+            "Langsames Zielen"
+          ]
+        },
+        {
+          "ref": "strider-300",
+          "role": "sniper",
+          "rank": 4
+        }
+      ]
+    },
+    {
+      "id": "ranked",
+      "title": "Ranked",
+      "note": "Ranked Battle Royale: hier gelten eigene Regeln und eingeschränkte Aufsätze, deshalb ist die Meta ganz anders. Für die meisten dieser Waffen ist noch kein Build eingetragen.",
+      "list": [
+        {
+          "id": "maddox-rfb",
+          "name": "MADDOX RFB",
+          "cls": "Sturmgewehr",
+          "role": "long",
+          "rank": 1
+        },
+        {
+          "id": "m8a1",
+          "name": "M8A1",
+          "cls": "Marksman-Gewehr",
+          "role": "long",
+          "rank": 2
+        },
+        {
+          "id": "egrt-17",
+          "name": "EGRT-17",
+          "cls": "Sturmgewehr",
+          "role": "long",
+          "rank": 3
+        },
+        {
+          "id": "m15-mod-0",
+          "name": "M15 MOD 0",
+          "cls": "Sturmgewehr",
+          "role": "long",
+          "rank": 4
+        },
+        {
+          "id": "carbon-57",
+          "name": "CARBON 57",
+          "cls": "MP",
+          "role": "close",
+          "rank": 1
+        },
+        {
+          "id": "kogot-7",
+          "name": "KOGOT-7",
+          "cls": "MP",
+          "role": "close",
+          "rank": 2
+        },
+        {
+          "id": "rev-46-ranked",
+          "name": "REV-46",
+          "cls": "MP",
+          "role": "close",
+          "rank": 3
+        },
+        {
+          "id": "razor-9mm",
+          "name": "RAZOR 9MM",
+          "cls": "MP",
+          "role": "close",
+          "rank": 4
+        },
+        {
+          "id": "hawker-hx-ranked",
+          "name": "HAWKER HX",
+          "cls": "Scharfschützengewehr",
+          "role": "sniper",
+          "rank": 1
+        }
+      ]
+    }
+  ],
+  "loadouts": [
+    {
+      "id": "meta",
+      "title": "Battle-Royale-Meta",
+      "tag": "Nr. 1",
+      "primary": "VOYAK KT-3",
+      "secondary": "VMP",
+      "perks": [
+        "Scavenger",
+        "Sprinter",
+        "Ghost"
+      ],
+      "equipment": [
+        "Semtex",
+        "Rauchgranate"
+      ],
+      "note": "Die stärkste Kombi für Fern- und Nahkampf."
+    },
+    {
+      "id": "sniper",
+      "title": "Sniper-Meta",
+      "tag": "Sniper",
+      "primary": "STRIDER 300",
+      "secondary": "VX COMPACT",
+      "perks": [
+        "Scavenger",
+        "Sprinter",
+        "Survivor"
+      ],
+      "equipment": [
+        "Semtex",
+        "Rauchgranate"
+      ],
+      "note": "Sniper für den One-Shot, VX COMPACT als Sniper-Support."
+    },
+    {
+      "id": "easy",
+      "title": "Einfach zu spielen",
+      "tag": "Anfänger",
+      "primary": "MK35 ISR",
+      "secondary": "MPC-25",
+      "perks": [
+        "Scavenger",
+        "Sprinter",
+        "Ghost"
+      ],
+      "equipment": [
+        "Semtex",
+        "Rauchgranate"
+      ],
+      "note": "Sehr wenig Rückstoß und gutes Handling."
+    },
+    {
+      "id": "kar",
+      "title": "Für KAR98K-Fans",
+      "tag": "Sniper",
+      "primary": "KAR98K",
+      "secondary": "VX COMPACT",
+      "perks": [
+        "Scavenger",
+        "Sprinter",
+        "Tempered"
+      ],
+      "equipment": [
+        "Wurfaxt",
+        "Rauchgranate"
+      ]
+    },
+    {
+      "id": "lmg",
+      "title": "LMG-Loadout",
+      "tag": "LMG",
+      "primary": "SOKOL 545",
+      "secondary": "VMP",
+      "perks": [
+        "Scavenger",
+        "Sprinter",
+        "Ghost"
+      ],
+      "equipment": [
+        "Semtex",
+        "Rauchgranate"
+      ],
+      "note": "Großes Magazin für Squads auf Distanz."
+    }
+  ],
+  "proFavorites": [
+    "VOYAK KT-3",
+    "VMP",
+    "MPC-25"
+  ],
+  "tierList": [
+    {
+      "name": "VOYAK KT-3",
+      "cls": "Sturmgewehr",
+      "role": "long",
+      "tier": "META"
+    },
+    {
+      "name": "VMP",
+      "cls": "MP",
+      "role": "close",
+      "tier": "META"
+    },
+    {
+      "name": "MK35 ISR",
+      "cls": "Sturmgewehr",
+      "role": "long",
+      "tier": "META"
+    },
+    {
+      "name": "MPC-25",
+      "cls": "MP",
+      "role": "close",
+      "tier": "META"
+    },
+    {
+      "name": "DS20 MIRAGE",
+      "cls": "Sturmgewehr",
+      "role": "long",
+      "tier": "META"
+    },
+    {
+      "name": "REV-46",
+      "cls": "MP",
+      "role": "close",
+      "tier": "META"
+    },
+    {
+      "name": "RYDEN 45K",
+      "cls": "MP",
+      "role": "close",
+      "tier": "META"
+    },
+    {
+      "name": "STRIDER 300",
+      "cls": "Scharfschützengewehr",
+      "role": "sniper",
+      "tier": "META"
+    },
+    {
+      "name": "VX COMPACT",
+      "cls": "Sturmgewehr",
+      "role": "long",
+      "tier": "A"
+    },
+    {
+      "name": "STURMWOLF 45",
+      "cls": "MP",
+      "role": "close",
+      "tier": "A"
+    },
+    {
+      "name": "PEACEKEEPER MK1",
+      "cls": "Sturmgewehr",
+      "role": "long",
+      "tier": "A"
+    },
+    {
+      "name": "CARBON 57",
+      "cls": "MP",
+      "role": "close",
+      "tier": "A"
+    },
+    {
+      "name": "M15 MOD 0",
+      "cls": "Sturmgewehr",
+      "role": "long",
+      "tier": "A"
+    },
+    {
+      "name": "VST",
+      "cls": "MP",
+      "role": "close",
+      "tier": "A"
+    },
+    {
+      "name": "FG42",
+      "cls": "Sturmgewehr",
+      "role": "long",
+      "tier": "A"
+    },
+    {
+      "name": "AK-27",
+      "cls": "Sturmgewehr",
+      "role": "long",
+      "tier": "A"
+    },
+    {
+      "name": "EGRT-17",
+      "cls": "Sturmgewehr",
+      "role": "long",
+      "tier": "A"
+    },
+    {
+      "name": "SOKOL 545",
+      "cls": "LMG",
+      "role": "long",
+      "tier": "A"
+    },
+    {
+      "name": "CBRS-3",
+      "cls": "MP",
+      "role": "close",
+      "tier": "A"
+    },
+    {
+      "name": "VS RECON",
+      "cls": "Scharfschützengewehr",
+      "role": "sniper",
+      "tier": "A"
+    },
+    {
+      "name": "HAWKER HX",
+      "cls": "Scharfschützengewehr",
+      "role": "sniper",
+      "tier": "A"
+    },
+    {
+      "name": "AN-94",
+      "cls": "Sturmgewehr",
+      "role": "long",
+      "tier": "A"
+    },
+    {
+      "name": "KOGOT-7",
+      "cls": "MP",
+      "role": "close",
+      "tier": "A"
+    },
+    {
+      "name": "TR51 PARA",
+      "cls": "Sturmgewehr",
+      "role": "long",
+      "tier": "A"
+    },
+    {
+      "name": "DRAVEC 45",
+      "cls": "MP",
+      "role": "close",
+      "tier": "A"
+    },
+    {
+      "name": "RAZOR 9MM",
+      "cls": "MP",
+      "role": "close",
+      "tier": "A"
+    },
+    {
+      "name": "GREMLIN",
+      "cls": "MP",
+      "role": "close",
+      "tier": "A"
+    },
+    {
+      "name": "MK.78",
+      "cls": "LMG",
+      "role": "long",
+      "tier": "A"
+    },
+    {
+      "name": "MXR-17",
+      "cls": "Sturmgewehr",
+      "role": "long",
+      "tier": "A"
+    },
+    {
+      "name": "X9 MAVERICK",
+      "cls": "Sturmgewehr",
+      "role": "long",
+      "tier": "A"
+    },
+    {
+      "name": "MADDOX RFB",
+      "cls": "Sturmgewehr",
+      "role": "long",
+      "tier": "A"
+    },
+    {
+      "name": "HDR",
+      "cls": "Scharfschützengewehr",
+      "role": "sniper",
+      "tier": "A"
+    },
+    {
+      "name": "XM325",
+      "cls": "LMG",
+      "role": "long",
+      "tier": "A"
+    },
+    {
+      "name": "KILO 141",
+      "cls": "Sturmgewehr",
+      "role": "long",
+      "tier": "A"
+    },
+    {
+      "name": "MERRICK 556",
+      "cls": "Sturmgewehr",
+      "role": "long",
+      "tier": "A"
+    },
+    {
+      "name": "AKITA",
+      "cls": "Schrotflinte",
+      "role": "close",
+      "tier": "A"
+    },
+    {
+      "name": "RIVETER",
+      "cls": "Schrotflinte",
+      "role": "close",
+      "tier": "A"
+    },
+    {
+      "name": "M10 BREACHER",
+      "cls": "Schrotflinte",
+      "role": "close",
+      "tier": "A"
+    },
+    {
+      "name": "RK-9",
+      "cls": "MP",
+      "role": "close",
+      "tier": "A"
+    },
+    {
+      "name": "SG-12",
+      "cls": "Schrotflinte",
+      "role": "close",
+      "tier": "A"
+    },
+    {
+      "name": "ECHO 12",
+      "cls": "Schrotflinte",
+      "role": "close",
+      "tier": "A"
+    },
+    {
+      "name": "KATT-AMR",
+      "cls": "Scharfschützengewehr",
+      "role": "sniper",
+      "tier": "A"
+    },
+    {
+      "name": "VICTUS XMR",
+      "cls": "Scharfschützengewehr",
+      "role": "sniper",
+      "tier": "A"
+    },
+    {
+      "name": "FJX IMPERIUM",
+      "cls": "Scharfschützengewehr",
+      "role": "sniper",
+      "tier": "A"
+    },
+    {
+      "name": "LR 7.62",
+      "cls": "Scharfschützengewehr",
+      "role": "sniper",
+      "tier": "A"
+    },
+    {
+      "name": "LW3A1 FROSTLINE",
+      "cls": "Scharfschützengewehr",
+      "role": "sniper",
+      "tier": "A"
+    },
+    {
+      "name": "KAR98K",
+      "cls": "Marksman-Gewehr",
+      "role": "sniper",
+      "tier": "A"
+    },
+    {
+      "name": "SWAT 5.56",
+      "cls": "Marksman-Gewehr",
+      "role": "long",
+      "tier": "A"
+    },
+    {
+      "name": "XR-3 ION",
+      "cls": "Scharfschützengewehr",
+      "role": "sniper",
+      "tier": "A"
+    },
+    {
+      "name": "M8A1",
+      "cls": "Marksman-Gewehr",
+      "role": "long",
+      "tier": "B"
+    },
+    {
+      "name": "SWORDFISH A1",
+      "cls": "Marksman-Gewehr",
+      "role": "long",
+      "tier": "B"
+    },
+    {
+      "name": "TR2",
+      "cls": "Marksman-Gewehr",
+      "role": "close",
+      "tier": "B"
+    },
+    {
+      "name": "M34 NOVALINE",
+      "cls": "Marksman-Gewehr",
+      "role": "long",
+      "tier": "B"
+    },
+    {
+      "name": "WARDEN 308",
+      "cls": "Marksman-Gewehr",
+      "role": "long",
+      "tier": "B"
+    },
+    {
+      "name": "KRS-7.62",
+      "cls": "Marksman-Gewehr",
+      "role": "long",
+      "tier": "B"
+    },
+    {
+      "name": "C9",
+      "cls": "MP",
+      "role": "close",
+      "tier": "B"
+    },
+    {
+      "name": "DRESDEN 9MM",
+      "cls": "MP",
+      "role": "close",
+      "tier": "B"
+    },
+    {
+      "name": "GPR 91",
+      "cls": "Sturmgewehr",
+      "role": "long",
+      "tier": "B"
+    },
+    {
+      "name": "JACKAL PDW",
+      "cls": "MP",
+      "role": "close",
+      "tier": "B"
+    },
+    {
+      "name": "X52 RESONATOR",
+      "cls": "Spezial",
+      "role": "close",
+      "tier": "B"
+    },
+    {
+      "name": "CR-56 AMAX",
+      "cls": "Sturmgewehr",
+      "role": "long",
+      "tier": "B"
+    },
+    {
+      "name": "AMES 85",
+      "cls": "Sturmgewehr",
+      "role": "long",
+      "tier": "B"
+    },
+    {
+      "name": "GREKHOVA",
+      "cls": "Pistole",
+      "role": "close",
+      "tier": "B"
+    },
+    {
+      "name": "VELOX 5.7",
+      "cls": "Pistole",
+      "role": "close",
+      "tier": "B"
+    },
+    {
+      "name": "1911",
+      "cls": "Pistole",
+      "role": "close",
+      "tier": "B"
+    },
+    {
+      "name": "CODA 9",
+      "cls": "Pistole",
+      "role": "close",
+      "tier": "B"
+    },
+    {
+      "name": "JÄGER 45",
+      "cls": "Pistole",
+      "role": "close",
+      "tier": "B"
+    },
+    {
+      "name": "LADRA",
+      "cls": "MP",
+      "role": "close",
+      "tier": "B"
+    },
+    {
+      "name": "PPSH-41",
+      "cls": "MP",
+      "role": "close",
+      "tier": "B"
+    },
+    {
+      "name": "KSV",
+      "cls": "MP",
+      "role": "close",
+      "tier": "B"
+    },
+    {
+      "name": "SAUG",
+      "cls": "MP",
+      "role": "close",
+      "tier": "B"
+    },
+    {
+      "name": "ABR A1",
+      "cls": "Sturmgewehr",
+      "role": "long",
+      "tier": "B"
+    },
+    {
+      "name": "LC10",
+      "cls": "MP",
+      "role": "close",
+      "tier": "B"
+    },
+    {
+      "name": "KOMPAKT 92",
+      "cls": "MP",
+      "role": "close",
+      "tier": "B"
+    },
+    {
+      "name": "CYPHER 091",
+      "cls": "Sturmgewehr",
+      "role": "long",
+      "tier": "B"
+    },
+    {
+      "name": "XM4",
+      "cls": "Sturmgewehr",
+      "role": "long",
+      "tier": "B"
+    },
+    {
+      "name": "AS VAL",
+      "cls": "Sturmgewehr",
+      "role": "long",
+      "tier": "B"
+    },
+    {
+      "name": "FFAR 1",
+      "cls": "Sturmgewehr",
+      "role": "long",
+      "tier": "B"
+    },
+    {
+      "name": "MODEL L",
+      "cls": "Sturmgewehr",
+      "role": "long",
+      "tier": "B"
+    },
+    {
+      "name": "KRIG C",
+      "cls": "Sturmgewehr",
+      "role": "long",
+      "tier": "B"
+    },
+    {
+      "name": "M13B",
+      "cls": "Sturmgewehr",
+      "role": "long",
+      "tier": "B"
+    },
+    {
+      "name": "M4",
+      "cls": "Sturmgewehr",
+      "role": "long",
+      "tier": "B"
+    },
+    {
+      "name": "STRIKER",
+      "cls": "MP",
+      "role": "close",
+      "tier": "B"
+    },
+    {
+      "name": "MX9",
+      "cls": "MP",
+      "role": "close",
+      "tier": "B"
+    },
+    {
+      "name": "BAS-P",
+      "cls": "MP",
+      "role": "close",
+      "tier": "B"
+    },
+    {
+      "name": "VAZNEV-9K",
+      "cls": "MP",
+      "role": "close",
+      "tier": "B"
+    },
+    {
+      "name": "VEL 46",
+      "cls": "MP",
+      "role": "close",
+      "tier": "B"
+    },
+    {
+      "name": "MARINE SP",
+      "cls": "Schrotflinte",
+      "role": "close",
+      "tier": "B"
+    },
+    {
+      "name": "SAKIN MG38",
+      "cls": "LMG",
+      "role": "long",
+      "tier": "B"
+    },
+    {
+      "name": "MCW",
+      "cls": "Sturmgewehr",
+      "role": "long",
+      "tier": "B"
+    },
+    {
+      "name": "XMG",
+      "cls": "LMG",
+      "role": "long",
+      "tier": "B"
+    },
+    {
+      "name": "STG44",
+      "cls": "Sturmgewehr",
+      "role": "long",
+      "tier": "B"
+    },
+    {
+      "name": "HRM-9",
+      "cls": "MP",
+      "role": "close",
+      "tier": "B"
+    },
+    {
+      "name": "AK-74",
+      "cls": "Sturmgewehr",
+      "role": "long",
+      "tier": "B"
+    },
+    {
+      "name": "SHADOW SK",
+      "cls": "Scharfschützengewehr",
+      "role": "sniper",
+      "tier": "B"
+    },
+    {
+      "name": "PDSW 528",
+      "cls": "MP",
+      "role": "close",
+      "tier": "B"
+    },
+    {
+      "name": "TAQ-56",
+      "cls": "Sturmgewehr",
+      "role": "long",
+      "tier": "B"
+    },
+    {
+      "name": "LACHMANN SHROUD",
+      "cls": "MP",
+      "role": "close",
+      "tier": "B",
+      "kit": true
+    },
+    {
+      "name": "RECLAIMER 18",
+      "cls": "Schrotflinte",
+      "role": "close",
+      "tier": "B"
+    },
+    {
+      "name": "FENG 82",
+      "cls": "LMG",
+      "role": "long",
+      "tier": "B"
+    },
+    {
+      "name": "GOBLIN MK2",
+      "cls": "Sturmgewehr",
+      "role": "long",
+      "tier": "B"
+    },
+    {
+      "name": "AMR MOD 4",
+      "cls": "Scharfschützengewehr",
+      "role": "sniper",
+      "tier": "B"
+    },
+    {
+      "name": "PML 5.56",
+      "cls": "LMG",
+      "role": "long",
+      "tier": "B"
+    },
+    {
+      "name": "PP-919",
+      "cls": "MP",
+      "role": "close",
+      "tier": "B"
+    },
+    {
+      "name": "SIRIN 9MM",
+      "cls": "Spezial",
+      "role": "close",
+      "tier": "B"
+    },
+    {
+      "name": "MTZ-556",
+      "cls": "Sturmgewehr",
+      "role": "long",
+      "tier": "B"
+    },
+    {
+      "name": "MORS",
+      "cls": "Scharfschützengewehr",
+      "role": "sniper",
+      "tier": "B"
+    },
+    {
+      "name": "XRK STALKER",
+      "cls": "Scharfschützengewehr",
+      "role": "sniper",
+      "tier": "B"
+    },
+    {
+      "name": "NAIL GUN",
+      "cls": "Spezial",
+      "role": "close",
+      "tier": "B"
+    },
+    {
+      "name": "BP50",
+      "cls": "Sturmgewehr",
+      "role": "close",
+      "tier": "B",
+      "kit": true
+    },
+    {
+      "name": "MCW",
+      "cls": "Sturmgewehr",
+      "role": "close",
+      "tier": "B",
+      "kit": true
+    },
+    {
+      "name": "MX GUARDIAN",
+      "cls": "Schrotflinte",
+      "role": "close",
+      "tier": "B"
+    },
+    {
+      "name": "PULEMYOT 762",
+      "cls": "LMG",
+      "role": "long",
+      "tier": "B"
+    },
+    {
+      "name": "DM-10",
+      "cls": "Marksman-Gewehr",
+      "role": "long",
+      "tier": "B"
+    },
+    {
+      "name": "ESSEX MODEL 07",
+      "cls": "Marksman-Gewehr",
+      "role": "long",
+      "tier": "B"
+    },
+    {
+      "name": "RENETTI",
+      "cls": "Pistole",
+      "role": "close",
+      "tier": "B",
+      "kit": true
+    },
+    {
+      "name": "SUPERI 46",
+      "cls": "MP",
+      "role": "close",
+      "tier": "B"
+    },
+    {
+      "name": "FJX HORUS",
+      "cls": "MP",
+      "role": "close",
+      "tier": "B"
+    },
+    {
+      "name": "FJX HORUS",
+      "cls": "MP",
+      "role": "close",
+      "tier": "B",
+      "kit": true
+    },
+    {
+      "name": "RIVAL-9",
+      "cls": "MP",
+      "role": "close",
+      "tier": "B"
+    },
+    {
+      "name": "AMR9",
+      "cls": "MP",
+      "role": "close",
+      "tier": "B"
+    },
+    {
+      "name": "ISO HEMLOCK",
+      "cls": "Sturmgewehr",
+      "role": "long",
+      "tier": "B"
+    },
+    {
+      "name": "HOLGER 556",
+      "cls": "Sturmgewehr",
+      "role": "long",
+      "tier": "B"
+    },
+    {
+      "name": "RAM-9",
+      "cls": "MP",
+      "role": "close",
+      "tier": "B"
+    },
+    {
+      "name": "556 ICARUS",
+      "cls": "LMG",
+      "role": "long",
+      "tier": "B"
+    },
+    {
+      "name": "DG-58 LSW",
+      "cls": "LMG",
+      "role": "long",
+      "tier": "B"
+    },
+    {
+      "name": "BAL-27",
+      "cls": "Sturmgewehr",
+      "role": "long",
+      "tier": "B"
+    },
+    {
+      "name": "TAQ ERADICATOR",
+      "cls": "LMG",
+      "role": "long",
+      "tier": "B"
+    },
+    {
+      "name": "STB 556",
+      "cls": "Sturmgewehr",
+      "role": "long",
+      "tier": "B"
+    },
+    {
+      "name": "BP50",
+      "cls": "Sturmgewehr",
+      "role": "long",
+      "tier": "B"
+    },
+    {
+      "name": "HOLGER 26",
+      "cls": "LMG",
+      "role": "long",
+      "tier": "B"
+    },
+    {
+      "name": "PULEMYOT 762",
+      "cls": "LMG",
+      "role": "long",
+      "tier": "B",
+      "kit": true
+    },
+    {
+      "name": "TAQ EVOLVERE",
+      "cls": "LMG",
+      "role": "long",
+      "tier": "B"
+    },
+    {
+      "name": "KASTOV 762",
+      "cls": "Sturmgewehr",
+      "role": "long",
+      "tier": "B",
+      "kit": true
+    },
+    {
+      "name": "TEMPUS TORRENT",
+      "cls": "Marksman-Gewehr",
+      "role": "long",
+      "tier": "B"
+    },
+    {
+      "name": "MCW 6.8",
+      "cls": "Marksman-Gewehr",
+      "role": "long",
+      "tier": "B"
+    },
+    {
+      "name": "SOA SUBVERTER",
+      "cls": "Kampfgewehr",
+      "role": "long",
+      "tier": "B"
+    },
+    {
+      "name": "KV BROADSIDE",
+      "cls": "Schrotflinte",
+      "role": "close",
+      "tier": "B"
+    },
+    {
+      "name": "BAS-B",
+      "cls": "Kampfgewehr",
+      "role": "long",
+      "tier": "B"
+    },
+    {
+      "name": "KASTOV 545",
+      "cls": "Sturmgewehr",
+      "role": "long",
+      "tier": "B",
+      "kit": true
+    },
+    {
+      "name": "TAQ-V",
+      "cls": "Kampfgewehr",
+      "role": "long",
+      "tier": "B"
+    },
+    {
+      "name": "LACHMANN-556",
+      "cls": "Sturmgewehr",
+      "role": "long",
+      "tier": "B"
+    },
+    {
+      "name": "FENNEC 45",
+      "cls": "MP",
+      "role": "close",
+      "tier": "B"
+    },
+    {
+      "name": "LOCKWOOD MK2",
+      "cls": "Marksman-Gewehr",
+      "role": "close",
+      "tier": "B",
+      "kit": true
+    },
+    {
+      "name": "M16",
+      "cls": "Sturmgewehr",
+      "role": "long",
+      "tier": "B",
+      "kit": true
+    },
+    {
+      "name": "RAPP H",
+      "cls": "LMG",
+      "role": "long",
+      "tier": "B"
+    },
+    {
+      "name": "MTZ-762",
+      "cls": "Kampfgewehr",
+      "role": "long",
+      "tier": "B"
+    },
+    {
+      "name": "SVA 545",
+      "cls": "Sturmgewehr",
+      "role": "long",
+      "tier": "B"
+    },
+    {
+      "name": "BRUEN MK9",
+      "cls": "LMG",
+      "role": "long",
+      "tier": "B"
+    },
+    {
+      "name": "TEMPUS RAZORBACK",
+      "cls": "Sturmgewehr",
+      "role": "long",
+      "tier": "B"
+    },
+    {
+      "name": "SIDEWINDER",
+      "cls": "Kampfgewehr",
+      "role": "long",
+      "tier": "B"
+    },
+    {
+      "name": "DTIR 30-06",
+      "cls": "Kampfgewehr",
+      "role": "long",
+      "tier": "B"
+    },
+    {
+      "name": "WSP-9",
+      "cls": "MP",
+      "role": "close",
+      "tier": "B"
+    },
+    {
+      "name": "WSP SWARM",
+      "cls": "MP",
+      "role": "close",
+      "tier": "B"
+    },
+    {
+      "name": "DG-58 LSW",
+      "cls": "LMG",
+      "role": "close",
+      "tier": "B",
+      "kit": true
+    },
+    {
+      "name": "MAMMOTH",
+      "cls": "LMG",
+      "role": "long",
+      "tier": "B"
+    },
+    {
+      "name": "PU-21",
+      "cls": "LMG",
+      "role": "long",
+      "tier": "B"
+    },
+    {
+      "name": "GPMG-7",
+      "cls": "LMG",
+      "role": "long",
+      "tier": "B"
+    },
+    {
+      "name": "KVD ENFORCER",
+      "cls": "Marksman-Gewehr",
+      "role": "long",
+      "tier": "B"
+    },
+    {
+      "name": "HCR 56",
+      "cls": "LMG",
+      "role": "long",
+      "tier": "B"
+    },
+    {
+      "name": "BRYSON 890",
+      "cls": "Schrotflinte",
+      "role": "close",
+      "tier": "B"
+    },
+    {
+      "name": "BRYSON 800",
+      "cls": "Schrotflinte",
+      "role": "close",
+      "tier": "B"
+    },
+    {
+      "name": "EXPEDITE 12",
+      "cls": "Schrotflinte",
+      "role": "close",
+      "tier": "B"
+    },
+    {
+      "name": "AEK-973",
+      "cls": "Marksman-Gewehr",
+      "role": "long",
+      "tier": "B"
+    },
+    {
+      "name": "STRIKER 9",
+      "cls": "MP",
+      "role": "close",
+      "tier": "B"
+    },
+    {
+      "name": "FSS HURRICANE",
+      "cls": "MP",
+      "role": "close",
+      "tier": "B"
+    },
+    {
+      "name": "STATIC-HV",
+      "cls": "MP",
+      "role": "close",
+      "tier": "C"
+    },
+    {
+      "name": "WSP STINGER",
+      "cls": "Pistole",
+      "role": "close",
+      "tier": "C"
+    },
+    {
+      "name": "SO-14",
+      "cls": "Kampfgewehr",
+      "role": "long",
+      "tier": "C"
+    },
+    {
+      "name": "MINIBAK",
+      "cls": "MP",
+      "role": "close",
+      "tier": "C"
+    },
+    {
+      "name": "LACHMANN SUB",
+      "cls": "MP",
+      "role": "close",
+      "tier": "C"
+    },
+    {
+      "name": "TANTO .22",
+      "cls": "MP",
+      "role": "close",
+      "tier": "C"
+    },
+    {
+      "name": "MAELSTROM",
+      "cls": "Schrotflinte",
+      "role": "close",
+      "tier": "C"
+    },
+    {
+      "name": "STRYDER .22",
+      "cls": "Pistole",
+      "role": "close",
+      "tier": "C"
+    },
+    {
+      "name": "9MM PM",
+      "cls": "Pistole",
+      "role": "close",
+      "tier": "C"
+    },
+    {
+      "name": "GS45",
+      "cls": "Pistole",
+      "role": "close",
+      "tier": "C"
+    },
+    {
+      "name": "WSP SWARM",
+      "cls": "MP",
+      "role": "close",
+      "tier": "C",
+      "kit": true
+    },
+    {
+      "name": "HAYMAKER",
+      "cls": "Schrotflinte",
+      "role": "close",
+      "tier": "C"
+    },
+    {
+      "name": "STORMENDER",
+      "cls": "Schrotflinte",
+      "role": "close",
+      "tier": "C",
+      "kit": true
+    },
+    {
+      "name": "KASTOV LSW",
+      "cls": "LMG",
+      "role": "long",
+      "tier": "C"
+    },
+    {
+      "name": "KASTOV 545",
+      "cls": "Sturmgewehr",
+      "role": "long",
+      "tier": "C"
+    },
+    {
+      "name": "KASTOV 762",
+      "cls": "Sturmgewehr",
+      "role": "long",
+      "tier": "C"
+    },
+    {
+      "name": "TR-76 GEIST",
+      "cls": "Sturmgewehr",
+      "role": "long",
+      "tier": "C"
+    },
+    {
+      "name": "ISO 45",
+      "cls": "MP",
+      "role": "close",
+      "tier": "C"
+    },
+    {
+      "name": "MCPR-300",
+      "cls": "Scharfschützengewehr",
+      "role": "sniper",
+      "tier": "C"
+    },
+    {
+      "name": "SP-X 80",
+      "cls": "Scharfschützengewehr",
+      "role": "sniper",
+      "tier": "C"
+    },
+    {
+      "name": "LA-B 330",
+      "cls": "Scharfschützengewehr",
+      "role": "sniper",
+      "tier": "C"
+    },
+    {
+      "name": "CROSSBOW",
+      "cls": "Marksman-Gewehr",
+      "role": "long",
+      "tier": "C"
+    },
+    {
+      "name": "RAM-7",
+      "cls": "Sturmgewehr",
+      "role": "long",
+      "tier": "C"
+    },
+    {
+      "name": "FR AVANCER",
+      "cls": "Sturmgewehr",
+      "role": "long",
+      "tier": "C"
+    },
+    {
+      "name": "LM-S",
+      "cls": "Marksman-Gewehr",
+      "role": "long",
+      "tier": "C"
+    },
+    {
+      "name": "TSARKOV 7.62",
+      "cls": "Marksman-Gewehr",
+      "role": "long",
+      "tier": "C"
+    },
+    {
+      "name": "LOCKWOOD 680",
+      "cls": "Schrotflinte",
+      "role": "close",
+      "tier": "C"
+    },
+    {
+      "name": "X13 AUTO",
+      "cls": "Pistole",
+      "role": "close",
+      "tier": "C"
+    },
+    {
+      "name": "M16",
+      "cls": "Sturmgewehr",
+      "role": "long",
+      "tier": "C"
+    },
+    {
+      "name": "FTAC RECON",
+      "cls": "Kampfgewehr",
+      "role": "long",
+      "tier": "C"
+    },
+    {
+      "name": "DM56",
+      "cls": "Marksman-Gewehr",
+      "role": "long",
+      "tier": "C"
+    },
+    {
+      "name": "RENETTI",
+      "cls": "Pistole",
+      "role": "close",
+      "tier": "C"
+    },
+    {
+      "name": "ASG-89",
+      "cls": "Schrotflinte",
+      "role": "close",
+      "tier": "C"
+    },
+    {
+      "name": "OLYMPIA",
+      "cls": "Spezial",
+      "role": "close",
+      "tier": "C"
+    },
+    {
+      "name": "RPK",
+      "cls": "LMG",
+      "role": "long",
+      "tier": "C"
+    },
+    {
+      "name": "LACHMANN SHROUD",
+      "cls": "MP",
+      "role": "close",
+      "tier": "C"
+    },
+    {
+      "name": "SIGNAL 50",
+      "cls": "Scharfschützengewehr",
+      "role": "sniper",
+      "tier": "C"
+    },
+    {
+      "name": "SVD",
+      "cls": "Scharfschützengewehr",
+      "role": "sniper",
+      "tier": "C"
+    },
+    {
+      "name": "LONGBOW",
+      "cls": "Scharfschützengewehr",
+      "role": "sniper",
+      "tier": "C"
+    },
+    {
+      "name": "9MM DAEMON",
+      "cls": "Pistole",
+      "role": "close",
+      "tier": "C"
+    },
+    {
+      "name": "KV INHIBITOR",
+      "cls": "Scharfschützengewehr",
+      "role": "sniper",
+      "tier": "C"
+    },
+    {
+      "name": "DG-56",
+      "cls": "Sturmgewehr",
+      "role": "long",
+      "tier": "C"
+    },
+    {
+      "name": "FR 5.56",
+      "cls": "Sturmgewehr",
+      "role": "long",
+      "tier": "C"
+    },
+    {
+      "name": "CHIMERA",
+      "cls": "Sturmgewehr",
+      "role": "long",
+      "tier": "C"
+    },
+    {
+      "name": "ISO 9MM",
+      "cls": "MP",
+      "role": "close",
+      "tier": "C"
+    },
+    {
+      "name": "MX GUARDIAN",
+      "cls": "Schrotflinte",
+      "role": "close",
+      "tier": "C",
+      "kit": true
+    },
+    {
+      "name": "RGL-80",
+      "cls": "Marksman-Gewehr",
+      "role": "long",
+      "tier": "C",
+      "kit": true
+    },
+    {
+      "name": "M13C",
+      "cls": "Sturmgewehr",
+      "role": "long",
+      "tier": "C"
+    },
+    {
+      "name": "TAQ-M",
+      "cls": "Marksman-Gewehr",
+      "role": "long",
+      "tier": "C"
+    },
+    {
+      "name": "KASTOV-74U",
+      "cls": "Sturmgewehr",
+      "role": "long",
+      "tier": "C"
+    },
+    {
+      "name": "CARRACK .300",
+      "cls": "Scharfschützengewehr",
+      "role": "sniper",
+      "tier": "C"
+    },
+    {
+      "name": "LACHMANN-762",
+      "cls": "Kampfgewehr",
+      "role": "long",
+      "tier": "C"
+    },
+    {
+      "name": "CRONEN SQUALL",
+      "cls": "Kampfgewehr",
+      "role": "long",
+      "tier": "C"
+    },
+    {
+      "name": "RAAL MG",
+      "cls": "LMG",
+      "role": "long",
+      "tier": "C"
+    },
+    {
+      "name": "MTZ INTERCEPTOR",
+      "cls": "Marksman-Gewehr",
+      "role": "long",
+      "tier": "C"
+    },
+    {
+      "name": "TYR",
+      "cls": "Pistole",
+      "role": "close",
+      "tier": "C"
+    },
+    {
+      "name": "X12",
+      "cls": "Pistole",
+      "role": "close",
+      "tier": "C"
+    },
+    {
+      "name": "COR-45",
+      "cls": "Pistole",
+      "role": "close",
+      "tier": "C"
+    },
+    {
+      "name": "P890",
+      "cls": "Pistole",
+      "role": "close",
+      "tier": "C"
+    },
+    {
+      "name": "EBR-14",
+      "cls": "Marksman-Gewehr",
+      "role": "long",
+      "tier": "C"
+    },
+    {
+      "name": "SA-B 50",
+      "cls": "Marksman-Gewehr",
+      "role": "long",
+      "tier": "C"
+    },
+    {
+      "name": "TORQUE 35",
+      "cls": "Marksman-Gewehr",
+      "role": "long",
+      "tier": "C"
+    },
+    {
+      "name": "FTAC SIEGE",
+      "cls": "Pistole",
+      "role": "close",
+      "tier": "C"
+    },
+    {
+      "name": "D.13 SECTOR",
+      "cls": "Spezial",
+      "role": "close",
+      "tier": "C"
+    },
+    {
+      "name": "GRAVEMARK .357",
+      "cls": "Pistole",
+      "role": "close",
+      "tier": "D"
+    },
+    {
+      "name": "RGL-80",
+      "cls": "Marksman-Gewehr",
+      "role": "long",
+      "tier": "D"
+    },
+    {
+      "name": "STORMENDER",
+      "cls": "Schrotflinte",
+      "role": "close",
+      "tier": "D"
+    },
+    {
+      "name": "SP-R 208",
+      "cls": "Marksman-Gewehr",
+      "role": "long",
+      "tier": "D"
+    },
+    {
+      "name": "LOCKWOOD MK2",
+      "cls": "Marksman-Gewehr",
+      "role": "long",
+      "tier": "D"
+    },
+    {
+      "name": ".50GS",
+      "cls": "Pistole",
+      "role": "close",
+      "tier": "D"
+    },
+    {
+      "name": "BASILISK",
+      "cls": "Pistole",
+      "role": "close",
+      "tier": "D"
+    },
+    {
+      "name": "GS MAGNA",
+      "cls": "Pistole",
+      "role": "close",
+      "tier": "D"
+    },
+    {
+      "name": "LOCKWOOD 300",
+      "cls": "Schrotflinte",
+      "role": "close",
+      "tier": "D"
+    },
+    {
+      "name": "RPK",
+      "cls": "LMG",
+      "role": "long",
+      "tier": "D",
+      "kit": true
+    },
+    {
+      "name": "SIREN",
+      "cls": "Spezial",
+      "role": "long",
+      "tier": "D"
+    },
+    {
+      "name": "NX RAVAGER",
+      "cls": "Spezial",
+      "role": "long",
+      "tier": "D"
+    },
+    {
+      "name": "GDL HAVOC",
+      "cls": "Spezial",
+      "role": "long",
+      "tier": "D"
+    },
+    {
+      "name": "GRIMHAWK",
+      "cls": "Spezial",
+      "role": "long",
+      "tier": "D"
+    },
+    {
+      "name": "ROC 20MM",
+      "cls": "Spezial",
+      "role": "long",
+      "tier": "D"
+    }
   ]
 }

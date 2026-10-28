@@ -213,8 +213,6 @@ a:hover { text-decoration: underline; }
 }
 .showcase .tag { position: absolute; left: 10px; bottom: 8px; font-size: 12px; font-weight: 600; color: var(--muted); }
 .gun-svg { display: block; width: 84%; max-width: 300px; height: auto; overflow: visible; }
-.showcase.has-img { height: 140px; padding: 8px; }
-.gun-img { display: block; max-width: 100%; max-height: 124px; object-fit: contain; border-radius: 6px; }
 .gun-svg.mini { width: 96px; max-width: 100%; margin: 0 0 6px; }
 .gun-body { fill: color-mix(in srgb, var(--accent) 22%, transparent); stroke: var(--accent); stroke-width: 1.6; stroke-linejoin: round; }
 
@@ -307,6 +305,38 @@ footer .legal { color: var(--dim); font-size: 12.5px; }
 .set-src { grid-column: 1 / -1; margin: 0; font-size: 13px; color: var(--dim); }
 @media (max-width: 560px) { .set-list dd { white-space: normal; } }
 
+/* ---------- Modi, Loadouts, Tier-Liste ---------- */
+.mode-note { margin: -4px 0 14px; color: var(--muted); font-size: 14px; max-width: 75ch; }
+.showcase.has-img { height: 140px; padding: 8px; }
+.gun-img { display: block; max-width: 100%; max-height: 124px; object-fit: contain; border-radius: 6px; }
+.loadouts { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 340px), 1fr)); gap: 16px; align-items: start; }
+.lo { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); padding: 18px; display: grid; gap: 12px; min-width: 0; }
+.lo-head { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; justify-content: space-between; }
+.lo-head h3 { font-weight: 800; font-size: 18px; }
+.lo-guns { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+.lo-gun { --rar: var(--accent); background: var(--raised); border-radius: var(--radius-sm); padding: 12px; display: grid; gap: 2px; min-width: 0; align-content: start; }
+.lo-gun strong { font-weight: 800; font-size: 16px; overflow-wrap: anywhere; }
+.lo-gun .row { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; margin-top: 6px; }
+.lo-gun code { font-family: var(--f-mono); font-size: 12px; color: var(--muted); overflow-wrap: anywhere; }
+.lo-kit { margin: 0; font-size: 14px; line-height: 1.8; }
+.lo-kit .label { margin-right: 4px; }
+.lo-note { margin: 0; font-size: 13.5px; color: var(--muted); }
+.tier-tools { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin-bottom: 16px; }
+#tier-search { flex: 1 1 240px; min-width: 0; padding: 10px 14px; border-radius: 12px; border: 1px solid var(--line-strong); background: var(--surface); color: var(--ink); font: inherit; font-size: 15px; }
+#tier-search:focus { outline: 2px solid var(--accent); outline-offset: 1px; }
+.tier-list { display: grid; gap: 14px; }
+.tier-block { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 14px 16px; }
+.tier-block h3 { font-size: 14px; font-weight: 700; color: var(--muted); display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
+.tier-badge { display: inline-grid; place-items: center; min-width: 44px; height: 28px; padding: 0 8px; border-radius: 8px; font-weight: 800; font-size: 14px; color: #FFFFFF; background: var(--dim); }
+.tier-META .tier-badge { background: var(--legendary); color: #1A1200; }
+.tier-A .tier-badge { background: var(--epic); }
+.tier-B .tier-badge { background: var(--accent); }
+.tier-block ul { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 210px), 1fr)); gap: 6px; }
+.tier-block li { background: var(--raised); border-radius: 8px; padding: 8px 10px; display: grid; min-width: 0; }
+.tier-block li strong { font-size: 14.5px; font-weight: 800; overflow-wrap: anywhere; }
+.tier-block li small { font-size: 12.5px; color: var(--muted); }
+@media (max-width: 560px) { .lo-guns { grid-template-columns: minmax(0, 1fr); } }
+
 @media (max-width: 900px) {
   .hero { grid-template-columns: minmax(0, 1fr); }
 }
@@ -358,10 +388,19 @@ footer .legal { color: var(--dim); font-size: 12.5px; }
     <div class="kit" id="kit"></div>
   </section>
 
+  <section id="lo-section" aria-labelledby="lo-title" hidden>
+    <div class="section-head">
+      <h2 id="lo-title">Fertige Loadouts</h2>
+      <span class="label">Komplett zum Nachbauen</span>
+    </div>
+    <div class="loadouts" id="loadouts"></div>
+  </section>
+
   <section aria-labelledby="meta-title">
     <div class="section-head">
       <h2 id="meta-title">Meta-Waffen</h2>
       <div class="tabs-row">
+        <nav class="tabs" id="mode-tabs" aria-label="Spielmodus"></nav>
         <nav class="tabs" id="seg" aria-label="Nach Rolle filtern">
           <kbd title="Taste Q">Q</kbd>
           <button type="button" id="f-all" data-filter="all" aria-pressed="true">Alle<span class="n"></span></button>
@@ -376,6 +415,7 @@ footer .legal { color: var(--dim); font-size: 12.5px; }
         </button>
       </div>
     </div>
+    <p class="mode-note" id="mode-note" hidden></p>
     <div id="grid" class="grid"></div>
   </section>
 
@@ -389,10 +429,14 @@ footer .legal { color: var(--dim); font-size: 12.5px; }
 
   <section id="atier-section" aria-labelledby="atier-title" hidden>
     <div class="section-head">
-      <h2 id="atier-title">Auch spielbar</h2>
-      <span class="label">A-Tier</span>
+      <h2 id="atier-title">Tier-Liste</h2>
+      <span class="label" id="tier-count"></span>
     </div>
-    <div class="atier" id="atier"></div>
+    <div class="tier-tools">
+      <input type="search" id="tier-search" placeholder="Waffe suchen, z.B. VMP" autocomplete="off" aria-label="Waffe suchen">
+      <nav class="tabs" id="tier-filter" aria-label="Nach Tier filtern"></nav>
+    </div>
+    <div class="tier-list" id="atier"></div>
   </section>
 
   <section id="patch-section" aria-labelledby="patch-title" hidden>
@@ -422,6 +466,8 @@ footer .legal { color: var(--dim); font-size: 12.5px; }
   try { const f = localStorage.getItem("wz-filter"); if (f && FILTERS.includes(f)) S.filter = f; } catch (e) {}
   try { S.favOnly = localStorage.getItem("wz-favonly") === "1"; } catch (e) {}
   S.settings = []; S.setTab = "controller";
+  S.mode = "br"; S.modes = []; S.tierList = []; S.loadouts = []; S.tierQ = ""; S.tierF = "all";
+  try { const m = localStorage.getItem("wz-mode"); if (m) S.mode = m; } catch (e) {}
   try { const t = localStorage.getItem("wz-settab"); if (t) S.setTab = t; } catch (e) {}
 
   const $ = (id) => document.getElementById(id);
@@ -444,7 +490,17 @@ footer .legal { color: var(--dim); font-size: 12.5px; }
     return Math.round((Date.UTC(b.getFullYear(), b.getMonth(), b.getDate()) - Date.UTC(a.getFullYear(), a.getMonth(), a.getDate())) / 86400000);
   }
   const todayIso = () => { const d = new Date(); return d.getFullYear() + "-" + String(d.getMonth() + 1).padStart(2, "0") + "-" + String(d.getDate()).padStart(2, "0"); };
-  const metaWeapons = () => S.weapons.filter((w) => w.tier === "meta");
+  const slug = (s) => String(s || "").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+  function metaWeapons() {
+    const m = S.mode !== "br" ? arr(S.modes).find((x) => x.id === S.mode) : null;
+    if (!m) return S.weapons.filter((w) => w.tier === "meta");
+    return arr(m.list).map((e) => {
+      const base = e.ref ? S.weapons.find((w) => w.id === e.ref) : null;
+      const out = Object.assign({}, base || {}, e, { tier: "meta", fromBr: !!base && !e.attachments });
+      out.id = e.ref || e.id || slug(e.name);
+      return out;
+    });
+  }
   const latestPatch = () => S.patches.slice().sort((a, b) => String(b.date).localeCompare(String(a.date)))[0];
 
   function saveFavs() { try { localStorage.setItem("wz-favs", JSON.stringify([...S.favs])); } catch (e) {} }
@@ -534,7 +590,7 @@ footer .legal { color: var(--dim); font-size: 12.5px; }
     if (!long && !close) { sec.hidden = true; return; }
     sec.hidden = false;
     const gun = (w, slot, role) => '<div class="slot gun"><span class="label">' + slot + " · " + ROLES[role] + "</span>" +
-      (w ? gunSvg(w.cls, "mini") + "<strong>" + esc(w.name) + "</strong>" + (w.code ? '<div class="row"><code>' + esc(w.code) + "</code>" + copyBtn(w.code) + "</div>" : "") : "<small>Keine Angabe</small>") + "</div>";
+      (w ? gunSvg(w.cls, "mini", w.id) + "<strong>" + esc(w.name) + "</strong>" + (w.code ? '<div class="row"><code>' + esc(w.code) + "</code>" + copyBtn(w.code) + "</div>" : "") : "<small>Keine Angabe</small>") + "</div>";
     const perks = arr(i.perks).slice(0, 3);
     const eq = arr(i.equipment).slice(0, 2);
     $("kit").innerHTML =
@@ -595,14 +651,89 @@ footer .legal { color: var(--dim); font-size: 12.5px; }
     if (w.image && /^img\/[A-Za-z0-9_\/.-]+$/.test(w.image)) {
       return '<img class="gun-img" src="' + esc(w.image) + '" alt="' + esc(w.name) + '" loading="lazy" data-cls="' + esc(w.cls) + '">';
     }
-    return gunSvg(w.cls);
+    return gunSvg(w.cls, "", w.id);
   }
   document.addEventListener("error", (ev) => {
     const img = ev.target;
     if (img && img.classList && img.classList.contains("gun-img")) img.outerHTML = gunSvg(img.dataset.cls);
   }, true);
-  function gunSvg(cls, size) {
-    return '<svg class="gun-svg ' + (size || "") + '" viewBox="0 0 240 80" aria-hidden="true"><g class="gun-body">' + GUNS[gunKind(cls)].join("") + "</g></svg>";
+  // Detaillierte Silhouetten: jede Meta-Waffe bekommt ein eigenes Profil (Schaft, Magazin, Optik, Mündung, Unterlauf)
+  const C = (cx, cy, r) => '<circle cx="' + cx + '" cy="' + cy + '" r="' + r + '"></circle>';
+  const GUN_PROFILES = {
+    "voyak-kt-3": { k: "ar", stock: "pad", mag: "drum", optic: "red", muzzle: "supp", barrel: 26 },
+    "mk35-isr": { k: "ar", stock: "full", mag: "drum", optic: "red", muzzle: "supp", barrel: 22, rail: true },
+    "ds20-mirage": { k: "ar", stock: "full", mag: "ext", optic: "red", muzzle: "supp", barrel: 24, under: "gl" },
+    "vmp": { k: "smg", stock: "pad", mag: "long", muzzle: "brake", under: "stop", barrel: 14 },
+    "mpc-25": { k: "smg", stock: "wire", mag: "drum", muzzle: "brake", under: "grip", barrel: 12 },
+    "rev-46": { k: "smg", stock: "wire", mag: "drum", optic: "red", muzzle: "brake", under: "stop", barrel: 10 },
+    "ryden-45k": { k: "smg", stock: "none", mag: "straight", optic: "red", muzzle: "brake", under: "grip", barrel: 6 },
+    "strider-300": { k: "sniper", stock: "full", mag: "small", optic: "scope", muzzle: "supp", barrel: 86, under: "bipod" },
+    "hawker-hx": { k: "sniper", stock: "thumb", mag: "small", optic: "scope", muzzle: "supp", barrel: 80, under: "laser" },
+    "vs-recon": { k: "sniper", stock: "pad", mag: "small", optic: "scope", muzzle: "supp", barrel: 82, under: "stop" },
+    "kar98k": { k: "sniper", stock: "wood", mag: "none", optic: "scope", muzzle: "supp", barrel: 70 },
+    "vx-compact": { k: "ar", stock: "wire", mag: "curved", optic: "red", muzzle: "comp", barrel: 14, under: "grip" },
+    "sokol-545": { k: "lmg", stock: "full", mag: "box", optic: "red", muzzle: "brake", barrel: 34, under: "bipod" }
+  };
+  const GUN_DEFAULTS = {
+    ar: { k: "ar", stock: "full", mag: "curved", optic: "red", muzzle: "comp", barrel: 26 },
+    smg: { k: "smg", stock: "wire", mag: "straight", muzzle: "none", under: "grip", barrel: 12 },
+    sniper: { k: "sniper", stock: "full", mag: "small", optic: "scope", muzzle: "brake", barrel: 80 },
+    marksman: { k: "ar", stock: "full", mag: "small", optic: "scope", muzzle: "comp", barrel: 46 },
+    lmg: { k: "lmg", stock: "full", mag: "box", optic: "red", muzzle: "brake", barrel: 34, under: "bipod" }
+  };
+  function buildGun(p) {
+    const s = [];
+    const rw = p.k === "smg" ? 60 : p.k === "lmg" ? 82 : p.k === "sniper" ? 62 : 74;
+    const hg = p.k === "smg" ? 28 : p.k === "lmg" ? 48 : p.k === "sniper" ? 0 : 50;
+    const rx = 52, ry = 28;
+    const hx = rx + rw, bx = hx + hg, bl = p.barrel || 20;
+    // Schaft
+    if (p.stock === "full") s.push(P("8,31 50,28 52,36 52,47 44,50 14,54 8,47"));
+    if (p.stock === "pad") s.push(P("16,31 52,29 52,46 20,48 16,44"), R(10, 29, 6, 21));
+    if (p.stock === "wire") s.push(P("18,30 52,29 52,34 26,34 26,43 52,41 52,46 18,48"));
+    if (p.stock === "thumb") s.push(P("6,32 52,30 52,46 40,46 32,40 28,40 26,52 6,54"));
+    if (p.stock === "wood") s.push(P("4,36 52,31 58,40 " + (hx + 30) + ",38 " + (hx + 30) + ",45 52,48 22,56 4,51"));
+    // Gehäuse und Handschutz
+    s.push(R(rx, ry, rw, p.k === "lmg" ? 17 : 14));
+    if (p.rail || p.k === "lmg") s.push(R(rx + 4, ry - 4, rw - 8, 4));
+    if (hg) s.push(R(hx, ry + 2, hg, 10));
+    // Lauf und Mündung
+    s.push(R(bx, ry + 5, bl, 4));
+    const mx = bx + bl;
+    if (p.muzzle === "supp") s.push(R(mx, ry + 1, 26, 12), R(mx + 2, ry - 1, 22, 2));
+    if (p.muzzle === "brake") s.push(R(mx, ry + 2, 12, 10), R(mx + 3, ry + 4, 2, 6), R(mx + 7, ry + 4, 2, 6));
+    if (p.muzzle === "comp") s.push(R(mx, ry + 3, 9, 8));
+    // Optik
+    if (p.optic === "red") s.push(R(rx + 14, ry - 10, 26, 9), R(rx + 22, ry - 2, 10, 2), R(rx + 16, ry - 8, 6, 5));
+    if (p.optic === "scope") s.push(R(rx + 6, ry - 14, 54, 9), P((rx + 60) + "," + (ry - 16) + " " + (rx + 72) + "," + (ry - 18) + " " + (rx + 72) + "," + (ry - 1) + " " + (rx + 60) + "," + (ry - 3)), P((rx - 4) + "," + (ry - 15) + " " + (rx + 6) + "," + (ry - 14) + " " + (rx + 6) + "," + (ry - 6) + " " + (rx - 4) + "," + (ry - 5)), R(rx + 16, ry - 5, 5, 5), R(rx + 42, ry - 5, 5, 5));
+    // Griff, Abzugsbügel
+    s.push(P((rx + 10) + "," + (ry + 14) + " " + (rx + 23) + "," + (ry + 14) + " " + (rx + 19) + "," + (ry + 34) + " " + (rx + 6) + "," + (ry + 32)));
+    s.push(R(rx + 23, ry + 14, 12, 3));
+    // Magazin
+    const gx = rx + Math.round(rw * 0.56);
+    if (p.mag === "curved") s.push(P(gx + "," + (ry + 14) + " " + (gx + 14) + "," + (ry + 14) + " " + (gx + 20) + "," + (ry + 36) + " " + (gx + 5) + "," + (ry + 39)));
+    if (p.mag === "ext") s.push(P(gx + "," + (ry + 14) + " " + (gx + 14) + "," + (ry + 14) + " " + (gx + 24) + "," + (ry + 44) + " " + (gx + 9) + "," + (ry + 47)));
+    if (p.mag === "straight") s.push(R(gx, ry + 14, 11, 26));
+    if (p.mag === "long") s.push(R(gx, ry + 14, 11, 36));
+    if (p.mag === "drum") s.push(R(gx + 1, ry + 14, 13, 6), C(gx + 8, ry + 30, 13), C(gx + 8, ry + 30, 5));
+    if (p.mag === "box") s.push(R(gx - 6, ry + 17, 30, 24), R(gx - 2, ry + 21, 22, 3));
+    if (p.mag === "small") s.push(R(gx, ry + 14, 15, 9));
+    // Repetierhebel bei Snipern
+    if (p.k === "sniper") s.push(R(rx + rw - 18, ry + 12, 4, 8), C(rx + rw - 16, ry + 21, 3));
+    // Unterlauf
+    const ux = hg ? hx + 10 : bx + 8;
+    if (p.under === "grip") s.push(R(ux + 4, ry + 12, 7, 16));
+    if (p.under === "stop") s.push(R(ux, ry + 12, 12, 5));
+    if (p.under === "gl") s.push(R(ux - 4, ry + 12, 38, 8), R(ux + 30, ry + 13, 6, 6));
+    if (p.under === "laser") s.push(R(ux + 2, ry + 10, 18, 5));
+    if (p.under === "bipod") s.push(P((bx + 18) + "," + (ry + 9) + " " + (bx + 22) + "," + (ry + 9) + " " + (bx + 30) + "," + (ry + 34) + " " + (bx + 26) + "," + (ry + 34)), P((bx + 22) + "," + (ry + 9) + " " + (bx + 26) + "," + (ry + 9) + " " + (bx + 16) + "," + (ry + 34) + " " + (bx + 12) + "," + (ry + 34)));
+    return s;
+  }
+  function gunSvg(cls, size, id) {
+    const kind = gunKind(cls);
+    const prof = (id && GUN_PROFILES[id]) || GUN_DEFAULTS[kind];
+    const shapes = prof ? buildGun(prof) : GUNS[kind];
+    return '<svg class="gun-svg ' + (size || "") + '" viewBox="0 0 240 80" aria-hidden="true"><g class="gun-body">' + shapes.join("") + "</g></svg>";
   }
 
   /* ---------- Waffen ---------- */
@@ -644,7 +775,7 @@ footer .legal { color: var(--dim); font-size: 12.5px; }
       '<div class="showcase' + (w.image ? " has-img" : "") + '">' + weaponVisual(w) + '<span class="tag">' + esc(w.cls) + "</span></div>" +
       (trendChip ? '<div class="chips">' + trendChip + "</div>" : "") +
       (t && t.note ? '<p class="trend-note">Letzter Patch: ' + esc(t.note) + "</p>" : "") +
-      '<div class="gunsmith"><span class="label">Gunsmith</span>' + attList(w.attachments) + "</div>" +
+      (arr(w.attachments).length ? '<div class="gunsmith"><span class="label">' + (w.fromBr ? "Gunsmith (Build aus dem Battle Royale)" : "Gunsmith") + "</span>" + attList(w.attachments) + "</div>" : '<p class="trend-note">Für diesen Modus ist noch kein Build eingetragen.</p>') +
       codeBox(w.code) +
       stats +
       more +
@@ -684,11 +815,53 @@ footer .legal { color: var(--dim); font-size: 12.5px; }
       : '<div class="empty"><h3>Keine Treffer</h3><p>' + (S.favOnly ? "In dieser Kategorie hast du noch keine Favoriten. Tippe auf den Stern einer Waffe, um sie zu merken." : "In dieser Kategorie ist gerade keine Waffe in der Meta.") + "</p></div>";
   }
 
+  const TIER_ORDER = ["META", "A", "B", "C", "D"];
   function renderATier() {
-    const a = S.weapons.filter((w) => w.tier === "a").sort((x, y) => (ROLE_ORDER[x.role] ?? 9) - (ROLE_ORDER[y.role] ?? 9) || (x.rank || 99) - (y.rank || 99));
-    $("atier-section").hidden = !a.length;
-    $("atier").innerHTML = a.map((w) =>
-      '<div class="cut">' + gunSvg(w.cls, "mini") + '<span class="rarity">A-Tier</span><strong>' + esc(w.name) + "</strong><small>" + esc(w.cls) + " · " + esc(ROLES[w.role] || w.role) + (w.note ? " · " + esc(w.note) : "") + "</small></div>").join("");
+    const all = arr(S.tierList);
+    const sec = $("atier-section");
+    sec.hidden = !all.length;
+    if (!all.length) return;
+    const q = S.tierQ.trim().toUpperCase();
+    const list = all.filter((t) => (S.tierF === "all" || t.tier === S.tierF) && (!q || String(t.name).toUpperCase().includes(q)));
+    $("tier-filter").innerHTML = ["all"].concat(TIER_ORDER).map((t) => '<button type="button" data-tierf="' + t + '" aria-pressed="' + (t === S.tierF) + '">' + (t === "all" ? "Alle" : t === "META" ? "Meta" : t + "-Tier") + "</button>").join("");
+    $("tier-count").textContent = list.length + " von " + all.length + " Waffen";
+    $("atier").innerHTML = TIER_ORDER.map((t) => {
+      const rows = list.filter((x) => x.tier === t);
+      if (!rows.length) return "";
+      return '<div class="tier-block tier-' + t + '"><h3><span class="tier-badge">' + (t === "META" ? "Meta" : t) + "</span>" + rows.length + (rows.length === 1 ? " Waffe" : " Waffen") + "</h3><ul>" +
+        rows.map((r) => "<li><strong>" + esc(r.name) + "</strong><small>" + esc(r.cls) + " · " + esc(ROLES[r.role] || r.role) + (r.kit ? " · Umbau-Kit" : "") + "</small></li>").join("") + "</ul></div>";
+    }).join("") || '<div class="empty"><h3>Keine Waffe gefunden</h3><p>Prüfe die Schreibweise, zum Beispiel „VMP“ oder „KAR98K“.</p></div>';
+  }
+
+  function renderModes() {
+    const modes = [{ id: "br", title: "Battle Royale" }].concat(arr(S.modes).filter((m) => m && m.id && m.id !== "br"));
+    if (!modes.some((m) => m.id === S.mode)) S.mode = "br";
+    const tabs = $("mode-tabs");
+    tabs.hidden = modes.length < 2;
+    tabs.innerHTML = modes.map((m) => '<button type="button" data-mode="' + esc(m.id) + '" aria-pressed="' + (m.id === S.mode) + '">' + esc(m.title) + "</button>").join("");
+    const cur = modes.find((m) => m.id === S.mode);
+    const note = $("mode-note");
+    note.hidden = !(cur && cur.note);
+    note.textContent = cur && cur.note ? cur.note : "";
+  }
+
+  function findGun(n) {
+    const u = String(n || "").toUpperCase();
+    return S.weapons.find((w) => String(w.name).toUpperCase() === u) || arr(S.tierList).find((t) => String(t.name).toUpperCase() === u) || { name: n };
+  }
+  function renderLoadouts() {
+    const L = arr(S.loadouts);
+    $("lo-section").hidden = !L.length;
+    if (!L.length) return;
+    const gun = (n, label) => {
+      const w = findGun(n);
+      return '<div class="lo-gun">' + gunSvg(w.cls, "mini", w.id || slug(n)) + '<span class="label">' + label + "</span><strong>" + esc(n) + "</strong>" +
+        (w.code ? '<div class="row"><code>' + esc(w.code) + "</code>" + copyBtn(w.code) + "</div>" : "") + "</div>";
+    };
+    $("loadouts").innerHTML = L.map((l) => '<article class="lo"><div class="lo-head"><h3>' + esc(l.title) + "</h3>" + (l.tag ? '<span class="chip">' + esc(l.tag) + "</span>" : "") + "</div>" +
+      '<div class="lo-guns">' + gun(l.primary, "Primär") + gun(l.secondary, "Sekundär") + "</div>" +
+      '<p class="lo-kit"><span class="label">Perks</span>' + arr(l.perks).map(esc).join(" · ") + '<br><span class="label">Ausrüstung</span>' + arr(l.equipment).map(esc).join(" · ") + "</p>" +
+      (l.note ? '<p class="lo-note">' + esc(l.note) + "</p>" : "") + "</article>").join("");
   }
 
   function renderPatches() {
@@ -733,7 +906,7 @@ footer .legal { color: var(--dim); font-size: 12.5px; }
   }
 
   function render() {
-    renderHud(); renderStatus(); renderZone(); renderKit(); renderGrid(); renderATier(); renderSettings(); renderPatches(); renderFooter();
+    renderHud(); renderStatus(); renderZone(); renderKit(); renderGrid(); renderModes(); renderLoadouts(); renderATier(); renderSettings(); renderPatches(); renderFooter();
   }
 
   /* ---------- Interaktion ---------- */
@@ -743,6 +916,10 @@ footer .legal { color: var(--dim); font-size: 12.5px; }
     renderGrid();
   }
   document.addEventListener("click", (ev) => {
+    const md = ev.target.closest("[data-mode]");
+    if (md) { S.mode = md.dataset.mode; try { localStorage.setItem("wz-mode", S.mode); } catch (e) {} renderModes(); renderHud(); renderKit(); renderGrid(); return; }
+    const tf = ev.target.closest("[data-tierf]");
+    if (tf) { S.tierF = tf.dataset.tierf; renderATier(); return; }
     const st = ev.target.closest("[data-settab]");
     if (st) { S.setTab = st.dataset.settab; try { localStorage.setItem("wz-settab", S.setTab); } catch (e) {} renderSettings(); return; }
     const f = ev.target.closest("[data-filter]");
@@ -774,6 +951,7 @@ footer .legal { color: var(--dim); font-size: 12.5px; }
       try { navigator.clipboard.writeText(code).then(() => done("Kopiert"), fallback); } catch (e) { fallback(); }
     }
   });
+  document.addEventListener("input", (ev) => { if (ev.target.id === "tier-search") { S.tierQ = ev.target.value; renderATier(); } });
   // Q / E wechseln die Kategorie wie die Schultertasten im Spielmenü
   document.addEventListener("keydown", (ev) => {
     if (ev.ctrlKey || ev.metaKey || ev.altKey) return;
@@ -820,6 +998,7 @@ footer .legal { color: var(--dim); font-size: 12.5px; }
     S.weapons = arr(d && d.weapons);
     S.patches = arr(d && d.patches);
     S.settings = arr(d && d.settings);
+    S.modes = arr(d && d.modes); S.tierList = arr(d && d.tierList); S.loadouts = arr(d && d.loadouts);
     S.offline = !!offline;
     S.status = "ready";
     render();
