@@ -213,6 +213,8 @@ a:hover { text-decoration: underline; }
 }
 .showcase .tag { position: absolute; left: 10px; bottom: 8px; font-size: 12px; font-weight: 600; color: var(--muted); }
 .gun-svg { display: block; width: 84%; max-width: 300px; height: auto; overflow: visible; }
+.showcase.has-img { height: 140px; padding: 8px; }
+.gun-img { display: block; max-width: 100%; max-height: 124px; object-fit: contain; border-radius: 6px; }
 .gun-svg.mini { width: 96px; max-width: 100%; margin: 0 0 6px; }
 .gun-body { fill: color-mix(in srgb, var(--accent) 22%, transparent); stroke: var(--accent); stroke-width: 1.6; stroke-linejoin: round; }
 
@@ -588,6 +590,17 @@ footer .legal { color: var(--dim); font-size: 12.5px; }
     if (c.includes("pistol")) return "pistol";
     return "ar";
   }
+  // Eigener Screenshot (img/weapons/<id>.webp), sonst die Silhouette der Waffenklasse
+  function weaponVisual(w) {
+    if (w.image && /^img\/[A-Za-z0-9_\/.-]+$/.test(w.image)) {
+      return '<img class="gun-img" src="' + esc(w.image) + '" alt="' + esc(w.name) + '" loading="lazy" data-cls="' + esc(w.cls) + '">';
+    }
+    return gunSvg(w.cls);
+  }
+  document.addEventListener("error", (ev) => {
+    const img = ev.target;
+    if (img && img.classList && img.classList.contains("gun-img")) img.outerHTML = gunSvg(img.dataset.cls);
+  }, true);
   function gunSvg(cls, size) {
     return '<svg class="gun-svg ' + (size || "") + '" viewBox="0 0 240 80" aria-hidden="true"><g class="gun-body">' + GUNS[gunKind(cls)].join("") + "</g></svg>";
   }
@@ -628,7 +641,7 @@ footer .legal { color: var(--dim); font-size: 12.5px; }
         '<div><span class="rarity">Meta</span><h3>' + esc(w.name) + '</h3><p class="cls">' + esc(w.cls) + " · " + esc(ROLES[w.role] || w.role) + "</p></div>" +
         '<button type="button" class="fav" data-fav="' + esc(w.id) + '" aria-pressed="' + fav + '" aria-label="' + esc(w.name) + ' als Favorit merken">' + STAR + "</button>" +
       "</div>" +
-      '<div class="showcase">' + gunSvg(w.cls) + '<span class="tag">' + esc(w.cls) + "</span></div>" +
+      '<div class="showcase' + (w.image ? " has-img" : "") + '">' + weaponVisual(w) + '<span class="tag">' + esc(w.cls) + "</span></div>" +
       (trendChip ? '<div class="chips">' + trendChip + "</div>" : "") +
       (t && t.note ? '<p class="trend-note">Letzter Patch: ' + esc(t.note) + "</p>" : "") +
       '<div class="gunsmith"><span class="label">Gunsmith</span>' + attList(w.attachments) + "</div>" +
