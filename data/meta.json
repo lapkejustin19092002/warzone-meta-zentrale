@@ -1256,6 +1256,283 @@
           "rank": 1
         }
       ]
+    },
+    {
+      "id": "zombies",
+      "title": "Zombies (BO7)",
+      "kit": false,
+      "note": "Black Ops 7 Zombies: hier zählen Schaden pro Magazin und Wirkung gegen Horden, deshalb sind Schrotflinten und LMGs stark. Rangfolge und Codes von CODMunity (Stand 24. Sept. 2026); Aufsätze sind dort nicht angegeben.",
+      "tips": [
+        "Mit dem Build-Code übernimmst du den kompletten Build im Gunsmith.",
+        "Pickrate = wie oft die Waffe von Zombies-Spielern genutzt wird."
+      ],
+      "list": [
+        {
+          "id": "m34-novaline-z",
+          "name": "M34 NOVALINE",
+          "cls": "Marksman-Gewehr",
+          "role": "long",
+          "rank": 1,
+          "code": "M03-2TKIF-FFL83-51",
+          "stats": [
+            {
+              "label": "Pickrate",
+              "value": "1,4 %"
+            },
+            {
+              "label": "Stufe",
+              "value": "Top-Meta"
+            }
+          ]
+        },
+        {
+          "id": "mammoth-z",
+          "name": "MAMMOTH",
+          "cls": "LMG",
+          "role": "long",
+          "rank": 2,
+          "code": "L10-693JW-UQDY1-1",
+          "stats": [
+            {
+              "label": "Pickrate",
+              "value": "2,5 %"
+            },
+            {
+              "label": "Stufe",
+              "value": "Top-Meta"
+            }
+          ]
+        },
+        {
+          "id": "warden-308-z",
+          "name": "WARDEN 308",
+          "cls": "Marksman-Gewehr",
+          "role": "long",
+          "rank": 3,
+          "stats": [
+            {
+              "label": "Pickrate",
+              "value": "0,5 %"
+            },
+            {
+              "label": "Stufe",
+              "value": "Meta"
+            }
+          ]
+        },
+        {
+          "id": "xm325-z",
+          "name": "XM325",
+          "cls": "LMG",
+          "role": "long",
+          "rank": 4,
+          "stats": [
+            {
+              "label": "Pickrate",
+              "value": "0,7 %"
+            },
+            {
+              "label": "Stufe",
+              "value": "Meta"
+            }
+          ]
+        },
+        {
+          "id": "vst-z",
+          "name": "VST",
+          "cls": "MP",
+          "role": "close",
+          "rank": 1,
+          "stats": [
+            {
+              "label": "Pickrate",
+              "value": "3,4 %"
+            },
+            {
+              "label": "Stufe",
+              "value": "Top-Meta"
+            }
+          ]
+        },
+        {
+          "id": "sg-12-z",
+          "name": "SG-12",
+          "cls": "Schrotflinte",
+          "role": "close",
+          "rank": 2,
+          "code": "C05-21WSX-8A6C8-NY11",
+          "stats": [
+            {
+              "label": "Pickrate",
+              "value": "1,2 %"
+            },
+            {
+              "label": "Stufe",
+              "value": "Top-Meta"
+            }
+          ]
+        },
+        {
+          "id": "m10-breacher-z",
+          "name": "M10 BREACHER",
+          "cls": "Schrotflinte",
+          "role": "close",
+          "rank": 3,
+          "stats": [
+            {
+              "label": "Pickrate",
+              "value": "1,1 %"
+            },
+            {
+              "label": "Stufe",
+              "value": "Meta"
+            }
+          ]
+        },
+        {
+          "id": "razor-9mm-z",
+          "name": "RAZOR 9MM",
+          "cls": "MP",
+          "role": "close",
+          "rank": 4,
+          "stats": [
+            {
+              "label": "Pickrate",
+              "value": "0,8 %"
+            },
+            {
+              "label": "Stufe",
+              "value": "Meta"
+            }
+          ]
+        },
+        {
+          "id": "kogot-7-z",
+          "name": "KOGOT-7",
+          "cls": "MP",
+          "role": "close",
+          "rank": 5,
+          "stats": [
+            {
+              "label": "Pickrate",
+              "value": "11,5 %"
+            },
+            {
+              "label": "Stufe",
+              "value": "Meta"
+            }
+          ]
+        },
+        {
+          "id": "shadow-sk-z",
+          "name": "SHADOW SK",
+          "cls": "Scharfschützengewehr",
+          "role": "sniper",
+          "rank": 1,
+          "code": "R02-C44Y3-JHKBK-11",
+          "stats": [
+            {
+              "label": "Pickrate",
+              "value": "1,3 %"
+            },
+            {
+              "label": "Stufe",
+              "value": "Top-Meta"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "endgame",
+      "title": "Endgame (BO7)",
+      "kit": false,
+      "note": "Black Ops 7 Endgame (Koop): Waffen-Rangfolge von wzstats.gg (Stand 28. Okt. 2026). Im Endgame zählen Fähigkeiten und Skill-Tracks oft mehr als die Waffe selbst.",
+      "tips": [
+        "Bestes Loadout laut Game8: exotische TORRENT (Sturmgewehr) mit Munitions-Mod „Mortar Rounds“ und Handling-Mod „Combat Ready“, dazu der legendäre Werfer AAROW 109.",
+        "Fähigkeiten: Crash Cart (Haupt-Fähigkeit, belebt dich und Mitspieler wieder), Enterhaken (Neben-Fähigkeit), Ausrüstung: Köder-Granate.",
+        "Skill-Tracks ab CR 60: Surgeon, Gunner und Tactician. Upgrades zuerst Max-Gesundheit, dann Bewegungstempo, dann Rüstung.",
+        "Automatische Exotics wie Torrent, Redline und Backdrive sind am vielseitigsten. Das Game8-Loadout stammt von Nov. 2025 und kann überholt sein."
+      ],
+      "list": [
+        {
+          "id": "fg42-e",
+          "name": "FG42",
+          "cls": "Sturmgewehr",
+          "role": "long",
+          "rank": 1
+        },
+        {
+          "id": "an-94-e",
+          "name": "AN-94",
+          "cls": "Sturmgewehr",
+          "role": "long",
+          "rank": 2
+        },
+        {
+          "id": "vx-compact-e",
+          "name": "VX COMPACT",
+          "cls": "Sturmgewehr",
+          "role": "long",
+          "rank": 3
+        },
+        {
+          "id": "m15-mod-0-e",
+          "name": "M15 MOD 0",
+          "cls": "Sturmgewehr",
+          "role": "long",
+          "rank": 4
+        },
+        {
+          "id": "voyak-kt-3-e",
+          "name": "VOYAK KT-3",
+          "cls": "Sturmgewehr",
+          "role": "long",
+          "rank": 5
+        },
+        {
+          "id": "vmp-e",
+          "name": "VMP",
+          "cls": "MP",
+          "role": "close",
+          "rank": 1
+        },
+        {
+          "id": "kogot-7-e",
+          "name": "KOGOT-7",
+          "cls": "MP",
+          "role": "close",
+          "rank": 2
+        },
+        {
+          "id": "sturmwolf-45-e",
+          "name": "STURMWOLF 45",
+          "cls": "MP",
+          "role": "close",
+          "rank": 3
+        },
+        {
+          "id": "ryden-45k-e",
+          "name": "RYDEN 45K",
+          "cls": "MP",
+          "role": "close",
+          "rank": 4
+        },
+        {
+          "id": "m10-breacher-e",
+          "name": "M10 BREACHER",
+          "cls": "Schrotflinte",
+          "role": "close",
+          "rank": 5
+        },
+        {
+          "id": "shadow-sk-e",
+          "name": "SHADOW SK",
+          "cls": "Scharfschützengewehr",
+          "role": "sniper",
+          "rank": 1
+        }
+      ]
     }
   ],
   "loadouts": [
