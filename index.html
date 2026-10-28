@@ -344,6 +344,36 @@ footer .legal { color: var(--dim); font-size: 12.5px; }
 .set-list label { display: grid; grid-template-columns: 24px minmax(0, 1fr); gap: 10px; align-items: start; cursor: pointer; }
 .set-list input[type="checkbox"] { width: 20px; height: 20px; margin: 1px 0 0; accent-color: var(--buff); cursor: pointer; }
 
+/* ---------- Waffen-Vergleich ---------- */
+.cmp-pick { display: grid; grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); gap: 10px; align-items: end; margin-bottom: 16px; }
+.cmp-pick label { display: grid; gap: 6px; font-size: 12.5px; font-weight: 700; color: var(--muted); min-width: 0; }
+.cmp-pick select { width: 100%; min-width: 0; padding: 10px 12px; border-radius: 12px; border: 1px solid var(--line-strong); background: var(--surface); color: var(--ink); font: inherit; font-size: 15px; font-weight: 700; }
+.cmp-pick select:focus { outline: 2px solid var(--accent); outline-offset: 1px; }
+.cmp-body { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); overflow: hidden; }
+.cmp-head { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.cmp-head > div { --rar: var(--accent); padding: 16px; display: grid; gap: 4px; align-content: start; min-width: 0; }
+.cmp-head > div + div { border-left: 1px solid var(--line); }
+.cmp-head h3 { font-weight: 800; font-size: 20px; letter-spacing: -.02em; overflow-wrap: anywhere; }
+.cmp-head .gun-svg { width: 100%; max-width: 220px; margin-bottom: 6px; }
+.cmp-place { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 4px; }
+.cmp-sec { padding: 12px 16px 6px; font-size: 12.5px; font-weight: 800; color: var(--muted); border-top: 1px solid var(--line); background: var(--raised); }
+.cmp-row { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); border-top: 1px solid var(--line); }
+.cmp-row > div { padding: 10px 16px; min-width: 0; overflow-wrap: anywhere; font-size: 14.5px; }
+.cmp-row > div + div { border-left: 1px solid var(--line); }
+.cmp-row small { display: block; font-size: 12px; font-weight: 600; color: var(--muted); }
+.cmp-row b { font-weight: 800; font-size: 16px; font-variant-numeric: tabular-nums; }
+.cmp-row .win b { color: var(--buff); }
+.cmp-row .win b::after { content: " ▲"; font-size: 11px; }
+.cmp-row ul { margin: 0; padding-left: 18px; display: grid; gap: 2px; }
+.cmp-row code { font-family: var(--f-mono); font-size: 13px; }
+.cmp-empty { color: var(--dim); }
+.cmp-add { justify-self: start; border: 1px solid var(--line-strong); background: transparent; color: var(--muted); padding: 6px 12px; border-radius: 8px; font-weight: 700; font-size: 13px; }
+.cmp-add:hover { color: var(--ink); background: var(--raised); }
+@media (max-width: 560px) {
+  .cmp-pick { grid-template-columns: minmax(0, 1fr); }
+  .cmp-row > div, .cmp-head > div { padding: 10px 12px; }
+}
+
 @media (max-width: 900px) {
   .hero { grid-template-columns: minmax(0, 1fr); }
 }
@@ -428,6 +458,19 @@ footer .legal { color: var(--dim); font-size: 12.5px; }
     </div>
     <p class="mode-note" id="mode-note" hidden></p>
     <div id="grid" class="grid"></div>
+  </section>
+
+<section id="cmp-section" aria-labelledby="cmp-title" hidden>
+    <div class="section-head">
+      <h2 id="cmp-title">Waffen vergleichen</h2>
+      <span class="label">Zwei Waffen nebeneinander</span>
+    </div>
+    <div class="cmp-pick">
+      <label for="cmp-a">Waffe 1<select id="cmp-a"></select></label>
+      <button type="button" class="btn" id="cmp-swap">Tauschen</button>
+      <label for="cmp-b">Waffe 2<select id="cmp-b"></select></label>
+    </div>
+    <div id="cmp-body" class="cmp-body"></div>
   </section>
 
   <section id="set-section" aria-labelledby="set-title" hidden>
@@ -791,6 +834,7 @@ footer .legal { color: var(--dim); font-size: 12.5px; }
       (arr(w.attachments).length ? '<div class="gunsmith"><span class="label">' + (w.fromBr ? "Gunsmith (Build aus dem Battle Royale)" : "Gunsmith") + "</span>" + attList(w.attachments) + "</div>" : '<p class="trend-note">Für diesen Modus ist noch kein Build eingetragen.</p>') +
       codeBox(w.code) +
       stats +
+      '<button type="button" class="cmp-add" data-cmp="' + esc(w.name) + '">Vergleichen</button>' +
       more +
       "</article>";
   }
@@ -942,8 +986,87 @@ footer .legal { color: var(--dim); font-size: 12.5px; }
       (g.source ? '<p class="set-src">Quellen: ' + esc(g.source) + ". Startwerte, im Spiel feinjustieren.</p>" : "");
   }
 
+  /* ---------- Waffen-Vergleich ---------- */
+  const MODE_NAMES = { br: "Battle Royale" };
+  function comparePool() {
+    const map = new Map();
+    const put = (w, prio) => {
+      if (!w || !w.name) return;
+      const k = String(w.name).toUpperCase();
+      const old = map.get(k);
+      if (!old || prio > old.prio) map.set(k, { prio, w });
+    };
+    S.weapons.forEach((w) => put(w, w.tier === "meta" ? 4 : 2));
+    arr(S.modes).forEach((m) => arr(m.list).forEach((e) => {
+      const base = e.ref ? S.weapons.find((w) => w.id === e.ref) : null;
+      const w = Object.assign({}, base || {}, e); w.id = e.ref || e.id || slug(e.name);
+      put(w, arr(w.attachments).length ? 3 : 1);
+    }));
+    arr(S.tierList).forEach((t) => put(Object.assign({ id: slug(t.name) }, t), 0));
+    return [...map.values()].map((x) => x.w).sort((a, b) => String(a.name).localeCompare(String(b.name), "de"));
+  }
+  function placements(name) {
+    const u = String(name).toUpperCase(), out = [];
+    S.weapons.filter((w) => w.tier === "meta" && String(w.name).toUpperCase() === u).forEach((w) => out.push("Battle Royale #" + w.rank + " " + (ROLES[w.role] || "")));
+    arr(S.modes).forEach((m) => arr(m.list).forEach((e) => {
+      const base = e.ref ? S.weapons.find((w) => w.id === e.ref) : null;
+      const n = e.name || (base && base.name);
+      if (String(n).toUpperCase() === u) out.push(m.title + " #" + e.rank + " " + (ROLES[e.role] || ""));
+    }));
+    const t = arr(S.tierList).find((x) => String(x.name).toUpperCase() === u && !x.kit);
+    if (t) out.push("Tier " + (t.tier === "META" ? "Meta" : t.tier));
+    return out;
+  }
+  const num = (v) => { const m = String(v || "").replace(/\./g, "").replace(",", ".").match(/-?\d+(\.\d+)?/); return m ? parseFloat(m[0]) : null; };
+  const lowerIsBetter = (label) => /zielen|ads|sprint|nachladen|reload/i.test(label);
+  function renderCompare() {
+    const pool = comparePool();
+    $("cmp-section").hidden = pool.length < 2;
+    if (pool.length < 2) return;
+    const names = pool.map((w) => String(w.name));
+    if (!S.cmpA || !names.includes(S.cmpA)) { const t = topOf("long"); S.cmpA = t ? t.name : names[0]; }
+    if (!S.cmpB || !names.includes(S.cmpB)) { const t = topOf("close"); S.cmpB = t ? t.name : names[1]; }
+    const opts = (sel) => pool.map((w) => '<option value="' + esc(w.name) + '"' + (w.name === sel ? " selected" : "") + ">" + esc(w.name) + " · " + esc(w.cls) + "</option>").join("");
+    $("cmp-a").innerHTML = opts(S.cmpA);
+    $("cmp-b").innerHTML = opts(S.cmpB);
+    const A = pool.find((w) => w.name === S.cmpA), B = pool.find((w) => w.name === S.cmpB);
+    const head = (w) => '<div>' + gunSvg(w.cls, "", w.id) + "<h3>" + esc(w.name) + '</h3><span class="label">' + esc(w.cls) + " · " + esc(ROLES[w.role] || w.role || "") + "</span>" +
+      '<div class="cmp-place">' + (placements(w.name).map((p) => '<span class="chip">' + esc(p) + "</span>").join("") || '<span class="chip">Nicht in der Meta</span>') + "</div></div>";
+    const row = (a, b, cls) => '<div class="cmp-row"><div class="' + (cls ? cls[0] : "") + '">' + a + '</div><div class="' + (cls ? cls[1] : "") + '">' + b + "</div></div>";
+    const dash = '<span class="cmp-empty">–</span>';
+    let h = '<div class="cmp-head">' + head(A) + head(B) + "</div>";
+    // Werte
+    const labels = [];
+    [A, B].forEach((w) => arr(w.stats).forEach((s) => { if (!labels.includes(s.label)) labels.push(s.label); }));
+    if (labels.length) {
+      h += '<div class="cmp-sec">Werte</div>';
+      labels.forEach((l) => {
+        const sa = arr(A.stats).find((s) => s.label === l), sb = arr(B.stats).find((s) => s.label === l);
+        let win = ["", ""];
+        const na = sa ? num(sa.value) : null, nb = sb ? num(sb.value) : null;
+        if (na != null && nb != null && na !== nb) {
+          const aBetter = lowerIsBetter(l) ? na < nb : na > nb;
+          win = aBetter ? ["win", ""] : ["", "win"];
+        }
+        h += row("<small>" + esc(l) + "</small>" + (sa ? "<b>" + esc(sa.value) + "</b>" : dash), "<small>" + esc(l) + "</small>" + (sb ? "<b>" + esc(sb.value) + "</b>" : dash), win);
+      });
+    }
+    // Patch
+    const tr = (w) => w.trend ? '<span class="chip ' + esc(w.trend.type) + '">' + (w.trend.type === "buff" ? "▲ Buff" : "▼ Nerf") + " · " + fmtDate(w.trend.date, true) + "</span><small>" + esc(w.trend.note || "") + "</small>" : dash;
+    if (A.trend || B.trend) h += '<div class="cmp-sec">Letzter Patch</div>' + row(tr(A), tr(B));
+    // Build
+    const code = (w) => w.code ? "<code>" + esc(w.code) + "</code> " + copyBtn(w.code) : dash;
+    const atts = (w) => arr(w.attachments).length ? "<ul>" + arr(w.attachments).map((a) => "<li><small>" + esc(a.slot) + "</small>" + esc(a.name) + "</li>").join("") + "</ul>" : '<span class="cmp-empty">Kein Build eingetragen</span>';
+    h += '<div class="cmp-sec">Build</div>' + row(code(A), code(B)) + row(atts(A), atts(B));
+    // Stärken / Schwächen
+    const list = (xs) => arr(xs).length ? "<ul>" + arr(xs).map((x) => "<li>" + esc(x) + "</li>").join("") + "</ul>" : dash;
+    if (arr(A.pros).length || arr(B.pros).length) h += '<div class="cmp-sec">Stärken</div>' + row(list(A.pros), list(B.pros));
+    if (arr(A.cons).length || arr(B.cons).length) h += '<div class="cmp-sec">Schwächen</div>' + row(list(A.cons), list(B.cons));
+    $("cmp-body").innerHTML = h;
+  }
+
   function render() {
-    renderHud(); renderStatus(); renderZone(); renderKit(); renderGrid(); renderModes(); renderLoadouts(); renderATier(); renderSettings(); renderPatches(); renderFooter();
+    renderHud(); renderStatus(); renderZone(); renderKit(); renderGrid(); renderModes(); renderLoadouts(); renderATier(); renderCompare(); renderSettings(); renderPatches(); renderFooter();
   }
 
   /* ---------- Interaktion ---------- */
@@ -953,6 +1076,9 @@ footer .legal { color: var(--dim); font-size: 12.5px; }
     renderGrid();
   }
   document.addEventListener("click", (ev) => {
+    const ca = ev.target.closest("[data-cmp]");
+    if (ca) { const n = ca.dataset.cmp; if (S.cmpA !== n && S.cmpB !== n) { S.cmpB = S.cmpA; S.cmpA = n; } renderCompare(); $("cmp-section").scrollIntoView({ behavior: "smooth", block: "start" }); return; }
+    if (ev.target.closest("#cmp-swap")) { const t = S.cmpA; S.cmpA = S.cmpB; S.cmpB = t; renderCompare(); return; }
     const md = ev.target.closest("[data-mode]");
     if (md) { S.mode = md.dataset.mode; try { localStorage.setItem("wz-mode", S.mode); } catch (e) {} renderModes(); renderHud(); renderKit(); renderGrid(); return; }
     const tf = ev.target.closest("[data-tierf]");
@@ -992,6 +1118,7 @@ footer .legal { color: var(--dim); font-size: 12.5px; }
   });
   document.addEventListener("input", (ev) => { if (ev.target.id === "tier-search") { S.tierQ = ev.target.value; renderATier(); } });
   document.addEventListener("change", (ev) => {
+    if (ev.target.id === "cmp-a" || ev.target.id === "cmp-b") { if (ev.target.id === "cmp-a") S.cmpA = ev.target.value; else S.cmpB = ev.target.value; renderCompare(); return; }
     const k = ev.target && ev.target.dataset && ev.target.dataset.setkey;
     if (!k) return;
     if (ev.target.checked) setDone[k] = 1; else delete setDone[k];
