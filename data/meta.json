@@ -3,7 +3,7 @@
     "game": "Black Ops 7",
     "season": "Season 6",
     "mode": "Battle Royale",
-    "updatedAt": "2026-10-27",
+    "updatedAt": "2026-10-29",
     "seasonStart": "2026-09-16",
     "perks": [
       "Scavenger",
@@ -1219,6 +1219,13 @@
           "cls": "Sturmgewehr",
           "role": "long",
           "rank": 4
+        },
+        {
+          "id": "ak-27",
+          "name": "AK-27",
+          "cls": "Sturmgewehr",
+          "role": "long",
+          "rank": 5
         },
         {
           "id": "carbon-57",
