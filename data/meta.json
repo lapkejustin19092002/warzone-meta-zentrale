@@ -3,7 +3,7 @@
     "game": "Black Ops 7",
     "season": "Season 6",
     "mode": "Battle Royale",
-    "updatedAt": "2026-10-29",
+    "updatedAt": "2026-10-30",
     "seasonStart": "2026-09-16",
     "perks": [
       "Scavenger",
@@ -667,6 +667,18 @@
           "type": "nerf",
           "weapon": "MAMMOTH",
           "text": "Etwas mehr View Kick"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-30",
+      "date": "2026-09-30",
+      "title": "Season 6 · Überraschungs-Update",
+      "changes": [
+        {
+          "type": "nerf",
+          "weapon": "TR51 PARA",
+          "text": "Feuerrate von 625 auf 333 RPM gesenkt"
         }
       ]
     },
