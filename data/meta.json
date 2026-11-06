@@ -1,704 +1,402 @@
 {
   "info": {
-    "game": "Black Ops 7",
-    "season": "Season 6",
+    "game": "Modern Warfare 4",
+    "season": "Season 1",
     "mode": "Battle Royale",
-    "updatedAt": "2026-10-30",
-    "seasonStart": "2026-09-16",
+    "updatedAt": "2026-11-06",
+    "seasonStart": "2026-11-06",
     "perks": [
-      "Scavenger",
-      "Sprinter",
-      "Tempered"
+      "Ninja",
+      "Quick Fix",
+      "Scavenger"
     ],
     "equipment": [
       "Semtex",
-      "Rauchgranate"
+      "Stim"
     ],
-    "perksNote": "Empfehlung von wzstats.gg zu den Meta-Builds",
-    "nextChange": {
-      "date": "2026-11-06",
-      "title": "MW4 kommt nach Warzone",
-      "text": "Season 1 bringt die MW4-Waffen und die neue BR-Map Hajin. Danach verschiebt sich die Meta stark. PS4 und Xbox One werden nicht mehr unterstützt."
-    },
+    "perksNote": "Empfehlung von wzstats.gg auf den MW4-Waffenseiten (Stand 6. Nov. 2026). Neu in Season 1: 15 Basis-Perks in drei Slots plus ein Elite-Perk-Slot.",
     "sources": [
       {
         "name": "wzstats.gg",
         "url": "https://wzstats.gg/"
       },
       {
-        "name": "CODMunity Patch Notes",
-        "url": "https://codmunity.gg/patch-notes/warzone/2026-10-14"
+        "name": "MP1st Patch Notes 1.111",
+        "url": "https://mp1st.com/title-updates-and-patches/modern-warfare-4-warzone-season-1-update-ver-1-111-brings-flood-of-new-conten"
+      },
+      {
+        "name": "Call of Duty Blog (Season 1)",
+        "url": "https://www.callofduty.com/blog/2026/11/call-of-duty-modern-warfare-4-warzone-season-1"
       }
     ]
   },
   "weapons": [
     {
-      "id": "voyak-kt-3",
-      "name": "VOYAK KT-3",
+      "id": "cronen-osprey-mw4",
+      "name": "CRONEN OSPREY",
       "cls": "Sturmgewehr",
       "role": "long",
       "tier": "meta",
       "rank": 1,
-      "code": "A09-34FBS-SSP4W-11",
       "attachments": [
         {
           "slot": "Optik",
-          "name": "FANG HOVERPOINT ELO",
-          "unlock": "Waffenkammer"
-        },
-        {
-          "slot": "Mündung",
-          "name": "MONOLITHIC SUPPRESSOR",
-          "unlock": "Level 28"
-        },
-        {
-          "slot": "Lauf",
-          "name": "17.6\" LTI GRAV-4 BARREL",
-          "unlock": "Level 34"
-        },
-        {
-          "slot": "Magazin",
-          "name": "SK-GARRISON DRUM",
-          "unlock": "Level 40"
-        },
-        {
-          "slot": "Schaft",
-          "name": "V-LAST CONTROL PAD",
-          "unlock": "Level 33"
-        }
-      ],
-      "stats": [
-        {
-          "label": "Feuerrate",
-          "value": "659 RPM"
-        },
-        {
-          "label": "Zielen (ADS)",
-          "value": "375 ms"
-        },
-        {
-          "label": "Projektil",
-          "value": "1151 m/s"
-        }
-      ],
-      "pros": [
-        "Gute TTK auf allen Distanzen",
-        "Doppelter Schaden pro Magazin dank Trommel",
-        "Rund 35 % weniger Rückstoß als die Basiswaffe"
-      ],
-      "cons": [
-        "Langsames Zielen",
-        "Langsameres Nachladen mit Trommel"
-      ],
-      "trend": {
-        "type": "buff",
-        "date": "2026-09-16",
-        "note": "Season-6-Start: mehr Schaden auf allen Distanzen, weniger Rückstoß, schnellere Projektile"
-      },
-      "altBuilds": [
-        {
-          "name": "Variante: wenig Rückstoß",
-          "code": "A09-9CQNY-ZW11",
-          "attachments": [
-            {
-              "slot": "Mündung",
-              "name": "EMT3 COMPENSATOR",
-              "unlock": "Level 20"
-            },
-            {
-              "slot": "Lauf",
-              "name": "17.6\" LTI GRAV-4 BARREL",
-              "unlock": "Level 34"
-            },
-            {
-              "slot": "Unterlauf",
-              "name": "VAS CONVERGENCE FOREGRIP",
-              "unlock": "Waffenkammer"
-            },
-            {
-              "slot": "Magazin",
-              "name": "SK-GARRISON DRUM",
-              "unlock": "Level 40"
-            },
-            {
-              "slot": "Schaft",
-              "name": "V-LAST CONTROL PAD",
-              "unlock": "Level 33"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "mk35-isr",
-      "name": "MK35 ISR",
-      "cls": "Sturmgewehr",
-      "role": "long",
-      "tier": "meta",
-      "rank": 2,
-      "code": "A12-34FBS-SSY4B-11",
-      "attachments": [
-        {
-          "slot": "Optik",
-          "name": "FANG HOVERPOINT ELO",
-          "unlock": "Waffenkammer"
-        },
-        {
-          "slot": "Mündung",
-          "name": "MONOLITHIC SUPPRESSOR",
-          "unlock": "Level 39"
-        },
-        {
-          "slot": "Lauf",
-          "name": "16.5\" GREAVES BELLUM BARREL",
-          "unlock": "Level 14"
-        },
-        {
-          "slot": "Magazin",
-          "name": "BOWEN SIREN DRUM",
-          "unlock": "Level 29"
-        },
-        {
-          "slot": "Schaft",
-          "name": "GREAVES CASSIN STOCK",
-          "unlock": "Level 8"
-        }
-      ],
-      "stats": [
-        {
-          "label": "Feuerrate",
-          "value": "750 RPM"
-        },
-        {
-          "label": "Projektil",
-          "value": "1109 m/s"
-        },
-        {
-          "label": "Schaden/Mag",
-          "value": "2280"
-        }
-      ],
-      "pros": [
-        "Sehr wenig Rückstoß",
-        "Sehr hohe Projektilgeschwindigkeit",
-        "Gute TTK auf allen Distanzen"
-      ],
-      "cons": []
-    },
-    {
-      "id": "ds20-mirage",
-      "name": "DS20 MIRAGE",
-      "cls": "Sturmgewehr",
-      "role": "long",
-      "tier": "meta",
-      "rank": 3,
-      "code": "A05-34FBS-SSSND-11",
-      "attachments": [
-        {
-          "slot": "Optik",
-          "name": "FANG HOVERPOINT ELO",
-          "unlock": "Waffenkammer"
-        },
-        {
-          "slot": "Mündung",
-          "name": "MONOLITHIC SUPPRESSOR",
-          "unlock": "Level 18"
-        },
-        {
-          "slot": "Lauf",
-          "name": "17.1\" ABDICATOR BARREL",
-          "unlock": "Level 29"
-        },
-        {
-          "slot": "Magazin",
-          "name": "GRIFFON RESERVE EXTENDED II",
-          "unlock": "Level 27"
-        },
-        {
-          "slot": "Schaft",
-          "name": "WEIGHTED STOCK",
-          "unlock": "Level 3"
-        }
-      ],
-      "stats": [
-        {
-          "label": "Feuerrate",
-          "value": "606 RPM"
-        },
-        {
-          "label": "Zielen (ADS)",
-          "value": "377 ms"
-        },
-        {
-          "label": "Projektil",
-          "value": "1179 m/s"
-        }
-      ],
-      "pros": [
-        "Gute Projektilgeschwindigkeit",
-        "Guter Schaden pro Magazin"
-      ],
-      "cons": [
-        "Unterdurchschnittliche TTK",
-        "Langsames Nachladen",
-        "Hoher vertikaler Rückstoß"
-      ],
-      "trend": {
-        "type": "buff",
-        "date": "2026-10-14",
-        "note": "Besserer Hüftfeuer-Spread, weniger View Kick, schnellerer Granatwerfer"
-      }
-    },
-    {
-      "id": "vmp",
-      "name": "VMP",
-      "cls": "MP",
-      "role": "close",
-      "tier": "meta",
-      "rank": 1,
-      "code": "S14-6K7PG-6B11",
-      "attachments": [
-        {
-          "slot": "Mündung",
-          "name": "LTI STENTORIAN BRAKE",
-          "unlock": "Waffenkammer"
-        },
-        {
-          "slot": "Lauf",
-          "name": "14.6\" NOCTURNAL-VI BARREL",
-          "unlock": "Level 9"
-        },
-        {
-          "slot": "Unterlauf",
-          "name": "SAPPER GUARD HANDSTOP",
-          "unlock": "Level 33"
-        },
-        {
-          "slot": "Magazin",
-          "name": "DAPPLE CAPACITY MAG",
-          "unlock": "Level 35"
-        },
-        {
-          "slot": "Schaft",
-          "name": "GREAVES VALOUR PAD",
-          "unlock": "Level 8"
-        }
-      ],
-      "stats": [
-        {
-          "label": "Feuerrate",
-          "value": "984 RPM"
-        },
-        {
-          "label": "Zielen (ADS)",
-          "value": "170 ms"
-        },
-        {
-          "label": "Sprint-to-Fire",
-          "value": "120 ms"
-        }
-      ],
-      "pros": [
-        "Sehr hohe Feuerrate",
-        "Schnelles Zielen",
-        "38 % mehr Schaden pro Magazin mit dem Build"
-      ],
-      "cons": [
-        "Seit dem 14. Oktober mehr Rückstoß",
-        "Langsames Nachladen"
-      ],
-      "trend": {
-        "type": "nerf",
-        "date": "2026-10-14",
-        "note": "Mehr View Kick und mehr Streuung"
-      }
-    },
-    {
-      "id": "mpc-25",
-      "name": "MPC-25",
-      "cls": "MP",
-      "role": "close",
-      "tier": "meta",
-      "rank": 2,
-      "code": "S06-3SUZ7-NU11",
-      "attachments": [
-        {
-          "slot": "Mündung",
-          "name": "LTI STENTORIAN BRAKE",
-          "unlock": "Waffenkammer"
-        },
-        {
-          "slot": "Lauf",
-          "name": "14.5\" VAS ASHE BARREL",
-          "unlock": "Level 15"
-        },
-        {
-          "slot": "Unterlauf",
-          "name": "FLOWGUARD FOREGRIP",
+          "name": "LOCUS PX3 CANTED",
           "unlock": "Level 32"
         },
         {
-          "slot": "Magazin",
-          "name": "MPC OVERLOAD DRUM",
-          "unlock": "Level 35"
-        },
-        {
-          "slot": "Schaft",
-          "name": "VIPER WIRE STOCK",
-          "unlock": "Level 34"
-        }
-      ],
-      "stats": [
-        {
-          "label": "Feuerrate",
-          "value": "723 RPM"
-        },
-        {
-          "label": "Zielen (ADS)",
-          "value": "196 ms"
-        },
-        {
-          "label": "Sprint-to-Fire",
-          "value": "142 ms"
-        }
-      ],
-      "pros": [
-        "Gute Mobilität",
-        "Gutes Handling",
-        "Starkes Hüftfeuer-Umbaukit"
-      ],
-      "cons": [
-        "Etwas schwächere TTK",
-        "Hoher vertikaler Rückstoß"
-      ],
-      "trend": {
-        "type": "buff",
-        "date": "2026-09-16",
-        "note": "Season-6-Start: Nahkampfschaden reicht weiter, 10 % weniger vertikaler Rückstoß"
-      }
-    },
-    {
-      "id": "rev-46",
-      "name": "REV-46",
-      "cls": "MP",
-      "role": "close",
-      "tier": "meta",
-      "rank": 3,
-      "code": "S09-AV4JD-2ZI31-1",
-      "attachments": [
-        {
-          "slot": "Optik",
-          "name": "LETHAL TOOLS ELO"
-        },
-        {
           "slot": "Mündung",
-          "name": "LTI STENTORIAN BRAKE",
-          "unlock": "Waffenkammer"
-        },
-        {
-          "slot": "Lauf",
-          "name": "CAUDAL TARGET BARREL",
-          "unlock": "Level 12"
-        },
-        {
-          "slot": "Unterlauf",
-          "name": "SAPPER GUARD HANDSTOP",
-          "unlock": "Level 24"
-        },
-        {
-          "slot": "Magazin",
-          "name": "KOMODO DRUM MAG",
-          "unlock": "Level 34"
-        }
-      ],
-      "stats": [
-        {
-          "label": "Feuerrate",
-          "value": "1200 RPM"
-        },
-        {
-          "label": "Zielen (ADS)",
-          "value": "201 ms"
-        },
-        {
-          "label": "Sprint-to-Fire",
-          "value": "125 ms"
-        }
-      ],
-      "pros": [
-        "Sehr hohe Feuerrate",
-        "Starke TTK im Nahkampf",
-        "Top Mobilität",
-        "Gut kontrollierbarer Rückstoß"
-      ],
-      "cons": [
-        "Munition ist schnell leer",
-        "Kimme verdeckt viel Sicht"
-      ],
-      "trend": {
-        "type": "buff",
-        "date": "2026-10-14",
-        "note": "Schaft klappt 150 ms schneller ein und aus"
-      }
-    },
-    {
-      "id": "ryden-45k",
-      "name": "RYDEN 45K",
-      "cls": "MP",
-      "role": "close",
-      "tier": "meta",
-      "rank": 4,
-      "code": "S01-34FEK-EX39Q-11",
-      "attachments": [
-        {
-          "slot": "Optik",
-          "name": "FANG HOVERPOINT ELO",
-          "unlock": "Waffenkammer"
-        },
-        {
-          "slot": "Mündung",
-          "name": "LTI STENTORIAN BRAKE",
-          "unlock": "Waffenkammer"
-        },
-        {
-          "slot": "Lauf",
-          "name": "9\" BASILISK BARREL",
-          "unlock": "Level 12"
-        },
-        {
-          "slot": "Unterlauf",
-          "name": "FLOWGUARD FOREGRIP",
-          "unlock": "Level 28"
-        },
-        {
-          "slot": "Magazin",
-          "name": "FORWARD BREACH MAG",
-          "unlock": "Level 27"
-        }
-      ],
-      "stats": [
-        {
-          "label": "Feuerrate",
-          "value": "952 RPM"
-        },
-        {
-          "label": "Zielen (ADS)",
-          "value": "168 ms"
-        },
-        {
-          "label": "Sprint-to-Fire",
-          "value": "91 ms"
-        }
-      ],
-      "pros": [
-        "Hohe Feuerrate",
-        "Gute Mobilität",
-        "Starke TTK bei Kopftreffern"
-      ],
-      "cons": [
-        "Schwächere TTK auf den Körper",
-        "Wenig Schaden pro Magazin",
-        "Munition ist schnell leer"
-      ],
-      "trend": {
-        "type": "buff",
-        "date": "2026-10-14",
-        "note": "Weniger View Kick und Gun Kick"
-      }
-    },
-    {
-      "id": "strider-300",
-      "name": "STRIDER 300",
-      "cls": "Scharfschützengewehr",
-      "role": "sniper",
-      "tier": "meta",
-      "rank": 1,
-      "code": "R07-2JD6P-9UF4L-IW11",
-      "attachments": [
-        {
-          "slot": "Mündung",
-          "name": "MONOLITHIC SUPPRESSOR",
-          "unlock": "Level 33"
-        },
-        {
-          "slot": "Lauf",
-          "name": "25\" BOWEN GROOVED BARREL",
+          "name": "FSS IS300",
           "unlock": "Level 21"
         },
         {
-          "slot": "Unterlauf",
-          "name": "CORNERSTONE-642 GUARD",
-          "unlock": "Level 9"
+          "slot": "Lauf",
+          "name": "IO-556 TAC 18\"",
+          "unlock": "Level 54"
         },
         {
-          "slot": "Hintergriff",
-          "name": "HATCH QUICK GRIP",
-          "unlock": "Level 23"
+          "slot": "Magazin",
+          "name": "60 ROUND MAG",
+          "unlock": "Level 42"
         },
         {
-          "slot": "Feuermodus",
-          "name": ".300 WM OVERPRESSURED",
-          "unlock": "Level 24"
+          "slot": "Munition",
+          "name": "5.56 NATO HIGH VELOCITY",
+          "unlock": "Level 68"
         }
       ],
       "stats": [
         {
-          "label": "Projektil",
-          "value": "1332 m/s"
+          "label": "Rang Long Range",
+          "value": "#1"
         },
         {
-          "label": "Zielen (ADS)",
-          "value": "605 ms"
+          "label": "Tier",
+          "value": "META"
         },
         {
-          "label": "Hitscan",
-          "value": "66,6 m"
+          "label": "Spiel",
+          "value": "MW4"
         }
       ],
       "pros": [
-        "One-Shot-Kopftreffer",
-        "Exzellente Projektilgeschwindigkeit"
+        "Platz 1 auf Distanz laut wzstats.gg",
+        "60er-Magazin für Squad-Kämpfe"
       ],
       "cons": [
-        "Langsames Zielen",
-        "Hoher Rückstoß",
-        "One-Shot-Kopftreffer auf jede Distanz nur mit einem bestimmten Lauf"
+        "Hohe Freischalt-Level (Munition erst Level 68)"
       ]
     },
     {
-      "id": "vx-compact",
-      "name": "VX COMPACT",
+      "id": "han-86-mw4",
+      "name": "HAN 86",
+      "cls": "Sturmgewehr",
+      "role": "long",
+      "tier": "meta",
+      "rank": 2,
+      "attachments": [
+        {
+          "slot": "Optik",
+          "name": "CRONEN R808",
+          "unlock": "Level 19"
+        },
+        {
+          "slot": "Mündung",
+          "name": "FSS IS300",
+          "unlock": "Level 6"
+        },
+        {
+          "slot": "Lauf",
+          "name": "HANBIT LIGHTNING-7 465MM",
+          "unlock": "Level 18"
+        },
+        {
+          "slot": "Magazin",
+          "name": "60 ROUND DRUM",
+          "unlock": "Level 10"
+        },
+        {
+          "slot": "Munition",
+          "name": "5.56 NATO HIGH VELOCITY",
+          "unlock": "Level 70"
+        }
+      ],
+      "stats": [
+        {
+          "label": "Rang Long Range",
+          "value": "#2"
+        },
+        {
+          "label": "Kopf-Multiplikator",
+          "value": "1,3"
+        },
+        {
+          "label": "Spiel",
+          "value": "MW4"
+        }
+      ],
+      "pros": [
+        "Zum Season-Start gebufft: mehr Kopfschaden",
+        "Platz 1 auf Distanz in Resurgence"
+      ],
+      "cons": [
+        "Munition erst ab Level 70"
+      ],
+      "trend": {
+        "type": "buff",
+        "date": "2026-11-05",
+        "note": "Kopf-Multiplikator 1,25 → 1,3"
+      }
+    },
+    {
+      "id": "mosin-nagant-mw4",
+      "name": "MOSIN-NAGANT",
+      "cls": "Marksman-Gewehr",
+      "role": "long",
+      "tier": "meta",
+      "rank": 3,
+      "attachments": [
+        {
+          "slot": "Optik",
+          "name": "SCHLAGER 7X",
+          "unlock": "Level 33"
+        },
+        {
+          "slot": "Mündung",
+          "name": "FTAC SILENT RECON",
+          "unlock": "Level 34"
+        },
+        {
+          "slot": "Lauf",
+          "name": "MOSIN K025 BARREL",
+          "unlock": "Level 3"
+        },
+        {
+          "slot": "Laser",
+          "name": "XRK CLUTCH-LS",
+          "unlock": "Level 20"
+        },
+        {
+          "slot": "Munition",
+          "name": "7.62X54MMR HIGH VELOCITY",
+          "unlock": "Level 18"
+        }
+      ],
+      "stats": [
+        {
+          "label": "Rang Long Range",
+          "value": "#3"
+        },
+        {
+          "label": "Max. Schadensreichweite",
+          "value": "40,13 m"
+        },
+        {
+          "label": "Spiel",
+          "value": "MW4"
+        }
+      ],
+      "pros": [
+        "Zum Season-Start gebufft: mehr Reichweite",
+        "Build früh freischaltbar"
+      ],
+      "cons": [],
+      "trend": {
+        "type": "buff",
+        "date": "2026-11-05",
+        "note": "Max. Schadensreichweite 36,83 m → 40,13 m"
+      }
+    },
+    {
+      "id": "vel-46-mw4",
+      "name": "VEL 46",
+      "cls": "MP",
+      "role": "close",
+      "tier": "meta",
+      "rank": 1,
+      "attachments": [
+        {
+          "slot": "Mündung",
+          "name": "212 LC40 COMP",
+          "unlock": "Level 27"
+        },
+        {
+          "slot": "Lauf",
+          "name": "VB-46 SERIES 11",
+          "unlock": "Level 3"
+        },
+        {
+          "slot": "Unterlauf",
+          "name": "FSS TAC90 GRIP",
+          "unlock": "Level 46"
+        },
+        {
+          "slot": "Magazin",
+          "name": "60 ROUND DRUM",
+          "unlock": "Level 33"
+        },
+        {
+          "slot": "Schaft",
+          "name": "EXP U-TURN STOCK",
+          "unlock": "Level 37"
+        }
+      ],
+      "stats": [
+        {
+          "label": "Rang Close Range",
+          "value": "#1"
+        },
+        {
+          "label": "Max. Schadensreichweite",
+          "value": "9,65 m"
+        },
+        {
+          "label": "Spiel",
+          "value": "MW4"
+        }
+      ],
+      "pros": [
+        "Platz 1 im Nahkampf in BR und Resurgence",
+        "Mindestschaden zum Season-Start erhöht"
+      ],
+      "cons": [
+        "Schadensreichweiten zum Season-Start verkürzt"
+      ],
+      "trend": {
+        "type": "nerf",
+        "date": "2026-11-05",
+        "note": "Max. Schadensreichweite 10,13 m → 9,65 m, Mindestschaden 13 → 14"
+      }
+    },
+    {
+      "id": "m4-mw4",
+      "name": "M4",
       "cls": "Sturmgewehr",
       "role": "long",
       "tier": "a",
-      "rank": 1,
-      "note": "auch als Sniper-Support"
+      "rank": 1
     },
     {
-      "id": "peacekeeper-mk1",
-      "name": "PEACEKEEPER MK1",
+      "id": "axion-mw4",
+      "name": "AXION",
       "cls": "Sturmgewehr",
       "role": "long",
       "tier": "a",
       "rank": 2
     },
     {
-      "id": "m15-mod-0",
-      "name": "M15 MOD 0",
+      "id": "oden-mw4",
+      "name": "ODEN",
       "cls": "Sturmgewehr",
       "role": "long",
       "tier": "a",
       "rank": 3
     },
     {
-      "id": "sturmwolf-45",
-      "name": "STURMWOLF 45",
+      "id": "patriot-xmr-mw4",
+      "name": "PATRIOT XMR",
+      "cls": "Sturmgewehr",
+      "role": "long",
+      "tier": "a",
+      "rank": 4
+    },
+    {
+      "id": "iso-nightshade-mw4",
+      "name": "ISO NIGHTSHADE",
       "cls": "MP",
       "role": "close",
       "tier": "a",
       "rank": 1
     },
     {
-      "id": "carbon-57",
-      "name": "CARBON 57",
+      "id": "x-58-nyx-mw4",
+      "name": "X-58 NYX",
       "cls": "MP",
       "role": "close",
+      "tier": "a",
+      "rank": 2
+    },
+    {
+      "id": "kg-7-vulcan-mw4",
+      "name": "KG-7 VULCAN",
+      "cls": "Scharfschützengewehr",
+      "role": "sniper",
+      "tier": "a",
+      "rank": 1,
+      "note": "Bester Sniper laut wzstats.gg, dort aber noch kein Battle-Royale-Build."
+    },
+    {
+      "id": "astaroth-57-mw4",
+      "name": "ASTAROTH .57",
+      "cls": "Scharfschützengewehr",
+      "role": "sniper",
       "tier": "a",
       "rank": 2
     }
   ],
   "patches": [
     {
-      "id": "2026-10-14",
-      "date": "2026-10-14",
-      "title": "Season 6 · Überraschungs-Update",
+      "id": "2026-11-05",
+      "date": "2026-11-05",
+      "title": "Season 1 · Start mit MW4",
       "changes": [
         {
           "type": "buff",
-          "weapon": "DS20 MIRAGE",
-          "text": "Besserer Hüftfeuer-Spread, weniger View Kick, schnellere Granatwerfer-Projektile"
+          "weapon": "HAN 86",
+          "text": "Kopf-Multiplikator 1,25 → 1,3"
         },
         {
           "type": "buff",
-          "weapon": "TR51 PARA",
-          "text": "Bolt Carrier Group gibt jetzt 6 % mehr Feuerrate"
-        },
-        {
-          "type": "buff",
-          "weapon": "GREMLIN",
-          "text": "4 % schnellere Bewegung; Procural Extended Mag ohne Malus auf Sprint-to-Fire und Nachladen"
-        },
-        {
-          "type": "buff",
-          "weapon": "REV-46",
-          "text": "Schaft klappt 150 ms schneller ein und aus"
-        },
-        {
-          "type": "buff",
-          "weapon": "RYDEN 45K",
-          "text": "Weniger View Kick und Gun Kick"
-        },
-        {
-          "type": "buff",
-          "weapon": "SOKOL 545",
-          "text": "Warpath Blitz Kit: ADS-Bonus 20 → 30 ms, Sprint-to-Fire-Bonus 5 → 15 ms"
-        },
-        {
-          "type": "buff",
-          "weapon": "XM325",
-          "text": "Weniger View Kick und Streuung"
-        },
-        {
-          "type": "buff",
-          "weapon": "KRS 7.62",
-          "text": "3 % schnellere Bewegung, weniger View Kick"
+          "weapon": "MOSIN-NAGANT",
+          "text": "Max. Schadensreichweite 36,83 m → 40,13 m"
         },
         {
           "type": "nerf",
-          "weapon": "VMP",
-          "text": "Mehr View Kick und Streuung"
+          "weapon": "VEL 46",
+          "text": "Kürzere Schadensreichweiten (max. 10,13 → 9,65 m), dafür Mindestschaden 13 → 14"
+        },
+        {
+          "type": "buff",
+          "weapon": "M4",
+          "text": "Max. Schadensreichweite 25,91 → 27,94 m, Kopf 1,25 → 1,3"
+        },
+        {
+          "type": "buff",
+          "weapon": "AXION",
+          "text": "Mittlere Schadensreichweite 34,8 → 38,61 m, Projektil 415 → 470 m/s"
+        },
+        {
+          "type": "buff",
+          "weapon": "PATRIOT XMR",
+          "text": "Max. Schadensreichweite 31,24 → 33,53 m, schneller beim Zielen-Gehen"
+        },
+        {
+          "type": "buff",
+          "weapon": "ISO NIGHTSHADE",
+          "text": "Max. Schadensreichweite 10,54 → 11,68 m, Mindestschaden 13 → 14"
+        },
+        {
+          "type": "buff",
+          "weapon": "X-58 NYX",
+          "text": "Mehr Schaden auf mittlere und weite Distanz"
+        },
+        {
+          "type": "buff",
+          "weapon": "KASTOV 762",
+          "text": "Mehr Schaden und Reichweite, höhere Trefferzonen-Multiplikatoren"
         },
         {
           "type": "nerf",
-          "weapon": "M10 BREACHER",
-          "text": "Argus Lever: Repetierzeit 450 → 500 ms"
+          "weapon": "HYEON BURST",
+          "text": "Hyperburst-Apex: Max. Schaden 30 → 23, Mindestschaden 25 → 20"
         },
         {
           "type": "nerf",
-          "weapon": "MAMMOTH",
-          "text": "Etwas mehr View Kick"
+          "weapon": "APOC-338",
+          "text": "Mindestschaden 33 → 32, Kopf 1,35 → 1,3"
         }
-      ]
-    },
-    {
-      "id": "2026-09-30",
-      "date": "2026-09-30",
-      "title": "Season 6 · Überraschungs-Update",
-      "changes": [
-        {
-          "type": "nerf",
-          "weapon": "TR51 PARA",
-          "text": "Feuerrate von 625 auf 333 RPM gesenkt"
-        }
-      ]
-    },
-    {
-      "id": "2026-09-16",
-      "date": "2026-09-16",
-      "title": "Season 6 · Start",
-      "note": "Auszug: nur die Änderungen an aktuellen Meta-Waffen.",
-      "changes": [
-        {
-          "type": "buff",
-          "weapon": "VOYAK KT-3",
-          "text": "Mehr Schaden auf allen Distanzen, weniger Rückstoß, schnellere Projektile"
-        },
-        {
-          "type": "buff",
-          "weapon": "MPC-25",
-          "text": "Nahkampfschaden reicht weiter (13 → 13,5 m), 8 % weniger Streuung, 10 % weniger vertikaler Rückstoß"
-        }
-      ]
+      ],
+      "note": "Waffen-Balancing aus Update 1.111 (MP1st führt es im Multiplayer-Teil, wzstats.gg in der Warzone-Patch-Historie). MW4 ist jetzt in Warzone integriert; BO7-Waffen bleiben als Legacy-Waffen spielbar."
     }
   ],
   "settings": [
@@ -1012,190 +710,38 @@
     {
       "id": "resurgence",
       "title": "Resurgence",
-      "note": "Kleinere Map mit Respawn. Hier zählen schnelle Waffen und Sniper mit One-Shot-Kopftreffer. Wo nicht anders angegeben, gilt der Build aus dem Battle Royale.",
+      "note": "Neue Resurgence-Map Zodiac mit MW4-Waffen (wzstats.gg, Stand 6. Nov. 2026). Wo nicht anders angegeben, gilt der Build aus dem Battle Royale; für M4, ISO NIGHTSHADE und KG-7 VULCAN gibt es noch keinen gesicherten Build.",
       "list": [
         {
-          "ref": "voyak-kt-3",
+          "ref": "han-86-mw4",
           "role": "long",
           "rank": 1
         },
         {
-          "ref": "ds20-mirage",
+          "id": "m4-res",
+          "name": "M4",
+          "cls": "Sturmgewehr",
           "role": "long",
           "rank": 2
         },
         {
-          "ref": "vmp",
+          "ref": "vel-46-mw4",
           "role": "close",
           "rank": 1
         },
         {
-          "ref": "mpc-25",
+          "id": "iso-nightshade-res",
+          "name": "ISO NIGHTSHADE",
+          "cls": "MP",
           "role": "close",
           "rank": 2
         },
         {
-          "ref": "rev-46",
-          "role": "close",
-          "rank": 3
-        },
-        {
-          "id": "hawker-hx",
-          "name": "HAWKER HX",
+          "id": "kg-7-vulcan-res",
+          "name": "KG-7 VULCAN",
           "cls": "Scharfschützengewehr",
           "role": "sniper",
-          "rank": 1,
-          "code": "R05-21WSL-NFYHD-XS11",
-          "attachments": [
-            {
-              "slot": "Mündung",
-              "name": "MONOLITHIC SUPPRESSOR",
-              "unlock": "Level 35"
-            },
-            {
-              "slot": "Lauf",
-              "name": "23.7\" COMPOSITE-11 BARREL",
-              "unlock": "Level 22"
-            },
-            {
-              "slot": "Hintergriff",
-              "name": "AURORAL LIGHT GRIP",
-              "unlock": "Level 30"
-            },
-            {
-              "slot": "Laser",
-              "name": "1MW INSTINCT LASER ARRAY",
-              "unlock": "Level 34"
-            },
-            {
-              "slot": "Feuermodus",
-              "name": ".338 LM OVERPRESSURED",
-              "unlock": "Level 38"
-            }
-          ],
-          "stats": [
-            {
-              "label": "Projektil",
-              "value": "1291 m/s"
-            },
-            {
-              "label": "Zielen (ADS)",
-              "value": "561 ms"
-            },
-            {
-              "label": "Hitscan",
-              "value": "64,6 m"
-            }
-          ],
-          "pros": [
-            "One-Shot-Kopftreffer",
-            "Exzellente Projektilgeschwindigkeit",
-            "Wenig Schwanken"
-          ],
-          "cons": [
-            "Langsames Zielen und Bewegen",
-            "One-Shot auf jede Distanz nur mit einem bestimmten Lauf"
-          ]
-        },
-        {
-          "id": "kar98k",
-          "name": "KAR98K",
-          "cls": "Marksman-Gewehr",
-          "role": "sniper",
-          "rank": 2,
-          "attachments": [
-            {
-              "slot": "Optik",
-              "name": "XTEN INTLAS AS-7"
-            },
-            {
-              "slot": "Mündung",
-              "name": "VT-7 SPIRITFIRE SUPPRESSOR"
-            },
-            {
-              "slot": "Lauf",
-              "name": "PRÄZISIONSGEWEHR 762 LONG BARREL"
-            },
-            {
-              "slot": "Schaft",
-              "name": "REPELLER TAC STOCK"
-            },
-            {
-              "slot": "Munition",
-              "name": "7.92 HIGH GRAIN ROUNDS"
-            }
-          ],
-          "stats": [
-            {
-              "label": "One-Shot bis",
-              "value": "71 m"
-            },
-            {
-              "label": "Zielen (ADS)",
-              "value": "340 ms"
-            },
-            {
-              "label": "Projektil",
-              "value": "905 m/s"
-            }
-          ],
-          "pros": [
-            "One-Shot-Kopftreffer",
-            "Hohe Mobilität",
-            "Schnelles Zielen"
-          ],
-          "cons": [
-            "One-Shot-Kopftreffer nur bis 71 m",
-            "Langsamere Projektile als neuere Sniper"
-          ]
-        },
-        {
-          "id": "vs-recon",
-          "name": "VS RECON",
-          "cls": "Scharfschützengewehr",
-          "role": "sniper",
-          "rank": 3,
-          "code": "R01-21WSG-L369K-P711",
-          "attachments": [
-            {
-              "slot": "Mündung",
-              "name": "MONOLITHIC SUPPRESSOR",
-              "unlock": "Level 28"
-            },
-            {
-              "slot": "Lauf",
-              "name": "23\" G-FORCE BARREL",
-              "unlock": "Level 18"
-            },
-            {
-              "slot": "Unterlauf",
-              "name": "MFS R-STOP HANDGUARD",
-              "unlock": "Prestige"
-            },
-            {
-              "slot": "Hintergriff",
-              "name": "R-1 SHELF GRIP",
-              "unlock": "Level 34"
-            },
-            {
-              "slot": "Feuermodus",
-              "name": "7.62 NATO OVERPRESSURED",
-              "unlock": "Level 39"
-            }
-          ],
-          "pros": [
-            "One-Shot-Kopftreffer auf jede Distanz",
-            "Starke Projektilgeschwindigkeit",
-            "Zwei Körpertreffer reichen"
-          ],
-          "cons": [
-            "Langsames Zielen"
-          ]
-        },
-        {
-          "ref": "strider-300",
-          "role": "sniper",
-          "rank": 4
+          "rank": 1
         }
       ]
     },
@@ -1647,298 +1193,436 @@
   ],
   "tierList": [
     {
-      "name": "VOYAK KT-3",
+      "name": "CRONEN OSPREY",
       "cls": "Sturmgewehr",
       "role": "long",
       "tier": "META"
+    },
+    {
+      "name": "VEL 46",
+      "cls": "MP",
+      "role": "close",
+      "tier": "META"
+    },
+    {
+      "name": "HAN 86",
+      "cls": "Sturmgewehr",
+      "role": "long",
+      "tier": "META"
+    },
+    {
+      "name": "MOSIN-NAGANT",
+      "cls": "Marksman-Gewehr",
+      "role": "long",
+      "tier": "META"
+    },
+    {
+      "name": "M4",
+      "cls": "Sturmgewehr",
+      "role": "long",
+      "tier": "A"
+    },
+    {
+      "name": "ISO NIGHTSHADE",
+      "cls": "MP",
+      "role": "close",
+      "tier": "A"
+    },
+    {
+      "name": "KG-7 VULCAN",
+      "cls": "Scharfschützengewehr",
+      "role": "sniper",
+      "tier": "A"
+    },
+    {
+      "name": "AXION",
+      "cls": "Sturmgewehr",
+      "role": "long",
+      "tier": "A"
+    },
+    {
+      "name": "X-58 NYX",
+      "cls": "MP",
+      "role": "close",
+      "tier": "A"
+    },
+    {
+      "name": "ASTAROTH .57",
+      "cls": "Scharfschützengewehr",
+      "role": "sniper",
+      "tier": "A"
+    },
+    {
+      "name": "ODEN",
+      "cls": "Sturmgewehr",
+      "role": "long",
+      "tier": "A"
+    },
+    {
+      "name": "PATRIOT XMR",
+      "cls": "Sturmgewehr",
+      "role": "long",
+      "tier": "A"
+    },
+    {
+      "name": "PPSH-41",
+      "cls": "MP",
+      "role": "close",
+      "tier": "A"
+    },
+    {
+      "name": "WZ.55 STRIGA",
+      "cls": "MP",
+      "role": "close",
+      "tier": "A"
+    },
+    {
+      "name": "KASTOV 762",
+      "cls": "Sturmgewehr",
+      "role": "long",
+      "tier": "A"
+    },
+    {
+      "name": "APOC-338",
+      "cls": "LMG",
+      "role": "long",
+      "tier": "A"
+    },
+    {
+      "name": "CRONEN SQUALL",
+      "cls": "Sturmgewehr",
+      "role": "long",
+      "tier": "A"
+    },
+    {
+      "name": "FINN LMG",
+      "cls": "LMG",
+      "role": "long",
+      "tier": "A"
+    },
+    {
+      "name": "KRAIT P68",
+      "cls": "Pistole",
+      "role": "close",
+      "tier": "A"
+    },
+    {
+      "name": "REZI 12",
+      "cls": "Schrotflinte",
+      "role": "close",
+      "tier": "A"
+    },
+    {
+      "name": "SIGNAL 50",
+      "cls": "Scharfschützengewehr",
+      "role": "sniper",
+      "tier": "A"
+    },
+    {
+      "name": "WARLORD",
+      "cls": "Schrotflinte",
+      "role": "close",
+      "tier": "A"
+    },
+    {
+      "name": "HYEON BURST",
+      "cls": "Sturmgewehr",
+      "role": "long",
+      "tier": "A"
+    },
+    {
+      "name": "VOYAK KT-3",
+      "cls": "Sturmgewehr",
+      "role": "long",
+      "tier": "B"
     },
     {
       "name": "VMP",
       "cls": "MP",
       "role": "close",
-      "tier": "META"
+      "tier": "B"
     },
     {
       "name": "MK35 ISR",
       "cls": "Sturmgewehr",
       "role": "long",
-      "tier": "META"
+      "tier": "B"
     },
     {
       "name": "MPC-25",
       "cls": "MP",
       "role": "close",
-      "tier": "META"
+      "tier": "B"
     },
     {
       "name": "DS20 MIRAGE",
       "cls": "Sturmgewehr",
       "role": "long",
-      "tier": "META"
+      "tier": "B"
     },
     {
       "name": "REV-46",
       "cls": "MP",
       "role": "close",
-      "tier": "META"
+      "tier": "B"
     },
     {
       "name": "RYDEN 45K",
       "cls": "MP",
       "role": "close",
-      "tier": "META"
+      "tier": "B"
     },
     {
       "name": "STRIDER 300",
       "cls": "Scharfschützengewehr",
       "role": "sniper",
-      "tier": "META"
+      "tier": "B"
     },
     {
       "name": "VX COMPACT",
       "cls": "Sturmgewehr",
       "role": "long",
-      "tier": "A"
+      "tier": "B"
     },
     {
       "name": "STURMWOLF 45",
       "cls": "MP",
       "role": "close",
-      "tier": "A"
+      "tier": "B"
     },
     {
       "name": "PEACEKEEPER MK1",
       "cls": "Sturmgewehr",
       "role": "long",
-      "tier": "A"
+      "tier": "B"
     },
     {
       "name": "CARBON 57",
       "cls": "MP",
       "role": "close",
-      "tier": "A"
+      "tier": "B"
     },
     {
       "name": "M15 MOD 0",
       "cls": "Sturmgewehr",
       "role": "long",
-      "tier": "A"
+      "tier": "B"
     },
     {
       "name": "VST",
       "cls": "MP",
       "role": "close",
-      "tier": "A"
+      "tier": "B"
     },
     {
       "name": "FG42",
       "cls": "Sturmgewehr",
       "role": "long",
-      "tier": "A"
+      "tier": "B"
     },
     {
       "name": "AK-27",
       "cls": "Sturmgewehr",
       "role": "long",
-      "tier": "A"
+      "tier": "B"
     },
     {
       "name": "EGRT-17",
       "cls": "Sturmgewehr",
       "role": "long",
-      "tier": "A"
+      "tier": "B"
     },
     {
       "name": "SOKOL 545",
       "cls": "LMG",
       "role": "long",
-      "tier": "A"
+      "tier": "B"
     },
     {
       "name": "CBRS-3",
       "cls": "MP",
       "role": "close",
-      "tier": "A"
+      "tier": "B"
     },
     {
       "name": "VS RECON",
       "cls": "Scharfschützengewehr",
       "role": "sniper",
-      "tier": "A"
+      "tier": "B"
     },
     {
       "name": "HAWKER HX",
       "cls": "Scharfschützengewehr",
       "role": "sniper",
-      "tier": "A"
+      "tier": "B"
     },
     {
       "name": "AN-94",
       "cls": "Sturmgewehr",
       "role": "long",
-      "tier": "A"
+      "tier": "B"
     },
     {
       "name": "KOGOT-7",
       "cls": "MP",
       "role": "close",
-      "tier": "A"
+      "tier": "B"
     },
     {
       "name": "TR51 PARA",
       "cls": "Sturmgewehr",
       "role": "long",
-      "tier": "A"
+      "tier": "B"
     },
     {
       "name": "DRAVEC 45",
       "cls": "MP",
       "role": "close",
-      "tier": "A"
+      "tier": "B"
     },
     {
       "name": "RAZOR 9MM",
       "cls": "MP",
       "role": "close",
-      "tier": "A"
+      "tier": "B"
     },
     {
       "name": "GREMLIN",
       "cls": "MP",
       "role": "close",
-      "tier": "A"
+      "tier": "B"
     },
     {
       "name": "MK.78",
       "cls": "LMG",
       "role": "long",
-      "tier": "A"
+      "tier": "B"
     },
     {
       "name": "MXR-17",
       "cls": "Sturmgewehr",
       "role": "long",
-      "tier": "A"
+      "tier": "B"
     },
     {
       "name": "X9 MAVERICK",
       "cls": "Sturmgewehr",
       "role": "long",
-      "tier": "A"
+      "tier": "B"
     },
     {
       "name": "MADDOX RFB",
       "cls": "Sturmgewehr",
       "role": "long",
-      "tier": "A"
+      "tier": "B"
     },
     {
       "name": "HDR",
       "cls": "Scharfschützengewehr",
       "role": "sniper",
-      "tier": "A"
+      "tier": "B"
     },
     {
       "name": "XM325",
       "cls": "LMG",
       "role": "long",
-      "tier": "A"
+      "tier": "B"
     },
     {
       "name": "KILO 141",
       "cls": "Sturmgewehr",
       "role": "long",
-      "tier": "A"
+      "tier": "B"
     },
     {
       "name": "MERRICK 556",
       "cls": "Sturmgewehr",
       "role": "long",
-      "tier": "A"
+      "tier": "B"
     },
     {
       "name": "AKITA",
       "cls": "Schrotflinte",
       "role": "close",
-      "tier": "A"
+      "tier": "B"
     },
     {
       "name": "RIVETER",
       "cls": "Schrotflinte",
       "role": "close",
-      "tier": "A"
+      "tier": "B"
     },
     {
       "name": "M10 BREACHER",
       "cls": "Schrotflinte",
       "role": "close",
-      "tier": "A"
+      "tier": "B"
     },
     {
       "name": "RK-9",
       "cls": "MP",
       "role": "close",
-      "tier": "A"
+      "tier": "B"
     },
     {
       "name": "SG-12",
       "cls": "Schrotflinte",
       "role": "close",
-      "tier": "A"
-    },
-    {
-      "name": "ECHO 12",
-      "cls": "Schrotflinte",
-      "role": "close",
-      "tier": "A"
-    },
-    {
-      "name": "KATT-AMR",
-      "cls": "Scharfschützengewehr",
-      "role": "sniper",
-      "tier": "A"
-    },
-    {
-      "name": "VICTUS XMR",
-      "cls": "Scharfschützengewehr",
-      "role": "sniper",
-      "tier": "A"
-    },
-    {
-      "name": "FJX IMPERIUM",
-      "cls": "Scharfschützengewehr",
-      "role": "sniper",
-      "tier": "A"
-    },
-    {
-      "name": "LR 7.62",
-      "cls": "Scharfschützengewehr",
-      "role": "sniper",
-      "tier": "A"
-    },
-    {
-      "name": "LW3A1 FROSTLINE",
-      "cls": "Scharfschützengewehr",
-      "role": "sniper",
-      "tier": "A"
+      "tier": "B"
     },
     {
       "name": "KAR98K",
       "cls": "Marksman-Gewehr",
       "role": "sniper",
-      "tier": "A"
+      "tier": "B"
+    },
+    {
+      "name": "KATT-AMR",
+      "cls": "Scharfschützengewehr",
+      "role": "sniper",
+      "tier": "B"
+    },
+    {
+      "name": "LR 7.62",
+      "cls": "Scharfschützengewehr",
+      "role": "sniper",
+      "tier": "B"
+    },
+    {
+      "name": "LW3A1 FROSTLINE",
+      "cls": "Scharfschützengewehr",
+      "role": "sniper",
+      "tier": "B"
+    },
+    {
+      "name": "VICTUS XMR",
+      "cls": "Scharfschützengewehr",
+      "role": "sniper",
+      "tier": "B"
+    },
+    {
+      "name": "FJX IMPERIUM",
+      "cls": "Scharfschützengewehr",
+      "role": "sniper",
+      "tier": "B"
+    },
+    {
+      "name": "ECHO 12",
+      "cls": "Schrotflinte",
+      "role": "close",
+      "tier": "B"
     },
     {
       "name": "SWAT 5.56",
       "cls": "Marksman-Gewehr",
       "role": "long",
-      "tier": "A"
+      "tier": "B"
     },
     {
       "name": "XR-3 ION",
       "cls": "Scharfschützengewehr",
       "role": "sniper",
-      "tier": "A"
+      "tier": "B"
     },
     {
       "name": "M8A1",
@@ -2217,6 +1901,12 @@
       "tier": "B"
     },
     {
+      "name": "AK-74",
+      "cls": "Sturmgewehr",
+      "role": "close",
+      "tier": "B"
+    },
+    {
       "name": "PDSW 528",
       "cls": "MP",
       "role": "close",
@@ -2266,392 +1956,398 @@
       "tier": "B"
     },
     {
-      "name": "PP-919",
-      "cls": "MP",
-      "role": "close",
-      "tier": "B"
-    },
-    {
-      "name": "SIRIN 9MM",
-      "cls": "Spezial",
-      "role": "close",
-      "tier": "B"
-    },
-    {
-      "name": "MTZ-556",
-      "cls": "Sturmgewehr",
-      "role": "long",
-      "tier": "B"
-    },
-    {
       "name": "MORS",
       "cls": "Scharfschützengewehr",
       "role": "sniper",
       "tier": "B"
     },
     {
+      "name": "PP-919",
+      "cls": "MP",
+      "role": "close",
+      "tier": "C"
+    },
+    {
+      "name": "SIRIN 9MM",
+      "cls": "Spezial",
+      "role": "close",
+      "tier": "C"
+    },
+    {
+      "name": "MTZ-556",
+      "cls": "Sturmgewehr",
+      "role": "long",
+      "tier": "C"
+    },
+    {
       "name": "XRK STALKER",
       "cls": "Scharfschützengewehr",
       "role": "sniper",
-      "tier": "B"
+      "tier": "C"
     },
     {
       "name": "NAIL GUN",
       "cls": "Spezial",
       "role": "close",
-      "tier": "B"
+      "tier": "C"
     },
     {
       "name": "BP50",
       "cls": "Sturmgewehr",
       "role": "close",
-      "tier": "B",
+      "tier": "C",
       "kit": true
     },
     {
       "name": "MCW",
       "cls": "Sturmgewehr",
       "role": "close",
-      "tier": "B",
+      "tier": "C",
       "kit": true
     },
     {
       "name": "MX GUARDIAN",
       "cls": "Schrotflinte",
       "role": "close",
-      "tier": "B"
+      "tier": "C"
     },
     {
       "name": "PULEMYOT 762",
       "cls": "LMG",
       "role": "long",
-      "tier": "B"
+      "tier": "C"
+    },
+    {
+      "name": "TR2",
+      "cls": "Marksman-Gewehr",
+      "role": "long",
+      "tier": "C"
     },
     {
       "name": "DM-10",
       "cls": "Marksman-Gewehr",
       "role": "long",
-      "tier": "B"
+      "tier": "C"
     },
     {
       "name": "ESSEX MODEL 07",
       "cls": "Marksman-Gewehr",
       "role": "long",
-      "tier": "B"
+      "tier": "C"
     },
     {
       "name": "RENETTI",
       "cls": "Pistole",
       "role": "close",
-      "tier": "B",
+      "tier": "C",
       "kit": true
     },
     {
       "name": "SUPERI 46",
       "cls": "MP",
       "role": "close",
-      "tier": "B"
+      "tier": "C"
     },
     {
       "name": "FJX HORUS",
       "cls": "MP",
       "role": "close",
-      "tier": "B"
+      "tier": "C"
     },
     {
       "name": "FJX HORUS",
       "cls": "MP",
       "role": "close",
-      "tier": "B",
+      "tier": "C",
       "kit": true
     },
     {
       "name": "RIVAL-9",
       "cls": "MP",
       "role": "close",
-      "tier": "B"
+      "tier": "C"
     },
     {
       "name": "AMR9",
       "cls": "MP",
       "role": "close",
-      "tier": "B"
+      "tier": "C"
     },
     {
       "name": "ISO HEMLOCK",
       "cls": "Sturmgewehr",
       "role": "long",
-      "tier": "B"
+      "tier": "C"
     },
     {
       "name": "HOLGER 556",
       "cls": "Sturmgewehr",
       "role": "long",
-      "tier": "B"
+      "tier": "C"
     },
     {
       "name": "RAM-9",
       "cls": "MP",
       "role": "close",
-      "tier": "B"
+      "tier": "C"
     },
     {
       "name": "556 ICARUS",
       "cls": "LMG",
       "role": "long",
-      "tier": "B"
+      "tier": "C"
     },
     {
       "name": "DG-58 LSW",
       "cls": "LMG",
       "role": "long",
-      "tier": "B"
+      "tier": "C"
     },
     {
       "name": "BAL-27",
       "cls": "Sturmgewehr",
       "role": "long",
-      "tier": "B"
+      "tier": "C"
     },
     {
       "name": "TAQ ERADICATOR",
       "cls": "LMG",
       "role": "long",
-      "tier": "B"
+      "tier": "C"
     },
     {
       "name": "STB 556",
       "cls": "Sturmgewehr",
       "role": "long",
-      "tier": "B"
+      "tier": "C"
     },
     {
       "name": "BP50",
       "cls": "Sturmgewehr",
       "role": "long",
-      "tier": "B"
+      "tier": "C"
     },
     {
       "name": "HOLGER 26",
       "cls": "LMG",
       "role": "long",
-      "tier": "B"
+      "tier": "C"
     },
     {
       "name": "PULEMYOT 762",
       "cls": "LMG",
       "role": "long",
-      "tier": "B",
+      "tier": "C",
       "kit": true
     },
     {
       "name": "TAQ EVOLVERE",
       "cls": "LMG",
       "role": "long",
-      "tier": "B"
+      "tier": "C"
     },
     {
       "name": "KASTOV 762",
       "cls": "Sturmgewehr",
       "role": "long",
-      "tier": "B",
+      "tier": "C",
       "kit": true
     },
     {
       "name": "TEMPUS TORRENT",
       "cls": "Marksman-Gewehr",
       "role": "long",
-      "tier": "B"
+      "tier": "C"
     },
     {
       "name": "MCW 6.8",
       "cls": "Marksman-Gewehr",
       "role": "long",
-      "tier": "B"
+      "tier": "C"
     },
     {
       "name": "SOA SUBVERTER",
       "cls": "Kampfgewehr",
       "role": "long",
-      "tier": "B"
+      "tier": "C"
     },
     {
       "name": "KV BROADSIDE",
       "cls": "Schrotflinte",
       "role": "close",
-      "tier": "B"
+      "tier": "C"
     },
     {
       "name": "BAS-B",
       "cls": "Kampfgewehr",
       "role": "long",
-      "tier": "B"
+      "tier": "C"
     },
     {
       "name": "KASTOV 545",
       "cls": "Sturmgewehr",
       "role": "long",
-      "tier": "B",
+      "tier": "C",
       "kit": true
     },
     {
       "name": "TAQ-V",
       "cls": "Kampfgewehr",
       "role": "long",
-      "tier": "B"
+      "tier": "C"
     },
     {
       "name": "LACHMANN-556",
       "cls": "Sturmgewehr",
       "role": "long",
-      "tier": "B"
+      "tier": "C"
     },
     {
       "name": "FENNEC 45",
       "cls": "MP",
       "role": "close",
-      "tier": "B"
+      "tier": "C"
     },
     {
       "name": "LOCKWOOD MK2",
       "cls": "Marksman-Gewehr",
       "role": "close",
-      "tier": "B",
+      "tier": "C",
       "kit": true
     },
     {
       "name": "M16",
       "cls": "Sturmgewehr",
       "role": "long",
-      "tier": "B",
+      "tier": "C",
       "kit": true
     },
     {
       "name": "RAPP H",
       "cls": "LMG",
       "role": "long",
-      "tier": "B"
+      "tier": "C"
     },
     {
       "name": "MTZ-762",
       "cls": "Kampfgewehr",
       "role": "long",
-      "tier": "B"
+      "tier": "C"
     },
     {
       "name": "SVA 545",
       "cls": "Sturmgewehr",
       "role": "long",
-      "tier": "B"
+      "tier": "C"
     },
     {
       "name": "BRUEN MK9",
       "cls": "LMG",
       "role": "long",
-      "tier": "B"
+      "tier": "C"
     },
     {
       "name": "TEMPUS RAZORBACK",
       "cls": "Sturmgewehr",
       "role": "long",
-      "tier": "B"
+      "tier": "C"
     },
     {
       "name": "SIDEWINDER",
       "cls": "Kampfgewehr",
       "role": "long",
-      "tier": "B"
+      "tier": "C"
     },
     {
       "name": "DTIR 30-06",
       "cls": "Kampfgewehr",
       "role": "long",
-      "tier": "B"
+      "tier": "C"
     },
     {
       "name": "WSP-9",
       "cls": "MP",
       "role": "close",
-      "tier": "B"
+      "tier": "C"
     },
     {
       "name": "WSP SWARM",
       "cls": "MP",
       "role": "close",
-      "tier": "B"
+      "tier": "C"
     },
     {
       "name": "DG-58 LSW",
       "cls": "LMG",
       "role": "close",
-      "tier": "B",
+      "tier": "C",
       "kit": true
     },
     {
       "name": "MAMMOTH",
       "cls": "LMG",
       "role": "long",
-      "tier": "B"
+      "tier": "C"
     },
     {
       "name": "PU-21",
       "cls": "LMG",
       "role": "long",
-      "tier": "B"
+      "tier": "C"
     },
     {
       "name": "GPMG-7",
       "cls": "LMG",
       "role": "long",
-      "tier": "B"
+      "tier": "C"
     },
     {
       "name": "KVD ENFORCER",
       "cls": "Marksman-Gewehr",
       "role": "long",
-      "tier": "B"
+      "tier": "C"
     },
     {
       "name": "HCR 56",
       "cls": "LMG",
       "role": "long",
-      "tier": "B"
+      "tier": "C"
     },
     {
       "name": "BRYSON 890",
       "cls": "Schrotflinte",
       "role": "close",
-      "tier": "B"
+      "tier": "C"
     },
     {
       "name": "BRYSON 800",
       "cls": "Schrotflinte",
       "role": "close",
-      "tier": "B"
+      "tier": "C"
     },
     {
       "name": "EXPEDITE 12",
       "cls": "Schrotflinte",
       "role": "close",
-      "tier": "B"
+      "tier": "C"
     },
     {
       "name": "AEK-973",
       "cls": "Marksman-Gewehr",
       "role": "long",
-      "tier": "B"
+      "tier": "C"
     },
     {
       "name": "STRIKER 9",
       "cls": "MP",
       "role": "close",
-      "tier": "B"
+      "tier": "C"
     },
     {
       "name": "FSS HURRICANE",
       "cls": "MP",
       "role": "close",
-      "tier": "B"
+      "tier": "C"
     },
     {
       "name": "STATIC-HV",
@@ -3130,6 +2826,48 @@
       "name": "ROC 20MM",
       "cls": "Spezial",
       "role": "long",
+      "tier": "D"
+    },
+    {
+      "name": "MAR-9",
+      "cls": "Marksman-Gewehr",
+      "role": "long",
+      "tier": "D"
+    },
+    {
+      "name": "MOJAVE .357",
+      "cls": "Pistole",
+      "role": "close",
+      "tier": "D"
+    },
+    {
+      "name": "ORIS 8.6",
+      "cls": "Marksman-Gewehr",
+      "role": "long",
+      "tier": "D"
+    },
+    {
+      "name": "SANG 9MM",
+      "cls": "Pistole",
+      "role": "close",
+      "tier": "D"
+    },
+    {
+      "name": "TYPE 73",
+      "cls": "LMG",
+      "role": "long",
+      "tier": "D"
+    },
+    {
+      "name": ".50 GS",
+      "cls": "Pistole",
+      "role": "close",
+      "tier": "D"
+    },
+    {
+      "name": "CSG-35",
+      "cls": "MP",
+      "role": "close",
       "tier": "D"
     }
   ]
