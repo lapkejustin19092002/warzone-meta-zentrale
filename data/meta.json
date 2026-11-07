@@ -3,7 +3,7 @@
     "game": "Modern Warfare 4",
     "season": "Season 1",
     "mode": "Battle Royale",
-    "updatedAt": "2026-11-06",
+    "updatedAt": "2026-11-07",
     "seasonStart": "2026-11-06",
     "perks": [
       "Ninja",
@@ -14,7 +14,7 @@
       "Semtex",
       "Stim"
     ],
-    "perksNote": "Empfehlung von wzstats.gg auf den MW4-Waffenseiten (Stand 6. Nov. 2026). Neu in Season 1: 15 Basis-Perks in drei Slots plus ein Elite-Perk-Slot.",
+    "perksNote": "Empfehlung von wzstats.gg auf den MW4-Waffenseiten (Stand 7. Nov. 2026). Neu in Season 1: 15 Basis-Perks in drei Slots plus ein Elite-Perk-Slot.",
     "sources": [
       {
         "name": "wzstats.gg",
@@ -27,6 +27,10 @@
       {
         "name": "Call of Duty Blog (Season 1)",
         "url": "https://www.callofduty.com/blog/2026/11/call-of-duty-modern-warfare-4-warzone-season-1"
+      },
+      {
+        "name": "wzstats.gg MW4-Komplett-Loadouts",
+        "url": "https://wzstats.gg/mw4/loadouts/full-loadouts"
       }
     ]
   },
@@ -71,8 +75,8 @@
           "value": "#1"
         },
         {
-          "label": "Tier",
-          "value": "META"
+          "label": "Rang Sniper Support",
+          "value": "#1"
         },
         {
           "label": "Spiel",
@@ -80,11 +84,44 @@
         }
       ],
       "pros": [
-        "Platz 1 auf Distanz laut wzstats.gg",
+        "Platz 1 auf Distanz in BR und Resurgence laut wzstats.gg",
+        "Auch beste Sniper-Support-Waffe",
         "60er-Magazin für Squad-Kämpfe"
       ],
       "cons": [
         "Hohe Freischalt-Level (Munition erst Level 68)"
+      ],
+      "altBuilds": [
+        {
+          "name": "Variante: Sniper-Support",
+          "attachments": [
+            {
+              "slot": "Mündung",
+              "name": "XRK MIL-TAC SUPPRESSOR",
+              "unlock": "Level 34"
+            },
+            {
+              "slot": "Lauf",
+              "name": "IO-556 TAC 18\"",
+              "unlock": "Level 54"
+            },
+            {
+              "slot": "Unterlauf",
+              "name": "FSS TAC90 GRIP",
+              "unlock": "Level 6"
+            },
+            {
+              "slot": "Magazin",
+              "name": "60 ROUND MAG",
+              "unlock": "Level 42"
+            },
+            {
+              "slot": "Schaft",
+              "name": "FADE TAC 9L",
+              "unlock": "Level 57"
+            }
+          ]
+        }
       ]
     },
     {
@@ -137,7 +174,7 @@
       ],
       "pros": [
         "Zum Season-Start gebufft: mehr Kopfschaden",
-        "Platz 1 auf Distanz in Resurgence"
+        "Build früh freischaltbar (bis auf Munition)"
       ],
       "cons": [
         "Munition erst ab Level 70"
@@ -149,47 +186,47 @@
       }
     },
     {
-      "id": "mosin-nagant-mw4",
-      "name": "MOSIN-NAGANT",
-      "cls": "Marksman-Gewehr",
-      "role": "long",
+      "id": "iso-nightshade-mw4",
+      "name": "ISO NIGHTSHADE",
+      "cls": "MP",
+      "role": "close",
       "tier": "meta",
-      "rank": 3,
+      "rank": 1,
       "attachments": [
         {
-          "slot": "Optik",
-          "name": "SCHLAGER 7X",
-          "unlock": "Level 33"
-        },
-        {
           "slot": "Mündung",
-          "name": "FTAC SILENT RECON",
-          "unlock": "Level 34"
+          "name": "XRK HERDER 40",
+          "unlock": "Level 17"
         },
         {
           "slot": "Lauf",
-          "name": "MOSIN K025 BARREL",
-          "unlock": "Level 3"
+          "name": "RT OUTRIDE-X 8\"",
+          "unlock": "Level 22"
+        },
+        {
+          "slot": "Unterlauf",
+          "name": "FSS TAC90 GRIP",
+          "unlock": "Level 55"
+        },
+        {
+          "slot": "Magazin",
+          "name": "50 ROUND DRUM MAG",
+          "unlock": "Level 53"
         },
         {
           "slot": "Laser",
           "name": "XRK CLUTCH-LS",
-          "unlock": "Level 20"
-        },
-        {
-          "slot": "Munition",
-          "name": "7.62X54MMR HIGH VELOCITY",
-          "unlock": "Level 18"
+          "unlock": "Level 33"
         }
       ],
       "stats": [
         {
-          "label": "Rang Long Range",
-          "value": "#3"
+          "label": "Rang Close Range",
+          "value": "#1"
         },
         {
           "label": "Max. Schadensreichweite",
-          "value": "40,13 m"
+          "value": "11,68 m"
         },
         {
           "label": "Spiel",
@@ -197,14 +234,16 @@
         }
       ],
       "pros": [
-        "Zum Season-Start gebufft: mehr Reichweite",
-        "Build früh freischaltbar"
+        "Neue Nr. 1 im Nahkampf in BR und Resurgence",
+        "Zum Season-Start gebufft: mehr Reichweite und Mindestschaden"
       ],
-      "cons": [],
+      "cons": [
+        "Hohe Freischalt-Level (Griff Level 55, Trommel Level 53)"
+      ],
       "trend": {
         "type": "buff",
         "date": "2026-11-05",
-        "note": "Max. Schadensreichweite 36,83 m → 40,13 m"
+        "note": "Max. Schadensreichweite 10,54 m → 11,68 m, Mindestschaden 13 → 14"
       }
     },
     {
@@ -213,7 +252,7 @@
       "cls": "MP",
       "role": "close",
       "tier": "meta",
-      "rank": 1,
+      "rank": 2,
       "attachments": [
         {
           "slot": "Mündung",
@@ -244,7 +283,7 @@
       "stats": [
         {
           "label": "Rang Close Range",
-          "value": "#1"
+          "value": "#2"
         },
         {
           "label": "Max. Schadensreichweite",
@@ -256,7 +295,7 @@
         }
       ],
       "pros": [
-        "Platz 1 im Nahkampf in BR und Resurgence",
+        "Platz 2 im Nahkampf in BR und Resurgence",
         "Mindestschaden zum Season-Start erhöht"
       ],
       "cons": [
@@ -269,12 +308,81 @@
       }
     },
     {
+      "id": "mosin-nagant-mw4",
+      "name": "MOSIN-NAGANT",
+      "cls": "Marksman-Gewehr",
+      "role": "sniper",
+      "tier": "meta",
+      "rank": 1,
+      "attachments": [
+        {
+          "slot": "Optik",
+          "name": "SCHLAGER 7X",
+          "unlock": "Level 33"
+        },
+        {
+          "slot": "Mündung",
+          "name": "FTAC SILENT RECON",
+          "unlock": "Level 34"
+        },
+        {
+          "slot": "Lauf",
+          "name": "MOSIN K025 BARREL",
+          "unlock": "Level 3"
+        },
+        {
+          "slot": "Laser",
+          "name": "XRK CLUTCH-LS",
+          "unlock": "Level 20"
+        },
+        {
+          "slot": "Munition",
+          "name": "7.62X54MMR HIGH VELOCITY",
+          "unlock": "Level 18"
+        }
+      ],
+      "stats": [
+        {
+          "label": "Rang Sniper",
+          "value": "#1"
+        },
+        {
+          "label": "Max. Schadensreichweite",
+          "value": "40,13 m"
+        },
+        {
+          "label": "Spiel",
+          "value": "MW4"
+        }
+      ],
+      "pros": [
+        "Platz 1 bei den Snipern in BR und Resurgence",
+        "Zum Season-Start gebufft: mehr Reichweite",
+        "Build früh freischaltbar"
+      ],
+      "cons": [],
+      "trend": {
+        "type": "buff",
+        "date": "2026-11-05",
+        "note": "Max. Schadensreichweite 36,83 m → 40,13 m"
+      }
+    },
+    {
+      "id": "kastov-762-mw4",
+      "name": "KASTOV 762",
+      "cls": "Sturmgewehr",
+      "role": "long",
+      "tier": "a",
+      "rank": 1,
+      "note": "In Resurgence sogar Meta (Platz 2 auf Distanz)."
+    },
+    {
       "id": "m4-mw4",
       "name": "M4",
       "cls": "Sturmgewehr",
       "role": "long",
       "tier": "a",
-      "rank": 1
+      "rank": 2
     },
     {
       "id": "axion-mw4",
@@ -282,31 +390,23 @@
       "cls": "Sturmgewehr",
       "role": "long",
       "tier": "a",
-      "rank": 2
-    },
-    {
-      "id": "oden-mw4",
-      "name": "ODEN",
-      "cls": "Sturmgewehr",
-      "role": "long",
-      "tier": "a",
       "rank": 3
     },
     {
-      "id": "patriot-xmr-mw4",
-      "name": "PATRIOT XMR",
-      "cls": "Sturmgewehr",
-      "role": "long",
-      "tier": "a",
-      "rank": 4
-    },
-    {
-      "id": "iso-nightshade-mw4",
-      "name": "ISO NIGHTSHADE",
+      "id": "wz55-striga-mw4",
+      "name": "WZ.55 STRIGA",
       "cls": "MP",
       "role": "close",
       "tier": "a",
       "rank": 1
+    },
+    {
+      "id": "csg-35-mw4",
+      "name": "CSG-35",
+      "cls": "MP",
+      "role": "close",
+      "tier": "a",
+      "rank": 2
     },
     {
       "id": "x-58-nyx-mw4",
@@ -314,7 +414,7 @@
       "cls": "MP",
       "role": "close",
       "tier": "a",
-      "rank": 2
+      "rank": 3
     },
     {
       "id": "kg-7-vulcan-mw4",
@@ -323,7 +423,7 @@
       "role": "sniper",
       "tier": "a",
       "rank": 1,
-      "note": "Bester Sniper laut wzstats.gg, dort aber noch kein Battle-Royale-Build."
+      "note": "Platz 2 bei den Snipern. BR-Build laut wzstats.gg: GAUGE-12 MONO, HAEBANG RMT762 29\", TT G76-RP STOCK, 7.62X54MMR HIGH VELOCITY, KT76 LIGHT BOLT."
     },
     {
       "id": "astaroth-57-mw4",
@@ -710,36 +810,37 @@
     {
       "id": "resurgence",
       "title": "Resurgence",
-      "note": "Neue Resurgence-Map Zodiac mit MW4-Waffen (wzstats.gg, Stand 6. Nov. 2026). Wo nicht anders angegeben, gilt der Build aus dem Battle Royale; für M4, ISO NIGHTSHADE und KG-7 VULCAN gibt es noch keinen gesicherten Build.",
+      "note": "Resurgence-Meta laut wzstats.gg (Stand 7. Nov. 2026). Wo nicht anders angegeben, gilt der Build aus dem Battle Royale; für KASTOV 762 gibt es noch keinen gesicherten Build.",
       "list": [
         {
-          "ref": "han-86-mw4",
+          "ref": "cronen-osprey-mw4",
           "role": "long",
           "rank": 1
         },
         {
-          "id": "m4-res",
-          "name": "M4",
+          "id": "kastov-762-res",
+          "name": "KASTOV 762",
           "cls": "Sturmgewehr",
           "role": "long",
           "rank": 2
         },
         {
-          "ref": "vel-46-mw4",
+          "ref": "han-86-mw4",
+          "role": "long",
+          "rank": 3
+        },
+        {
+          "ref": "iso-nightshade-mw4",
           "role": "close",
           "rank": 1
         },
         {
-          "id": "iso-nightshade-res",
-          "name": "ISO NIGHTSHADE",
-          "cls": "MP",
+          "ref": "vel-46-mw4",
           "role": "close",
           "rank": 2
         },
         {
-          "id": "kg-7-vulcan-res",
-          "name": "KG-7 VULCAN",
-          "cls": "Scharfschützengewehr",
+          "ref": "mosin-nagant-mw4",
           "role": "sniper",
           "rank": 1
         }
@@ -1102,95 +1203,104 @@
   ],
   "loadouts": [
     {
-      "id": "meta",
-      "title": "Battle-Royale-Meta",
-      "tag": "Nr. 1",
-      "primary": "VOYAK KT-3",
-      "secondary": "VMP",
+      "id": "ar",
+      "title": "Bestes Sturmgewehr-Loadout",
+      "tag": "Nr. 1 AR",
+      "primary": "AXION",
+      "secondary": "KRAIT P68",
       "perks": [
-        "Scavenger",
-        "Sprinter",
-        "Ghost"
+        "Quick Fix",
+        "Ninja",
+        "Scavenger"
       ],
       "equipment": [
         "Semtex",
-        "Rauchgranate"
-      ],
-      "note": "Die stärkste Kombi für Fern- und Nahkampf."
-    },
-    {
-      "id": "sniper",
-      "title": "Sniper-Meta",
-      "tag": "Sniper",
-      "primary": "STRIDER 300",
-      "secondary": "VX COMPACT",
-      "perks": [
-        "Scavenger",
-        "Sprinter",
-        "Survivor"
-      ],
-      "equipment": [
-        "Semtex",
-        "Rauchgranate"
-      ],
-      "note": "Sniper für den One-Shot, VX COMPACT als Sniper-Support."
-    },
-    {
-      "id": "easy",
-      "title": "Einfach zu spielen",
-      "tag": "Anfänger",
-      "primary": "MK35 ISR",
-      "secondary": "MPC-25",
-      "perks": [
-        "Scavenger",
-        "Sprinter",
-        "Ghost"
-      ],
-      "equipment": [
-        "Semtex",
-        "Rauchgranate"
-      ],
-      "note": "Sehr wenig Rückstoß und gutes Handling."
-    },
-    {
-      "id": "kar",
-      "title": "Für KAR98K-Fans",
-      "tag": "Sniper",
-      "primary": "KAR98K",
-      "secondary": "VX COMPACT",
-      "perks": [
-        "Scavenger",
-        "Sprinter",
-        "Tempered"
-      ],
-      "equipment": [
-        "Wurfaxt",
-        "Rauchgranate"
+        "Stim"
       ]
     },
     {
-      "id": "lmg",
-      "title": "LMG-Loadout",
-      "tag": "LMG",
-      "primary": "SOKOL 545",
-      "secondary": "VMP",
+      "id": "smg",
+      "title": "Bestes MP-Loadout",
+      "tag": "Nr. 1 MP",
+      "primary": "VEL 46",
+      "secondary": "KRAIT P68",
       "perks": [
-        "Scavenger",
-        "Sprinter",
-        "Ghost"
+        "Ghost",
+        "Ninja",
+        "Scavenger"
       ],
       "equipment": [
         "Semtex",
-        "Rauchgranate"
+        "Stim"
+      ]
+    },
+    {
+      "id": "apex",
+      "title": "Bestes Apex-Loadout",
+      "tag": "Apex",
+      "primary": "HYEON BURST",
+      "secondary": "SANG 9MM",
+      "perks": [
+        "Quick Fix",
+        "Ninja",
+        "Scavenger"
       ],
-      "note": "Großes Magazin für Squads auf Distanz."
+      "equipment": [
+        "Semtex",
+        "Stim"
+      ]
+    },
+    {
+      "id": "ak",
+      "title": "Für AK-Fans",
+      "tag": "AK",
+      "primary": "KASTOV 762",
+      "secondary": "KRAIT P68",
+      "perks": [
+        "Quick Fix",
+        "Ninja",
+        "Scavenger"
+      ],
+      "equipment": [
+        "Semtex",
+        "Stim"
+      ]
+    },
+    {
+      "id": "stealth",
+      "title": "Bestes Stealth-Loadout",
+      "tag": "Stealth",
+      "primary": "AXION",
+      "secondary": "KRAIT P68",
+      "perks": [
+        "Ghost",
+        "Ninja",
+        "Cold-Blooded"
+      ],
+      "equipment": [
+        "Wurfmesser",
+        "Stim"
+      ],
+      "note": "Leise und vom Radar verborgen."
+    },
+    {
+      "id": "akimbo",
+      "title": "Akimbo-MP",
+      "tag": "Akimbo",
+      "primary": "WZ.55 STRIGA",
+      "secondary": "KRAIT P68",
+      "perks": [
+        "Quick Fix",
+        "Blood Rush",
+        "Scavenger"
+      ],
+      "equipment": [
+        "Semtex",
+        "Stim"
+      ]
     }
   ],
-  "proFavorites": [
-    "VOYAK KT-3",
-    "VMP",
-    "MPC-25"
-  ],
+  "proFavorites": [],
   "tierList": [
     {
       "name": "CRONEN OSPREY",
@@ -1199,7 +1309,7 @@
       "tier": "META"
     },
     {
-      "name": "VEL 46",
+      "name": "ISO NIGHTSHADE",
       "cls": "MP",
       "role": "close",
       "tier": "META"
@@ -1211,21 +1321,21 @@
       "tier": "META"
     },
     {
+      "name": "VEL 46",
+      "cls": "MP",
+      "role": "close",
+      "tier": "META"
+    },
+    {
       "name": "MOSIN-NAGANT",
       "cls": "Marksman-Gewehr",
-      "role": "long",
+      "role": "sniper",
       "tier": "META"
     },
     {
       "name": "M4",
       "cls": "Sturmgewehr",
       "role": "long",
-      "tier": "A"
-    },
-    {
-      "name": "ISO NIGHTSHADE",
-      "cls": "MP",
-      "role": "close",
       "tier": "A"
     },
     {
