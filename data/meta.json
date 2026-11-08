@@ -3,7 +3,7 @@
     "game": "Modern Warfare 4",
     "season": "Season 1",
     "mode": "Battle Royale",
-    "updatedAt": "2026-11-07",
+    "updatedAt": "2026-11-08",
     "seasonStart": "2026-11-06",
     "perks": [
       "Ninja",
@@ -1198,6 +1198,57 @@
         "Rauchgranate"
       ],
       "note": "MOSIN-NAGANT auf Distanz, CRONEN OSPREY als Sniper-Support (wzstats.gg, Stand 7. Nov. 2026)."
+    },
+    {
+      "id": "meta-2",
+      "title": "Meta-Loadout Nr. 2",
+      "tag": "Nr. 2",
+      "primary": "HAN 86",
+      "secondary": "VEL 46",
+      "perks": [
+        "Field Medic",
+        "Scavenger",
+        "Tempered"
+      ],
+      "equipment": [
+        "Semtex",
+        "Rauchgranate"
+      ],
+      "note": "Die zweitbeste Meta-Kombi aus HAN 86 und VEL 46 (wzstats.gg, Stand 8. Nov. 2026)."
+    },
+    {
+      "id": "ak-lover",
+      "title": "AK-Fans",
+      "tag": "Alternative",
+      "primary": "KASTOV 762",
+      "secondary": "ISO NIGHTSHADE",
+      "perks": [
+        "Surveyor",
+        "Deft Hands",
+        "Tempered"
+      ],
+      "equipment": [
+        "Semtex",
+        "Rauchgranate"
+      ],
+      "note": "KASTOV 762 als starke A-Tier-Alternative auf Distanz (wzstats.gg, Stand 8. Nov. 2026)."
+    },
+    {
+      "id": "m4-lover",
+      "title": "M4-Fans",
+      "tag": "Alternative",
+      "primary": "M4",
+      "secondary": "ISO NIGHTSHADE",
+      "perks": [
+        "Field Medic",
+        "Scavenger",
+        "Tempered"
+      ],
+      "equipment": [
+        "Semtex",
+        "Rauchgranate"
+      ],
+      "note": "Die M4 als A-Tier-Alternative auf Distanz (wzstats.gg, Stand 8. Nov. 2026)."
     }
   ],
   "proFavorites": [
