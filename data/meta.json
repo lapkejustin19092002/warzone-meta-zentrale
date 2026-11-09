@@ -3,7 +3,7 @@
     "game": "Modern Warfare 4",
     "season": "Season 1",
     "mode": "Battle Royale",
-    "updatedAt": "2026-11-08",
+    "updatedAt": "2026-11-09",
     "seasonStart": "2026-11-06",
     "perks": [
       "Ninja",
@@ -60,9 +60,9 @@
           "unlock": "Level 42"
         },
         {
-          "slot": "Munition",
-          "name": "5.56 NATO HIGH VELOCITY",
-          "unlock": "Level 68"
+          "slot": "Schaft",
+          "name": "XR-9 TAC V2",
+          "unlock": "Level 69"
         }
       ],
       "stats": [
@@ -84,7 +84,7 @@
         "60er-Magazin für Squad-Kämpfe"
       ],
       "cons": [
-        "Hohe Freischalt-Level (Munition erst Level 68)"
+        "Hohe Freischalt-Level (Schaft erst Level 69)"
       ]
     },
     {
@@ -360,7 +360,7 @@
       "cls": "MP",
       "role": "close",
       "tier": "a",
-      "rank": 1
+      "rank": 2
     },
     {
       "id": "csg-35-mw4",
@@ -368,7 +368,7 @@
       "cls": "MP",
       "role": "close",
       "tier": "a",
-      "rank": 2,
+      "rank": 1,
       "note": "Neu im A-Tier (vorher D-Tier)."
     },
     {
@@ -1294,7 +1294,7 @@
       "tier": "A"
     },
     {
-      "name": "WZ.55 STRIGA",
+      "name": "CSG-35",
       "cls": "MP",
       "role": "close",
       "tier": "A"
@@ -1306,7 +1306,7 @@
       "tier": "A"
     },
     {
-      "name": "CSG-35",
+      "name": "WZ.55 STRIGA",
       "cls": "MP",
       "role": "close",
       "tier": "A"
