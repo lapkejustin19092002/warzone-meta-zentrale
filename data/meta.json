@@ -3,7 +3,7 @@
     "game": "Modern Warfare 4",
     "season": "Season 1",
     "mode": "Battle Royale",
-    "updatedAt": "2026-11-09",
+    "updatedAt": "2026-11-10",
     "seasonStart": "2026-11-06",
     "perks": [
       "Ninja",
@@ -97,8 +97,8 @@
       "attachments": [
         {
           "slot": "Optik",
-          "name": "CRONEN R808",
-          "unlock": "Level 19"
+          "name": "LOCUS PX3 CANTED",
+          "unlock": "Level 20"
         },
         {
           "slot": "Mündung",
