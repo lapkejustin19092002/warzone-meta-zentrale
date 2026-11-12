@@ -3,7 +3,7 @@
     "game": "Modern Warfare 4",
     "season": "Season 1",
     "mode": "Battle Royale",
-    "updatedAt": "2026-11-10",
+    "updatedAt": "2026-11-12",
     "seasonStart": "2026-11-06",
     "perks": [
       "Ninja",
@@ -85,6 +85,18 @@
       ],
       "cons": [
         "Hohe Freischalt-Level (Schaft erst Level 69)"
+      ],
+      "altBuilds": [
+        {
+          "name": "Variante: Sniper-Support",
+          "attachments": [
+            { "slot": "Mündung", "name": "XRK MIL-TAC SUPPRESSOR", "unlock": "Level 34" },
+            { "slot": "Lauf", "name": "IO-556 TAC 18\"", "unlock": "Level 54" },
+            { "slot": "Unterlauf", "name": "FSS TAC90 GRIP", "unlock": "Level 6" },
+            { "slot": "Magazin", "name": "60 ROUND MAG", "unlock": "Level 42" },
+            { "slot": "Schaft", "name": "FADE TAC 9L", "unlock": "Level 57" }
+          ]
+        }
       ]
     },
     {
@@ -278,13 +290,8 @@
       "attachments": [
         {
           "slot": "Mündung",
-          "name": "212 LC40 COMP",
-          "unlock": "Level 27"
-        },
-        {
-          "slot": "Lauf",
-          "name": "VB-46 SERIES 11",
-          "unlock": "Level 3"
+          "name": "TA LIGHTNING R3M",
+          "unlock": "Level 35"
         },
         {
           "slot": "Unterlauf",
@@ -300,6 +307,11 @@
           "slot": "Schaft",
           "name": "EXP U-TURN STOCK",
           "unlock": "Level 37"
+        },
+        {
+          "slot": "Laser",
+          "name": "XRK CLUTCH-LS",
+          "unlock": "Level 39"
         }
       ],
       "stats": [
